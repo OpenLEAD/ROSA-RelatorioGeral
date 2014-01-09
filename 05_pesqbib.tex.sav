@@ -1,0 +1,67 @@
+%%******************************************************************************
+%%
+%% pesqbib.tex
+%%
+%%******************************************************************************
+%%
+%% Title......: Introduction
+%%
+%% Author.....: GSCAR-DFKI
+%%
+%% Started....: Nov 2013
+%%
+%% Emails.....: renan028@gmail.com
+%%
+%% Address....: Universidade Federal do Rio de Janeiro
+%%              Caixa Postal 68.504, CEP: 21.945-970
+%%              Rio de Janeiro, RJ - Brasil.
+%%
+%%******************************************************************************
+
+
+%%******************************************************************************
+%% SECTION - Pesquisa Bibliográfica
+%%******************************************************************************
+
+\section{Pesquisa Bibliográfica e pesquisa de mercado}
+
+\subsection{Sensor de força}
+
+ Sensores de força podem ser utilizados para detectarem a presença da garra pescadora. A análise quantitativa e comparativa dessas forças pode indicar encaixe mal ou bem sucedido durante a operação e, portanto, é considerada uma solução viável mediante calibração. Os diversos tipos de sensores de força e suas aplicações podem ser consultados em \textbf{Guide to the Measurement of Force}, publicado por \textbf{The Institute of Measurement and Control, London}.
+
+ O sensor de força é composto por um transdutor, que é submetido à força, e uma instrumentação associada, responsável por alimentar o transdutor e processar a saída. O transdutor é um dispositivo que recebe um estímulo físico, como a contração elástica do material devido ao peso, e traduz em outra medida física, como variação de voltagem ou corrente elétrica. Esta variação obedece uma relação conhecida e, dessa forma, é possível determinar quantitativamente a força aplicada.
+
+ Existem diversos sensores de força disponíveis no mercado, com sistemas variados de operação. As principais características a serem consideradas na escolha de um sensor de força são: curva de resposta, capacidade máxima, não-linearidade, histerese, sensibilidade e reprodutibilidade.
+
+ O sensor de força mais utilizado e que atende aos requisitos do projeto é o strain gauge. A força atua em um metal cilíndrico, que é comprimido e altera a resistência de um strain gauge, acoplado à superfície do cilindro (FIGURA). A resistência elétrica de um fio varia conforme seu comprimento e sua área, portanto, a variação de corrente que passa por este fio pode ser utilizada como medida quantitativa e é possível determinar a força aplicada por um modelo matemático conhecido: $R=\frac{\rho L}{A}$. Outros sensores que poderiam atender às especificações, mas são de mais difícil comercialização, em relação aos requisitos de projeto, são: sensor de força piezoelétrico
+
+ De acordo com \textbf{Guide to the Measurement of Force}, a aplicação pode ser caracterizada como sistema para medições e controle de forças para operações de segurança. Pode ainda ser especificada como \textbf{Crane overload/underload protection}, que consiste em monitorar forças atuando em garras tipo pescadora ou gancho (FIGURA), no qual a medida será avaliada em situações estáticas ou de pouco movimento/vibração.
+
+ \subsubsection{Conclusão de análise técnica}
+
+A solução por sensores de força é eficiente em aplicações onde se deseja avaliar frequência de vibração e duração da onda de choque, porém não muito na medida quantitativa e comparativa de forças devido à sensibilidade do strain gauge a campos magnéticos externos, pressão hidrostática e umidade. A variação de acúmulo de sedimentos no stoplog também dificulta a calibração do instrumento.
+
+ \subparagraph{Pesquisa de mercado}
+
+Os possíveis fornecedores para sensores de força do tipo strain gauge avaliados nesta pesquisa são: Applied Measurements Limited, Load Cell Central, Transducer Techniques. Os modelos avaliados são da série DBEP e CLP de seus respectivos fornecedores.
+
+\paragraph{Sensor indutivo de proximidade}\mbox{}\\
+
+Sensores indutivos de proximidade podem ser utilizados para detectarem a presença da garra pescadora. Este sensor de presença pode ser do tipo linear, podendo ser realizada análise quantitativa, ou simplesmente chaveado, um simples indicador de presença. Portanto, pode indicar encaixe mal ou bem sucedido durante a operação de remoção/inserção de stoplogs.Os sensores indutivos apresentam a mesma forma de operação nos diversos produtos disponíveis no mercado, diferenciando-se principalmente na medida de distância da aplicação.
+
+ O sistema para sensoriamento por indução magnética é composto por uma fonte de alimentação e um indutor. Ao alimentar o sensor indutivo, uma corrente alternada é gerada. A corrente elétrica que passa pelo indutor gera um campo magnético na face do sensor. Este campo magnético induz corrente de Foucault no alvo metálico, que aumenta conforme o alvo se aproxima do sensor indutivo. O aumento das correntes de Foucault cria um campo magnético no alvo, que irá se opor ao campo produzido pelo sensor indutivo. Essa redução do campo magnético pode ser medida e, portanto, é possível presenciar o alvo.
+
+ Existem diversos sensores indutivos disponíveis no mercado que atendem às especificações, apresentam o mesmo modo de operação e diferenciam-se principalmente quanto à robustez, instalação (faceada ou não) e interface de saída. A resistência a choques, vibração, submersibilidade e o tipo de instalação são as características mais importantes para a aplicação. O sensor deve ser do tipo IP69K e faceado, o que diminui o alcance, mas aumenta a proteção.
+
+ A pesquisa por sensores indutivos de proximidade para a finalidade desejada resultou em aplicações equivalentes. A empresa \textbf{HATCH - Energy Innovations} desenvolveu em 2007 um Lifting Beam instrumentado com sensores indutivos. Em 2008, a empresa \textbf{Atlas Polar} adotou a mesma solução com sensores indutivos.
+
+
+ \subparagraph{Conclusão de análise técnica}\mbox{}\\
+
+A solução por sensores indutivos é eficiente em aplicações onde se deseja avaliar a presença de stoplog. A grande maioria dos sensores são frágeis a choque e vibração, além de sensíveis a ruídos elétricos e magnéticos. Porém, já há no mercado produtos IP69K e encapsulados. Há, também, a possibilidade de falso positivo em caso de sedimentos metálicos, mas é baixa a probabilidade.
+Pesquisas em aplicações semelhantes mostraram que o sensor indutivo é a solução adotada para o monitoramento de encaixe entre garra pescadora e stoplog, auxiliado por outros sensores ou sistemas independentes de atuadores.
+
+ \subparagraph{Pesquisa de mercado}\mbox{}\\
+
+Os possíveis fornecedores para sensores indutivos que atendem aos requisitos de projeto são: Contrinex, Pepperl-Fuchs, Positek e Turck. Diversos modelos foram avaliados, juntamente com os técnicos das respectivas empresas.
+As vantagens apresentadas e a utilização desse tipo de sensoriamento em aplicações equivalentes foram decisivos para a escolha por esta solução em nossa aplicação. O modelo selecionado, após ampla análise entre fornecedores, é o modelo NBB20-L2-E2-V1 de instalação faceada, chaveado normalmente aberto e distância de operação de 2cm. (FIGURA) 
