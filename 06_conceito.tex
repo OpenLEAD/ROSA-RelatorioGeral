@@ -23,3 +23,30 @@
 %% SECTION - Sistema proposto
 %%******************************************************************************
 \section{Projeto Conceitual}
+Esta seção aborda os problemas que serão atacados pelo projeto, de acordo com os modos de operação e falhas expostos na seção Descrição do Problema.
+
+Conceitualmente, o robô ROSA será constituído por um conjunto de sensores e atuadores a prova d’água que serão instalados no \emph{Lifting Beam}. Os sensores e atuadores serão conectados a uma eletrônica embarcada a prova d’água, instalada também no \emph{Lifting Beam}, que processará e transmitirá as informações para a superfície através de um umbilical. Na superfície, os dados e controles do sistema poderão ser visualizados em uma interface gráfica no console de comando. Os sensores medirão dados detalhados sobre o atual status da operação de inserção/remoção dos stoplogs permitindo ao operador tomar decisões com base nessas informações, otimizar a operação e evitar possíveis problemas. Os atuadores possibilitam intervir na operação resolvendo problemas encontrados sem a necessidade de enviar mergulhadores ao local.
+
+As subseções que se seguem descrevem o projeto conceitual direcionado a cada falha de operação.
+
+\subsection{Operação excepcional de inserção 1 - Travamento durante inserção}
+A instrumentação do \emph{Lifting Beam} com sensores de profundidade e inclinação auxiliam o operador no monitoramento da operação. Sensores de inclinação fornecem ao operador a informação de que o \emph{stoplog} está seguindo ou não o curso do trilho corretamente.
+
+Mesmo em caso de não inclinação, há a possibilidade de o \emph{stoplog} ser assentado de maneira incorreta. O acúmulo uniforme de sedimentos pode criar uma camada e impedir o posicionamento correto de \emph{stoplog}. Os sensores de nível indicarão a profundidade do \emph{stoplog}, possibilitando que o operador monitore a finalização da tarefa.
+
+Vale ressaltar que o projeto conceitual visa o monitoramento da operação. O operador, a partir dos dados recebidos, pode decider em continuar a tarefa ou reiniciá-la.
+
+\subsection{Operação excepcional de inserção 2 - Falha do desencaixe da garra pescadora}
+%TODO descreve o processo de de falha e causas e o que é feito para corrigir. mudar trava manualmente (mergulhador)
+
+\subsection{Operação excepcional de inserção 3 - Não vedamento devido ao acumulo de detritos na base do trilho}
+%TODO descreve o processo de de falha e causas e o que é feito para corrigir. só eh verificado apos a tentativa de drenagem e mergulhador q tira os detritos. caso o objeto seja muito grande havera um erro de nivel
+
+\subsection{Operação excepcional de remoção 1 - Falha no encaixe}
+%TODO erro1 nao engate, causas acumulo de detrito no olhal (comum), e situaçoes diversas nao descritivas.
+
+\subsection{Operação excepcional de remoção 2 - Travamento durante remoção}
+
+
+\subsection{Operação excepcional de remoção 3 - Acúmulo de sedimentos no fundo}
+%TODO descreve o processo de de falha e causas e o que é feito para corrigir. só eh verificado apos a tentativa de drenagem e mergulhador q tira os detritos. caso o objeto seja muito grande havera um erro de nivel
