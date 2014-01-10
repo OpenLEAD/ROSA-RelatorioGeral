@@ -24,21 +24,22 @@
 %%******************************************************************************
 
 \section{Introdução}
-O objetivo deste relatorio é apresentar o conceito do projeto ROSA. Este documento apresentará os modos de operação do sistema atual e suas falhas, descreverá o sistema proposto, as possíveis soluções e a metodologia de pesquisa para o desenvolvimento de soluções. Por último, este relatório mostrará um fluxograma completo da operação com o novo sistema .
+O objetivo deste relatório é apresentar o conceito do projeto ROSA. Este documento apresentará os modos de operação do sistema atual e suas falhas, descreverá o sistema proposto, as possíveis soluções e a metodologia de pesquisa para o desenvolvimento de soluções. Por último, este relatório mostrará um fluxograma completo da operação com o novo sistema.
 
 Este relatório se organiza nas seguintes seções:
     \begin{itemize}
         \item Descrição do problema: descrição do problema e os modos de operação do processo atual.
         \item Sistema proposto: especificação do sistema proposto, como sensores e atuadores que serão utilizados para a conclusão dos objetivos do projeto.
-        \item Metodologia e pesquisa bibliográfica: descrição do método de pesquisa e desenvolvimento de soluções.
+        \item Metodologia: descrição do método de pesquisa e desenvolvimento de soluções do grupo.
+        \item Pesquisa bibliográfica: levantamento das tecnologias utilizadas no sistema proposto e as tecnologias estudadas durante a fase de desenvolvimento do sistema.
         \item Fluxograma da solução: diagrama lógico com as etapas do processo, falhas e soluções.
         \item Referências.
     \end{itemize}
 
 Faz-se necessária a introdução da terminologia que será utlizada durante este relatório:
 \begin{itemize}
-\item \emph{Stoplog}: bloco de aço com vinte metros de comprimento, três metros de altura e três metros de largura (20x3x3 m). O fluxo de água do rio é controlado pelo empilhamento de stoplogs. (FIGURA)
-\item \emph{Lifting Beam}: é a estrutura mecânica responsável pelo deslocamento de stoplogs, composta por: duas garras não atuadas, duas chaves de operação, vigas e mecanismo. Um guindaste atua neste mecanismo. (FIGURA)
-\item \emph{Garra pescadora}: garra localizada no \emph{Lifting Beam} que se prende ao stoplog. O mecanismo é composto por duas garras. (FIGURA)
+\item \emph{\emph{Stoplog}}: bloco de aço com vinte metros de comprimento, três metros de altura e três metros de largura (20x3x3 m). O fluxo de água do rio é controlado pelo empilhamento de \emph{Stoplog}s. (FIGURA)
+\item \emph{Lifting Beam}: é a estrutura mecânica responsável pelo deslocamento de \emph{Stoplog}s, composta por: duas garras não atuadas, duas chaves de operação, vigas e mecanismo. Um guindaste atua neste mecanismo. (FIGURA)
+\item \emph{Garra pescadora}: garra localizada no \emph{Lifting Beam} que se prende ao \emph{Stoplog}. O mecanismo é composto por duas garras. (FIGURA)
 \item \emph{Chave de operação}: localizada na viga principal, próxima à garra pescadora, seleciona o modo de operação.  Atuada manualmente.
 \end{itemize}
