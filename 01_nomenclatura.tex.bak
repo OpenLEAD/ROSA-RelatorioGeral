@@ -1,6 +1,6 @@
 %%******************************************************************************
 %%
-%% bibliography.tex
+%% nomenclatura.tex
 %%
 %%******************************************************************************
 %%
@@ -25,7 +25,7 @@
 \section{Nomenclatura}
 \begin{itemize}
 
-\item \emph{Stoplog: Bloco de aço com vinte metros de comprimento, três metros de altura e três metros de largura (20x3x3 m). O fluxo de água do rio é controlado pelo empilhamento de \emph{Stoplogs} (FIGURA).
+\item \emph{Stoplog}: Bloco de aço com vinte metros de comprimento, três metros de altura e três metros de largura (20x3x3 m). O fluxo de água do rio é controlado pelo empilhamento de \emph{Stoplogs} (FIGURA).
 
 
 \item \emph{Lifting Beam}: Estrutura mecânica responsável pelo deslocamento de \emph{Stoplogs}, composta por: duas garras não atuadas, duas chaves de operação, vigas e mecanismo. Um guindaste atua neste mecanismo. (FIGURA).
