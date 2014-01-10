@@ -25,6 +25,30 @@
 \setcounter{secnumdepth}{5}
 \section{Pesquisa Bibliográfica e de fornecedores}
 
+A informação de encaixe mal ou bem sucedido entre garra e stoplog é de grande
+importância para o operador, durante o processo de remoção e inserção. Caso a
+operação continue sendo executada durante um encaixe mal sucedido, pode haver
+danos ao  \emph{Lifting Beam} ao stoplog e ao trilho, além de impossibilitar a
+finalização da tarefa (FIGURA). Há, portanto, a necessidade de instrumentar a
+garra pescadora com sensores que possam fornecer a informação de encaixe bem
+sucedido, uma eletrônica embarcada para receber e processar essa informação e um
+sistema eletrônico na base que deverá fornecer ao operador o status do processo.
+Os principais requisitos de projeto são robustez, ser submersível (IP69K),
+resistência a choque e vibração, e campos magnéticos externos não devem afetar
+as medições.
+
+%TODO colar o conceito
+
+%TODO para cada problema colocar a solucao conceitual
+
+
+ A pesquisa bibliográfica abordou os seguintes sensores e sistemas para solução
+ da detecção de encaixe: sensor de força, sensor de indutivo de proximidade,
+ sensor capacitivo de proximidade, sistema de atuação independente, sensor de
+ campo magnético, sensoriamento por campo elétrico. Em sequência foi realizada a
+ pesquisa de mercado, que consiste em avaliar produtos de fornecedores que
+ atendam aos requisitos de projeto.
+
 \subsection{Sensor de força}
 
  Sensores de força podem ser utilizados para detectarem a presença da garra pescadora. A análise quantitativa e comparativa dessas forças pode indicar encaixe mal ou bem sucedido durante a operação e, portanto, é considerada uma solução viável mediante calibração. Os diversos tipos de sensores de força e suas aplicações podem ser consultados em \textbf{Guide to the Measurement of Force}, publicado por \textbf{The Institute of Measurement and Control, London}.
@@ -172,7 +196,7 @@ O sonar ativo, daqui em diante apenas referido como sonar, emite um ping que é u
 
 Pela aplicação os sonares são divididos em basicamente duas categorias: \emph{profiling} e \emph{imaging};
 
-O sonar do tipo \emph{imaging} são tipicamente utilizados para fazer o mapeamento do fundo do mar, possuindo uma abertura em formato de leque (ver figura~\ref{sonar_1)}), eles podem utilizar um motor de rotação sobre o eixo perpendicular ao feixe ou podem ser arrastados pela água para fazer o escaneamento (ver figura~\ref{sonar_2)}).
+O sonar do tipo \emph{imaging} são tipicamente utilizados para fazer o mapeamento do fundo do mar, possuindo uma abertura em formato de leque (ver figura~\ref{sonar_1}), eles podem utilizar um motor de rotação sobre o eixo perpendicular ao feixe ou podem ser arrastados pela água para fazer o escaneamento (ver figura~\ref{sonar_2}).
 
 \begin{figure}[H]
     \centering
