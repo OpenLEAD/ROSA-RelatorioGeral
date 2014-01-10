@@ -41,26 +41,29 @@ Esta seção descreve o problema que será atacado a partir dos modos de operação e
 %TODO fundo com sedimentos, encaixe obstruido
 
 
-A operação padrão de inserção consiste: em inserção de \emph{Stoplogs} no Rio Madeira para o controle de seu fluxo de água, a fim de realizar a manutenção de turbinas de um sistema de geração de energia elétrica. Esta operação assume as seguintes hipóteses:
-\begin{itemize}
+A operação padrão de inserção consiste: em inserção de \emph{Stoplogs} no Rio Madeira para o controle de seu fluxo de água, a fim de realizar a manutenção de turbinas de um sistema de geração de energia elétrica. Esta operação assume as seguintes \textbf{hipóteses}:
+\begin{enumerate}
 \item O trilho está livre de obstáculos e sedimentos que poderiam impedir a execução da tarefa.
 \item O conjunto \emph{Lifting Beam}/\emph{stoplog} não sofre inclinações e desnivelamento em relação ao trilho, portanto o \emph{stoplog} desliza pelo trilho sem travamento.
 \item O desencaixe do conjunto \emph{Lifting Beam}/\emph{stoplog} é realizado com sucesso.
 \item O primeiro \emph{stoplog} a ser inserido é posicionado corretamente e veda a base do trilho.
-\end{itemize}
+\end{enumerate}
 
-A operação de inserção de \emph{Stoplogs} é composta pelas seguintes etapas:
+A operação de inserção de \emph{Stoplogs} é composta pelas seguintes \textbf{etapas}:
 \begin{enumerate}
 \item Auxiliar de operação manualmente modifica o estado da \emph{chave de operação} para \textbf{Encaixe}.
 \item Operador controla o guindaste, o qual desloca o conjunto \emph{Lifting Beam} e \emph{Garras Pescadoras}, até a posição do \emph{Stoplog}, que se encontra em terra, e realiza o encaixe. O encaixe bem sucedido é caracterizado pelo acoplamento correto das duas garras pescadoras com o \emph{Stoplog}. (FIGURA)
 \item Auxiliar de operação manualmente modifica o estado da chave de operação para \textbf{Desencaixe}.
 \item Operador controla o guindaste, o qual desloca o Lifting Beam junto com o \emph{Stoplog}, até os trilhos localizados na barragem, onde os \emph{Stoplogs} deverão ser empilhados.
 \item Operador desce o conjunto \emph{Lifting Beam} e \emph{Stoplog} guiado pelo trilho.
-\item O desencaixa do conjunto \emph{Lifting Beam}/\emph{Stoplog} é realizado quando o conjunto é impedido de continuar seu curso. Isso ocorre pelo contato do \emph{Stoplog} com o fim da guia ou pelo contato com outro \emph{Stoplog} que já tinha sido posicionado (empilhamento). O desencaixe ocorre, pois, no contato, há perda de tensão no cabo e de forma mecanicamente passiva a garra abre (FIGURA). O procedimento é repetido até os cinco \emph{Stoplogs} estarem empilhados.
+\item O desencaixa do conjunto \emph{Lifting Beam}/\emph{Stoplog} é realizado quando o conjunto é impedido de continuar seu curso. Isso ocorre pelo contato do \emph{Stoplog} com o fim da guia ou pelo contato com outro \emph{Stoplog} que já tinha sido posicionado (empilhamento). O desencaixe ocorre, pois, no contato, há perda de tensão no cabo de sustentação do \emph{Lifting Beam} e de forma mecanicamente passiva a garra abre (FIGURA).
+\item O procedimento é repetido até os cinco \emph{Stoplogs} estarem empilhados.
 \end{enumerate}
 
 
 \subsection{Operação excepcional 1 - Travamento durante inserção}
+Durante a etapa 5 da operação padrão de inserção, se assumirmos como falsas as hipóteses 1 e 2, há a possibilidade de travamento do conjunto \emph{Lifting Beam}/\emph{Stoplog} com o trilho. Acúmulos de sedimentos e grandes obstáculos podem impedir a movimentação do \emph{Stoplog}, ou pior, permitir a movimentação parcial, inclinando a estrutura. Em caso de grande inclinação do conjunto, poderá ocorrer o desencaixe do conjunto devido à perda de tensão do cabo de sustentação.
+Atualmente, nesta situação de falha, a operação excepcional consiste em um processo de tentativa e erro, isto é, o operador continuamente ergue e desce o conjunto \emph{Lifting Beam}/\emph{Stoplog} até a tarefa ser realizada com sucesso.
 %TODO descreve o processo de emperramento e o que é feito para corrigir. atual sobe e desce
 
 \subsection{Operação excepcional 2 - Falha do desencaixe da garra pescadora}
