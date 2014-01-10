@@ -55,11 +55,6 @@ A eletrônica embarcada é composta por: sensor de inclinação, sensor de nível, se
 
 
 \subsubsection{Carretel}
-O carretel industrial é necessário ao menos para fornecer alimentação para a bomba e comunicação para o sonar durante as operações que envolvam limpeza de sedimentos.
-
-Devido à necessidade de montagem mecânica e ao fato deste estar vinculado ao guindaste e não ao \textit{Lifting Beam}, deve preferencialmente ser utilizado somente um carretel, de forma a simplificar a montagem mecânica do sistema e se intervir ao mínimo no guindaste em si. Por esse mesmo motivo, deve ser utilizado um carretel de perfil compacto.
-
-A definição do carretel a ser utilizado está condicionada às características do sistema de potência. A especificação elétrica da bomba e o cabeamento necessário para alimentá-la é fundamental para definir as características do elemento. O peso das blindagens necessárias para o cabeamento da bomba e do par trançado para comunicação também devem ser considerados.
 
 
 \subsection{Operação Excepcional 1 - Inspeção}
