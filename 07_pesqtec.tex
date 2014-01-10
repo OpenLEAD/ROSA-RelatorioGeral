@@ -224,14 +224,14 @@ Muitos dos problemas encontrados na operação de inserção e remoção dos \textit{s
 
 Em ambientes subaquáticos onde o meio possui uma boa visibilidade, é possível a utilização de câmeras para a realização da inspeção. Porém em ambientes onde a visibilidade não é satisfatória, como o caso do Rio Madeira, a utilização de câmeras fica inviabilizada. Para esses casos, é necessário a utilização de outros métodos e sensores para a construção de uma representação 3D da superfície, que mapeie o ambiente com uma precisão satisfatória.
 
-Uma reconstrução 3D de superfície consiste na interpretação e combinação de dados, afim de se extrair informações tridimensionais do ambiente. Em ambientes subaquáticos com pouca visibilidade, o sensor recomendado para esse tipo de operação é o sonar. A figura \ref{fig:reconstrucao} exemplifica uma reconstrução 3D de um ambiente aberto, no caso um campus está sendo representado.
-%TODO 
+Uma reconstrução 3D de superfície consiste na interpretação e combinação de dados, afim de se extrair informações tridimensionais do ambiente. Em ambientes subaquáticos com pouca visibilidade, o sensor recomendado para esse tipo de operação é o sonar. A figura \ref{figs/3d/3dcomporta} exemplifica uma reconstrução 3D obtida pelo processamento de dados provenientes de um sonar.
 \begin{figure}[H]
     \centering
-    \includegraphics{figs/reconstrucao.pdf}
-    \caption{Exemplo de uma reconstrução da superfície 3D (campus da Faculdade de Freiburg).}
-    \label{fig:reconstrucao}
+    \includegraphics[width=0.9\textwidth]{figs/3d/3dcomporta}
+    \caption{Exemplo de uma reconstrução 3D da sáida de uma barragem dos dados obtidos de um sonar 3D.}
+    \label{figs/3d/3dcomporta}
 \end{figure}
+
 
 Um dos pontos determinantes para uma boa reconstrução 3D é a forma de se representar e armazenar as informações tridimensionais, já interpretadas dos sensores. Uma boa representação 3D deve possuir uma boa fidelidade do ambiente real representado, ter boa velocidade de processamento e pouca utilização de memória do sistema.
 
@@ -253,7 +253,7 @@ Após a revisão bibliográfica realizada, os tipos de armazenamento e representaçã
 
     \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{figs/elevationmap}
+    \includegraphics[width=0.8\textwidth]{figs/3d/elevationmap}
     \caption{Exemplo de uma reconstrução tridimensional representado por um Mapa de Elevação}
     \label{fig:elevacao}
 \end{figure}
@@ -262,7 +262,7 @@ Após a revisão bibliográfica realizada, os tipos de armazenamento e representaçã
 
     \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.4\textwidth]{figs/octree}
+    \includegraphics[width=0.4\textwidth]{figs/3d/octree}
     \caption{Divisão recursiva do espaço em octantes}
     \label{fig:octree}
 \end{figure}
@@ -270,7 +270,7 @@ Após a revisão bibliográfica realizada, os tipos de armazenamento e representaçã
 
     \begin{figure}[h!]
      \centering
-    \includegraphics[width=0.95\textwidth]{figs/free}
+    \includegraphics[width=0.95\textwidth]{figs/3d/free}
     \caption{\textit{Esquerda:} Representação do ambiente utilizando pointclouds e sem a possibilidade de se diferenciar espaços desconhecidos e vazios. \textit{Meio:} Representação em octomap com os espaços vazios omitidos. \textit{Direita:} Representação em octomap com os espaços vazios em cinza claros e os ocupados em cinza escuro.}
     \label{fig:free}
 \end{figure}
@@ -280,11 +280,11 @@ Após a revisão bibliográfica realizada, os tipos de armazenamento e representaçã
 A representação 3D do ambiente a ser inspecionado por meio da utilização de Octomap se mostrou, além de mais eficiente no quesito de consumo de memória, perfeitamente alinhada com as necessidades particulares da solução a ser proposta. A possibilidade de busca e segmentação do mapa, possibilita a análise de partes isoladas do mapa e, consequentemente, a identificação de objetos esperados, assim como objetos estranhos e que não deveriam estar presentes. A diferenciação entre espaços vazios e cheios e a política de ocupância probabilística exercem uma função de segurança, a medida que explicitam qual parte do ambiente já foi inspecionada e atenuam possíveis ruídos externos e, também, intrínsecos ao sensor.
 
 \subsection{Sistemas de potência}
-Os sistemas de potência devem ser analisados tendo em vista a operação convencional e excepcional. Para a operação excepcional, é necessário o uso de cabo para o fornecimento de grande potência, sendo impossibilitado o uso de bateria para esta operação devido à potência de operação da bomba. Vale notar que a potência da bomba e a consequente expessura do cabo de alimentação é primordial para a definição do carretel para esta aplicação.
+Os sistemas de potência devem ser analisados tendo em vista a operação convencional e excepcional. Para a operação excepcional, é necessário o uso de cabo para o fornecimento de grande potência, sendo impossibilitado o uso de bateria para esta operação devido à potência de operação da bomba. Vale notar que a potência da bomba e a consequente espessura do cabo de alimentação é primordial para a definição do carretel para esta aplicação.
 
 Para operação convencional, há a possibilidade do uso de um outro carretel, independente do sistema de alimentação da bomba ou do uso de bateria e um sistema de comunicação por ultra-som.
 \subsubsection{Carretel}
-Carretéis industriais são dispositivos para recolhimento de cabos atuados por mola. Os cabos são fixados e conectados em contatos girantes.Tais dispositivos apresentam robustez estrutural e resistência ao tempo.
+Carretéis industriais são dispositivos para recolhimento de cabos atuados por mola. Os cabos são fixados e conectados em contatos girantes. Tais dispositivos apresentam robustez estrutural e resistência ao tempo.
 
 A partir da pesquisa realizada, é possível concluir que há boa disponibilidade de carretéis industriais para a aplicação visada, inclusive com graus de proteção adequados para umidade e resistência ao tempo (NEMA4). Vale notar, portanto, necessidades essenciais para a correta especificação e definição do produto:
 
@@ -308,7 +308,7 @@ Em relação às baterias, deve-se considerar sobretudo a densidade volumétrica de 
 Com a correta definição do tempo de operação e da tensão e corrente necessária para o sistema, podemos definir o tipo de bateria necessário.
 
 Baterias de chumbo apresentam baixa densidade energética (aproximadamente 60 Wh/l) e auto-descarga em torno de 10 \% ao mês, são seguras e de fácil carga e descarga, mas têm sua vida útil significativamente reduzida devido a aumento de temperatura.
-Baterias de Ni-MH apresentam densidade de energia intermediária (aproximadamente 200Wh/l). As baterias de Ni-MH convencionais apresentam auto-descarga de cerca de 30 \% ao mês, tornando necessária a carga pouco tempo antes do uso, mas há a possibilidade de utilizar baterias de Ni-MH de baixa auto-descarga (Low Self Discharge), que apresenatam menor densidade de energia, mas apresentam perdas inferiores a 2\% ao mês.
+Baterias de Ni-MH apresentam densidade de energia intermediária (aproximadamente 200Wh/l). As baterias de Ni-MH convencionais apresentam auto-descarga de cerca de 30 \% ao mês, tornando necessária a carga pouco tempo antes do uso, mas há a possibilidade de utilizar baterias de Ni-MH de baixa auto-descarga (Low Self Discharge), que apresentam menor densidade de energia, mas apresentam perdas inferiores a 2\% ao mês.
 
 Finalmente, baterias de ion de lítio apresentam maior densidade de energia (aproximadamente 300Wh/l) e auto-descarga de cerca de 10\% ao mês, mas apresentam maior dificuldade de carga e a necessidade de dispositivos de proteção, apresentam perda de carga em temperaturas mais altas e questões de segurança.
 
