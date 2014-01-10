@@ -217,12 +217,10 @@ Outra característica importante dos sonares \emph{profiling} é o formato do seu 
 
 
 \subsection{Reconstrução de superfície 3D}
-%TODO retirar referencias ao Madeira
 
-%TODO falar pq nao se pode ler dados crus
 Muitos dos problemas encontrados na operação de inserção e remoção dos \textit{stoplogs} são provenientes da existência de objetos estranhos, trazidos pelo próprio rio, presentes no leito de concreto ou na superfície de um dos \textit{stoplogs}. A inspeção da existência de tais objetos, isto é, a sua visualização, é de suma importância para que se possa determinar corretamente qual ação corretiva é a mais apropriada.
 
-Em ambientes subaquáticos onde o meio possui uma boa visibilidade, é possível a utilização de câmeras para a realização da inspeção. Porém em ambientes onde a visibilidade não é satisfatória, como o caso do Rio Madeira, a utilização de câmeras fica inviabilizada. Para esses casos, é necessário a utilização de outros métodos e sensores para a construção de uma representação 3D da superfície, que mapeie o ambiente com uma precisão satisfatória.
+Em ambientes subaquáticos onde o meio possui uma boa visibilidade, é possível a utilização de câmeras para a realização da inspeção. Porém em ambientes onde a visibilidade não é satisfatória, a utilização de câmeras fica inviabilizada. Para esses casos, é necessário a utilização de outros métodos e sensores para a visualização do ambiente a ser inspecionado. Porém os sensores utilizados para mapear os ambientes não tem uma resposta que é facilmente interpretada pelo ser humano e, por isso, é necessário que se faça uma conversão dos dados e uma a construção de uma representação 3D da superfície.
 
 Uma reconstrução 3D de superfície consiste na interpretação e combinação de dados, afim de se extrair informações tridimensionais do ambiente. Em ambientes subaquáticos com pouca visibilidade, o sensor recomendado para esse tipo de operação é o sonar. A figura \ref{figs/3d/3dcomporta} exemplifica uma reconstrução 3D obtida pelo processamento de dados provenientes de um sonar.
 \begin{figure}[H]
@@ -243,7 +241,7 @@ Após a revisão bibliográfica realizada, os tipos de armazenamento e representaçã
 
     \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{figs/registration_closeup}
+    \includegraphics[width=0.8\textwidth]{figs/3d/registration_closeup}
     \caption{Exemplo de uma reconstrução tridimensional representado por uma Pointcloud}
     \label{fig:pointcloud}
 \end{figure}
