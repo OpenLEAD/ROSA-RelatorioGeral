@@ -23,33 +23,15 @@
 %% SECTION - Pesquisa Bibliográfica
 %%******************************************************************************
 \setcounter{secnumdepth}{5}
-\section{Pesquisa Bibliográfica e de fornecedores}
+\section{Pesquisa técnica e de fornecedores}
 
-A informação de encaixe mal ou bem sucedido entre garra e stoplog é de grande
-importância para o operador, durante o processo de remoção e inserção. Caso a
-operação continue sendo executada durante um encaixe mal sucedido, pode haver
-danos ao  \emph{Lifting Beam} ao stoplog e ao trilho, além de impossibilitar a
-finalização da tarefa (FIGURA). Há, portanto, a necessidade de instrumentar a
-garra pescadora com sensores que possam fornecer a informação de encaixe bem
-sucedido, uma eletrônica embarcada para receber e processar essa informação e um
-sistema eletrônico na base que deverá fornecer ao operador o status do processo.
-Os principais requisitos de projeto são robustez, ser submersível (IP69K),
-resistência a choque e vibração, e campos magnéticos externos não devem afetar
-as medições.
-
-%TODO colar o conceito
-
-%TODO para cada problema colocar a solucao conceitual
-
-
- A pesquisa bibliográfica abordou os seguintes sensores e sistemas para solução
- da detecção de encaixe: sensor de força, sensor de indutivo de proximidade,
+\subsection{Sensores}
+A pesquisa técnica abordou os seguintes sistemas de sensoriamento: sensor de força, sensor indutivo de proximidade,
  sensor capacitivo de proximidade, sistema de atuação independente, sensor de
  campo magnético, sensoriamento por campo elétrico. Em sequência foi realizada a
- pesquisa de mercado, que consiste em avaliar produtos de fornecedores que
- atendam aos requisitos de projeto.
-
-\subsection{Sensor de força}
+ pesquisa por fornecedores que atendam aos requisitos de projeto.
+ 
+\subsubsection{Sensor de força}
 
  Sensores de força podem ser utilizados para detectarem a presença da garra pescadora. A análise quantitativa e comparativa dessas forças pode indicar encaixe mal ou bem sucedido durante a operação e, portanto, é considerada uma solução viável mediante calibração. Os diversos tipos de sensores de força e suas aplicações podem ser consultados em \textbf{Guide to the Measurement of Force}, publicado por \textbf{The Institute of Measurement and Control, London}.
 
@@ -78,15 +60,15 @@ as medições.
     \label{forca_2}
 \end{figure}
 
- \subsubsection{Conclusão de análise técnica}
+ \paragraph{Conclusão de análise técnica}\mbox{}\\
 
 A solução por sensores de força é eficiente em aplicações onde se deseja avaliar frequência de vibração e duração da onda de choque, porém não muito na medida quantitativa e comparativa de forças devido à sensibilidade do strain gauge a campos magnéticos externos, pressão hidrostática e umidade. A variação de acúmulo de sedimentos no stoplog também dificulta a calibração do instrumento.
 
- \subsubsection{Pesquisa de fornecedores}
+ \paragraph{Pesquisa de fornecedores}\mbox{}\\
 
 Os fornecedores para sensores de força do tipo strain gauge avaliados nesta pesquisa são: Applied Measurements Limited, Load Cell Central, Transducer Techniques. Os modelos avaliados são da série DBEP e CLP de seus respectivos fornecedores.
 
-\subsection{Sensor indutivo de proximidade}
+\subsubsection{Sensor indutivo de proximidade}
 
 Sensores indutivos de proximidade podem ser utilizados para detectarem a presença da garra pescadora. Este sensor de presença pode ser do tipo linear, podendo ser realizada análise quantitativa, ou simplesmente chaveado, um simples indicador de presença. Portanto, pode indicar encaixe mal ou bem sucedido durante a operação de remoção/inserção de stoplogs. Os sensores indutivos apresentam a mesma forma de operação nos diversos produtos disponíveis no mercado, diferenciando-se principalmente na medida de distância da aplicação.
 
@@ -103,16 +85,16 @@ Sensores indutivos de proximidade podem ser utilizados para detectarem a presenç
     \label{indutivo_1}
 \end{figure}
 
- \subsubsection{Conclusão de análise técnica}
+ \paragraph{Conclusão de análise técnica}\mbox{}\\
 A solução por sensores indutivos é eficiente em aplicações onde se deseja avaliar a presença de stoplog. A grande maioria dos sensores são frágeis a choque e vibração, além de sensíveis a ruídos elétricos e magnéticos. Porém, já há no mercado produtos IP69K e encapsulados. Há, também, a possibilidade de falso positivo em caso de sedimentos metálicos, mas é baixa a probabilidade.
 Pesquisas em aplicações semelhantes mostraram que o sensor indutivo é a solução adotada para o monitoramento de encaixe entre garra pescadora e stoplog, auxiliado por outros sensores ou sistemas independentes de atuadores.
 
- \subsubsection{Pesquisa de fornecedores}
+ \paragraph{Pesquisa de fornecedores}\mbox{}\\
 
 Os fornecedores pesquisados para sensores indutivos que atendem aos requisitos de projeto são: Contrinex, Pepperl-Fuchs, Positek e Turck. Diversos modelos foram avaliados, juntamente com os técnicos das respectivas empresas.
 As vantagens apresentadas e a utilização desse tipo de sensoriamento em aplicações equivalentes foram decisivos para a escolha por esta solução em nossa aplicação. O modelo selecionado, após ampla análise entre fornecedores, é o modelo NBB20-L2-E2-V1 de instalação faceada, chaveado normalmente aberto e distância de operação de 2cm. (FIGURA)
 
-\subsection{Sensor capacitivo de proximidade}
+\subsubsection{Sensor capacitivo de proximidade}
 Os sensores capacitivos de proximidade são capazes de detectar objetos devido à capacidade destes alvos em serem carregados eletricamente. Analogamente ao sensor indutivo, que detecta variações de campo magnético devido a alvos metálicos, o sensor capacitivo é sensível a variações na capacitância (ver figura~\ref{capacitivo_1}).
 
 \begin{figure}[H]
@@ -128,12 +110,12 @@ Em sensores capacitivos, uma placa do capacitor está no sensor e a outra é o obj
 
 As características que devem ser avaliadas em sensores capacitivos são as mesmas dos sensores indutivos, como tipo de instalação, modo de operação chaveado ou linear e etc. Porém, deve-se atentar ao fator de redução, que depende do alvo a ser detectado.
 
- \subsubsection{Conclusão de análise técnica}
+ \paragraph{Conclusão de análise técnica}\mbox{}\\
  Os sensores capacitvos exercem função semelhante ao sensor indutivo e pode ser utilizado para detecção de presença de stoplog. Porém, a calibração se mostra bem mais complexa devido à sensibilidade do sensor e ao fato de não estar restrito a detecção de materiais metálicos. A chance de falsos positivos será bem maior em caso de escolha deste sensor em comparação com o sensor indutivo.
- \subsubsection{Pesquisa de fornecedores}
+ \paragraph{Pesquisa de fornecedores}\mbox{}\\
 Os fornecedores pesquisados de sensores capacitivos são os mesmos fornecedores de sensores indutivos.
 
-\subsection{Encoder}
+\subsubsection{Encoder}
 O Sistema de Lifting Beam desenvolvido em aplicação semelhante de remoção e inserção de stoplogs pela empresa \textbf{HATCH} utliza atuadores elétricos independentes em cada garra, o que permite o monitoramento da abertura das garras, sendo possível saber quando há encaixe mal ou bem sucedido. O sistema em estudo a ser desenvolvido, porém, é um Lifting Beam mecânico, onde as garras abrem e fecham passivamente conforme o Lifting Beam é atuado e a chave de operação é selecionada em uma determinada posição. Por questões de restrição de projeto, não é permitido alterar a estrutura mecânica de forma que as garras sejam atuadas independentemente, mas é permitida a instrumentação do Lifting Beam com encoders, sendo possível instalá-los nas vigas das garras, a fim de medir suas posições angulares.A movimentação angular das garras durante o encaixe é conhecido e sequencial, de forma que uma simples anlálise comparativa com os dados fornecidos pelos encoders durante a execução da tarefa pode indicar se o encaixe foi mal ou bem sucedido.
 
 O encoder óptico é um dispositivo eletromecânico que entrega como saída um sinal elétrico proporcional à posição angular do eixo acoplado. O eixo é acoplado mecanicamente a um disco opaco e marcado em sua superfície por segmentos (ver figura~\ref{encoder_1}).
@@ -149,15 +131,15 @@ Diodos emissores de luz infravermelha alcança os receptores através das fendas d
 
 Além dos requisitos básicos do projeto, como submersibilidade e resistência a choque e vibração, as principais características a serem avaliadas neste projeto para a escolha de um encoder são: modo de operação incremental ou absoluto, multi-voltas ou não, interface de comunicação, resolução e tensão de operação.
 
- \subsubsection{Conclusão de análise técnica}
+ \paragraph{Conclusão de análise técnica}\mbox{}\\
 A pesquisa mostrou ampla aplicação de encoders para a aplicação e é esperado que seja possível identificar encaixe mal ou bem sucedido com sua utilização. A instalação do encoder na viga da garra pescadora não é mecanicamente complexa e não resultará em alteração permanente da estrutura.
 
- \subsubsection{Pesquisa de fornecedores}
+ \paragraph{Pesquisa de fornecedores}\mbox{}\\
 Os fornecedores para encoders que atendem aos requisitos de projeto pesquisados são: Hohner, IFM, Pepperl-Fuchs e Rotary Encoder Solutions.
 
 As vantagens apresentadas e a utilização desse tipo de sensoriamento em aplicações equivalentes foram decisivos para a escolha por esta solução em nossa aplicação. O modelo selecionado, após ampla análise entre fornecedores, é o modelo Encoder RM9000 Absoluto com interface CAN, multi-voltas. (FIGURA)
 
-\subsection{Sensor de campo magnético}
+\subsubsection{Sensor de campo magnético}
 O stoplog é um bloco metálico e esta característica física pode ser aproveitada em soluções de circuito magnético e elétrico.
 
 Um circuito magnético consiste em uma malha fechada que contém um fluxo magnético através de condutores. A solução estudada é induzir um campo magnético em uma garra e utilizar um sensor de campo magnético na outra extremidade do Lifting Beam, fazendo com que o próprio stoplog seja o condutor. A permeabilidade magnética do stoplog é maior do que a permeabilidade da água e, dessa forma, o sensor de cmapo magnético detectaria variações no caso de presença de stoplog. (ver figura~\ref{magnetico_1})
@@ -170,10 +152,10 @@ Um circuito magnético consiste em uma malha fechada que contém um fluxo magnétic
 \end{figure}
 
 
- \subsubsection{Conclusão de análise técnica}
+ \paragraph{Conclusão de análise técnica}\mbox{}\\
 Sensores magnéticos exigem uma área de pouca interferência magnética, são muito sensíveis e necessitam de calibração rigorosa para cada aplicação. Além disso, a distância entre gerador de campo e sensor é longa devido ao comprimento do stoplog, o que exige ainda maior sensibilidade do sensor e grandes geradores. Esta solução não foi selecionada.
 
-\subsection{Sensoriamento por campo elétrico}
+\subsubsection{Sensoriamento por campo elétrico}
 Outra solução semelhante ao circuito magnético e que utiliza a vantagem da propriedade física metálica do stoplog é o circuito elétrico.
 
 O circuito elétrico é formado por uma diferença de potencial entre dois terminais em uma malha fechada. Na aplicação, o stoplog fecha a malha do circuito e será equivalente a uma resistência e pode ser realizada tanto a configuração de divisor de tensão, como a medição da corrente por efeito hall (~\ref{senseletrico_1}).
@@ -186,10 +168,10 @@ O circuito elétrico é formado por uma diferença de potencial entre dois terminai
 \end{figure}
 
 
- \subsubsection{Conclusão de análise técnica}
+ \paragraph{Conclusão de análise técnica}\mbox{}\\
  A solução apresentada, apesar de eficaz, apenas indica a presença de stoplog, não o encaixe mal ou bem sucedido. Além disso, há grande possibilidade de sedimentos e ferrugem prejudicarem no sensoriamento do sistema. Esta solução não foi selecionada.
 
-\subsection{Sonar}
+\subsubsection{Sonar}
 Sonar\footnote{A sigla tem origem como acrônimo de \textit{sound navigation and ranging}.} é uma técnica que utiliza a propagação do som na água para se comunicar e detectar objetos nesse meio, ela possui duas vertentes uma chamada ativa e outra passiva. A passiva se resume a escutar o meio e não será investigada, pois não possui a funcionalidade para o mapeamento de superfícies submersas. Os equipamentos que fazem uso de tal tecnologia acabam por herdar seu nome, assim sonares que utilizam a tecnologia ativa são chamados de sonares ativos.
 
 O sonar ativo, daqui em diante apenas referido como sonar, emite um ping que é um pulso de onda sonora que será refletido pelo meio. Conforme a frente de onda atravessa os objetos submersos ela é refletida e este eco é detectado no retorno pelo sonar, onde ele extrai as informações do tempo que a onda levou para retornar e sua intensidade, podendo, a partir do conhecimento de características do meio, como a velocidade de propagação do som, estimar a distancia de origem do eco e consequentemente do objeto.
@@ -234,10 +216,11 @@ Outra característica importante dos sonares \emph{profiling} é o formato do seu 
 
 
 
- \subsubsection{Conclusão de análise técnica}
+ \paragraph{Conclusão de análise técnica}\mbox{}\\
  O ambiente no qual será utilizado o sonar possui uma profundidade inferior a 20 metros e a necessidade de mapeamento se localiza sobretudo em uma área de aproximadamente $2 \times 15$ $m^²$. Para essa situação o sonar profiling se mostra como o mais apropriado devido ao seu estreito feixe que otimiza a precisão para uma pequena superfície pouco profunda.
- \subsubsection{Pesquisa de fornecedores}
- Os fornecedores para sonares avaliados nesta pesquisa são: Blueview, Echoscope, Marine Solution e Tritech. O modelo escolhido é o Super SeaKing da Tritech.
+ \paragraph{Pesquisa de fornecedores}\mbox{}\\
+ Os fornecedores para sonares avaliados nesta pesquisa são: Blueview, Echoscope,
+ Marine Solution e Tritech. O modelo escolhido é o Super SeaKing DFP da Tritech.
 
 
 \subsection{Reconstrução de superfície 3D}
@@ -298,7 +281,7 @@ Após a revisão bibliográfica realizada, os tipos de armazenamento e representaçã
 \end{figure}
 \end{itemize}
 
-\subsubsection{Conclusão de análise técnica}
+\paragraph{Conclusão de análise técnica}\mbox{}\\
 A representação 3D do ambiente a ser inspecionado por meio da utilização de Octomap se mostrou, além de mais eficiente no quesito de consumo de memória, perfeitamente alinhada com as necessidades particulares da solução a ser proposta. A possibilidade de busca e segmentação do mapa, possibilita a análise de partes isoladas do mapa e, consequentemente, a identificação de objetos esperados, assim como objetos estranhos e que não deveriam estar presentes. A diferenciação entre espaços vazios e cheios e a política de ocupância probabilística exercem uma função de segurança, a medida que explicitam qual parte do ambiente já foi inspecionada e atenuam possíveis ruídos externos e, também, intrínsecos ao sensor.
 
 \subsection{Sistemas de potência}

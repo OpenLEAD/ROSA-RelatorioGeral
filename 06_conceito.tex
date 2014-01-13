@@ -23,18 +23,58 @@
 %% SECTION - Sistema proposto
 %%******************************************************************************
 \section{Projeto Conceitual}
-Esta seÃ§Ã£o aborda os problemas que serÃ£o atacados pelo projeto, de acordo com os modos de operaÃ§Ã£o e falhas expostos na seÃ§Ã£o DescriÃ§Ã£o do Problema.
+Esta seçãoo aborda os problemas que serão atacados pelo projeto, de acordo com
+os modos de operação e falhas expostos na seção Descrição do Problema.
 
-Conceitualmente, o robÃ´ ROSA serÃ¡ constituÃ­do por um conjunto de sensores e atuadores a prova dâ€™Ã¡gua que serÃ£o instalados no \emph{Lifting Beam}. Os sensores e atuadores serÃ£o conectados a uma eletrÃ´nica embarcada a prova dâ€™Ã¡gua, instalada tambÃ©m no \emph{Lifting Beam}, que processarÃ¡ e transmitirÃ¡ as informaÃ§Ãµes para a superfÃ­cie atravÃ©s de um umbilical. Na superfÃ­cie, os dados e controles do sistema poderÃ£o ser visualizados em uma interface grÃ¡fica no console de comando. Os sensores medirÃ£o dados detalhados sobre o atual status da operaÃ§Ã£o de inserÃ§Ã£o/remoÃ§Ã£o dos stoplogs permitindo ao operador tomar decisÃµes com base nessas informaÃ§Ãµes, otimizar a operaÃ§Ã£o e evitar possÃ­veis problemas. Os atuadores possibilitam intervir na operaÃ§Ã£o resolvendo problemas encontrados sem a necessidade de enviar mergulhadores ao local.
+Conceitualmente, o robô ROSA será constituído por um conjunto de sensores e
+atuadores a prova d'água que serão instalados no \emph{Lifting Beam}. Os
+sensores e atuadores serão conectados a uma eletrônica embarcada a prova
+d'água, instalada também no \emph{Lifting Beam}, que processará e transmitirá as
+informações para a superfície através de um umbilical. Na superfície, os dados e
+controles do sistema poderão ser visualizados em uma interface gráfica no
+console de comando. Os sensores medirão dados detalhados sobre o atual status da
+operação de inserção/remoção dos stoplogs permitindo ao operador tomar decisões
+com base nessas informações, otimizar a operação e evitar possíveis problemas.
+Os atuadores possibilitam intervir na operação resolvendo problemas encontrados
+sem a necessidade de enviar mergulhadores ao local.
 
-As subseÃ§Ãµes que se seguem descrevem o projeto conceitual direcionado a cada falha de operaÃ§Ã£o.
+A informação de encaixe mal ou bem sucedido entre garra e stoplog é de grande
+importância para o operador, durante o processo de remoção e inserção. Caso a
+operação continue sendo executada durante um encaixe mal sucedido, pode haver
+danos ao  \emph{Lifting Beam} ao stoplog e ao trilho, além de impossibilitar a
+finalização da tarefa. Há, portanto, a necessidade de instrumentar a
+garra pescadora com sensores que possam fornecer a informação de encaixe bem
+sucedido, uma eletrônica embarcada para receber e processar essa informação e um
+sistema eletrônico na base que deverá fornecer ao operador o status do processo.
+Os principais requisitos de projeto são robustez dos dispositivos,
+capacidade de submersibilidade (IP69K), resistência a choque, vibração, e
+campos magnéticos externos não devem afetar as medições.
 
-\subsection{OperaÃ§Ã£o excepcional de inserÃ§Ã£o 1 - Travamento durante inserÃ§Ã£o}
-A instrumentaÃ§Ã£o do \emph{Lifting Beam} com sensores de profundidade e inclinaÃ§Ã£o auxiliam o operador no monitoramento da operaÃ§Ã£o. Sensores de inclinaÃ§Ã£o fornecem ao operador a informaÃ§Ã£o de que o \emph{stoplog} estÃ¡ seguindo ou nÃ£o o curso do trilho corretamente.
+As subseções que se seguem descrevem o projeto conceitual direcionado a cada
+falha de operação.
 
-Mesmo em caso de nÃ£o inclinaÃ§Ã£o, hÃ¡ a possibilidade de o \emph{stoplog} ser assentado de maneira incorreta. O acÃºmulo uniforme de sedimentos pode criar uma camada e impedir o posicionamento correto de \emph{stoplog}. Os sensores de nÃ­vel indicarÃ£o a profundidade do \emph{stoplog}, possibilitando que o operador monitore a finalizaÃ§Ã£o da tarefa.
+\subsection{Operação excepcional de inserção 1 - Travamento durante
+inserção} O travamento do \emph{stoplog} durante a inserção pode ser verificado
+pelo monitoramento da inclinação do \emph{Lifting Beam}, pela
+constante verificação do encaixe a partir do eixo de rotação das
+garras e o acompanhamento da movimentação do \emph{Lifting Beam} quando
+submerso.
 
-Vale ressaltar que o projeto conceitual visa o monitoramento da operaÃ§Ã£o. O operador, a partir dos dados recebidos, pode decider em continuar a tarefa ou reiniciÃ¡-la.
+Sensores de inclinação podem fornecer ao operador a informação de que o
+\emph{stoplog} está seguindo ou não o curso do trilho corretamente.
+
+Mesmo em caso de não inclinação, há a possibilidade de o \emph{stoplog} ser
+assentado de maneira incorreta. O acúmulo uniforme de sedimentos pode criar uma
+camada e impedir o posicionamento correto de \emph{stoplog}. Os sensores de
+profundidade possibilitam que o operador monitore a finalização da tarefa.
+
+Sensores de rotação podem ser acoplados ao eixo de rotação das garras
+pescadoras, monitorando constantemente o encaixe das garras e alertando ao
+operador situações de inclinações extremas que estejam desacoplando o conjunto
+\emph{Lifting Beam}/\emph{stoplog}.
+
+Vale ressaltar que o projeto conceitual visa o monitoramento da operações. O
+operador, a partir dos dados recebidos, pode decider em continuar a tarefa ou reiniciá-la.
 
 \subsection{OperaÃ§Ã£o excepcional de inserÃ§Ã£o 2 - Falha do desencaixe da garra pescadora}
 %TODO descreve o processo de de falha e causas e o que Ã© feito para corrigir. mudar trava manualmente (mergulhador)
