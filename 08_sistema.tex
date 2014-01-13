@@ -35,7 +35,7 @@ operações excepcionais expostos em seções anteriores.
 
 
 \subsection{Operação padrão (inspeção e remoção)}
-A principal preocupação do operador na operação normal de remoção e inserção de stoplogs se resume ao encaixe bem sucedido entre garra e stoplog. Este encaixe deve ser constantemente monitorado, tornando-se necessária a instrumentação do Lifting Beam. O sistema será composto por sensores, eletrônica embarcada, sinalizadores e eletrônica da base, e um carretel com umbilical, responsável pelo fornecimento de energia e interface de comunicação entre base e eletrônica embarcada (FIGURA).
+A principal preocupação do operador nas operações padrões se resume ao encaixe bem sucedido entre garra e stoplog. Este encaixe deve ser constantemente monitorado, tornando-se necessária a instrumentação do Lifting Beam. O sistema será composto por sensores, eletrônica embarcada, sinalizadores e eletrônica da base, e um carretel com umbilical, responsável pelo fornecimento de energia e interface de comunicação entre base e eletrônica embarcada (FIGURA).
 
 \subsubsection{Sensores}
 O sistema é composto pelos dispositivos:
@@ -43,7 +43,7 @@ O sistema é composto pelos dispositivos:
 \item Dois encoders absolutos.
 \item Dois sensores indutivos de proximidade.
 \item Sensor de inclinação.
-\item Sensor de nível.
+\item Sensor de profundidade.
 \end{itemize}
 
 Os encoders serão acoplados ao eixo de rotação da garra pescadora. O monitoramento do deslocamento angular das garras independentemente torna possível a identificação de falhas de encaixe. Durante a operação de encaixe, o eixo da garra percorre ângulos já conhecidos: o ângulo sofre leve abertura e volta a $90^o$ no encaixe (FIGURA). Interface de comunicação, potência requerida e outras especificações podem ser observadas no Datasheet abaixo: (FIGURA)
@@ -52,11 +52,45 @@ Os sensores indutivos de proximidade serão instalados na garra pescadora, próxim
 
 O sensor de inclinação ficará localizado junto à eletrônica embarcada, na parte central do Lifting Beam. O monitoramento da inclinação do Lifting Beam é importante na identificação de encaixe mal sucedido ou danos no equipamento. O sensor será do tipo capacitivo, e outras especificações podem ser observadas no Datasheet abaixo: (FIGURA)
 
-O sensor de nível também ficará localizado junto à eletrônica embarcada, na parte central do Lifting Beam. O sensor trabalha com diferença de pressão e será importante na identificação da localização do Lifting Beam quando submerso.
+O sensor de profundidade também ficará localizado junto à eletrônica embarcada,
+na parte central do Lifting Beam. O sensor trabalha com diferença de pressão e será importante na identificação da localização do Lifting Beam quando submerso.
 
 \subsubsection{Eletrônica embarcada}
-A eletrônica embarcada é composta por: sensor de inclinação, sensor de nível, sensor de ingresso de água, circuito supervisório, PC embarcado, gateways, conversores DC/DC e bateria. Terá encapsulamento à prova de vibração, choque, água e será acoplada à parte central do Lifting Beam.
+A eletrônica embarcada é composta por: sensor de inclinação, sensor de
+profundidade, sensor de ingresso de água, circuito supervisório, PC embarcado,
+gateways, conversores DC/DC e bateria. Terá encapsulamento à prova de vibração,
+choque, água e será acoplada à parte central do \emph{Lifting Beam}.
 
+O circuito supervisório será responsável por distribuir a alimentação aos
+dispositivos, monitorar essa potência fornecida e proteger os equipamentos
+contra sobrecorrente/voltagem. Será composta por relés, microcontroladores e
+outros componentes eletrônicos.
+
+O PC embarcado com sistema operacional Ubuntu, realizará preprocessamento dos
+dados enviados pelo sonar. Além disso gerenciará todos os dados dos outros
+sensores, enviando-os até a base através do umbilical.
+
+Gateways realização a conversão das interfaces que compõem o sistema: CAN e
+Ethernet. Pode ser necessária a utilização de um switch Ethernet.
+
+Conversores DC/DC realizam o condicionamento do sinal. Os dispositivos têm
+alimentação variada e o umbilical fornece apenas um nível de tensão, dessa forma
+há a necessidade de conversores para distribuírem a potência como requerida
+entre os dispositivos.
+
+\subsubsection{Eletrônica de superfície - base}
+A eletrônica de superfície na base será composta por uma fonte, PC e ponto de
+acesso WiFi.
+
+A fonte irá transmitir a potência necessária a todo o sistema embarcado através
+do umbilical.
+
+O PC processará todos os dados recebidos do sistema embarco e publicará na
+internet ou disponibilizará através de Ethernet WiFi.
+
+\subsubsection{Eletrônica de superfície - remota}
+O operador poderá monitorar todos os sensores através de um tablet com sistema
+de rede WiFi.
 
 \subsubsection{Carretel}
 O carretel industrial é necessário ao menos para fornecer alimentação para a bomba e comunicação para o sonar durante as operações que envolvam limpeza de sedimentos.
