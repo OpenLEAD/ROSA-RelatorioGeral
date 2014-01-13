@@ -67,6 +67,14 @@ Vale ressaltar que o projeto conceitual visa o monitoramento da operações. O
 operador, a partir dos dados recebidos, pode decider em continuar a tarefa ou reiniciá-la.
 
 \subsection{Operação excepcional de inserção 2 - Falha do desencaixe da garra pescadora}
+
+As consequências danosas de um desencaixe mal sucedido entre o \emph{Stoplog} e as \emph{Garras Pescadoras}, como desencaixe parcial e travamento de \emph{Stoplogs}, descritas na subseção \ref{op:rem:1}, são principalmente devido à falta de feedback na operação de inserção dos \emph{Stoplogs}.
+
+Devido à geometria do \emph{Lifiting Beam} e das \emph{Garras Pescadoras}, o desencaixe da \emph{Garra Pescadora} dos \emph{Stoplogs} tem, necessariamente, um conjunto de posições e uma ordem de acontecimento dessas posições que a \emph{Garra Pescadora} deve obedecer. A partir desse fato, é possível monitorar a operação de desencaixe por meio de sensores de rotação acoplados às \emph{Garras Pescadoras}. 
+
+Por meio do monitoramento de todas as etapas de movimentação das \emph{Garras Pescadoras} e o alinhamento do \emph{Lifiting Beam}, o operador tem a capacidade de perceber que a operação está sendo realizada corretamente e caso algum erro ocorra, pode decidir entre abortar a operação e reiniciá-la ou, caso seja necessário, aborta-la completamente e tomar ações corretivas mais drásticas, como o envio de mergulhadores.
+
+A solução concebida não atua diretamente na movimentação das garras e realiza um desencaixe livre de erros.Entretanto, possibilita um monitoramento de todos os parâmetros fundamentais para uma operação correta e eficiente e, assim,   permite, em tempo real, que ajustes sejam realizados para se finalizar a operação com sucesso ou, se necessário,  a operação seja abortada para evitar possíveis danos ou envio desnecessário de mergulhadores.
 % TODO descreve o processo de de falha e causas e o que é feito para corrigir.
 % mudar trava manualmente (mergulhador)
 
