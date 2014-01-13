@@ -1,7 +1,7 @@
 %%******************************************************************************
 %%
 %% sistema.tex
-%% teste
+%% teste web
 %%******************************************************************************
 %%
 %% Title......: Sistema proposto
@@ -23,65 +23,65 @@
 %% SECTION - Sistema proposto
 %%******************************************************************************
 \section{Sistema proposto}
-O objetivo do projeto ROSA é entregar uma solução para monitoramento, inspeção e
-remoção de sedimentos, de forma que as falhas comentadas nas seções anteriores
-sejam minimizadas e as operações sejam mais seguras. Esta seção é subdividida em
-uma descrição geral de dispositivos que compõem o projeto e nos modos de
-operações excepcionais expostos em seções anteriores.
+O objetivo do projeto ROSA ï¿½ entregar uma soluï¿½ï¿½o para monitoramento, inspeï¿½ï¿½o e
+remoï¿½ï¿½o de sedimentos, de forma que as falhas comentadas nas seï¿½ï¿½es anteriores
+sejam minimizadas e as operaï¿½ï¿½es sejam mais seguras. Esta seï¿½ï¿½o ï¿½ subdividida em
+uma descriï¿½ï¿½o geral de dispositivos que compï¿½em o projeto e nos modos de
+operaï¿½ï¿½es excepcionais expostos em seï¿½ï¿½es anteriores.
 
 %%******************************************************************************
 %% SUBSECTION - Subsection
 %%******************************************************************************
 
 
-\subsection{Operação padrão (inspeção e remoção)}
-A principal preocupação do operador nas operações padrões se resume ao encaixe bem sucedido entre garra e stoplog. Este encaixe deve ser constantemente monitorado, tornando-se necessária a instrumentação do Lifting Beam. O sistema será composto por sensores, eletrônica embarcada, sinalizadores e eletrônica da base, e um carretel com umbilical, responsável pelo fornecimento de energia e interface de comunicação entre base e eletrônica embarcada (FIGURA).
+\subsection{Operaï¿½ï¿½o padrï¿½o (inspeï¿½ï¿½o e remoï¿½ï¿½o)}
+A principal preocupaï¿½ï¿½o do operador nas operaï¿½ï¿½es padrï¿½es se resume ao encaixe bem sucedido entre garra e stoplog. Este encaixe deve ser constantemente monitorado, tornando-se necessï¿½ria a instrumentaï¿½ï¿½o do Lifting Beam. O sistema serï¿½ composto por sensores, eletrï¿½nica embarcada, sinalizadores e eletrï¿½nica da base, e um carretel com umbilical, responsï¿½vel pelo fornecimento de energia e interface de comunicaï¿½ï¿½o entre base e eletrï¿½nica embarcada (FIGURA).
 
 \subsubsection{Sensores}
-O sistema é composto pelos dispositivos:
+O sistema ï¿½ composto pelos dispositivos:
 \begin{itemize}
 \item Dois encoders absolutos.
 \item Dois sensores indutivos de proximidade.
-\item Sensor de inclinação.
+\item Sensor de inclinaï¿½ï¿½o.
 \item Sensor de profundidade.
 \end{itemize}
 
-Os encoders serão acoplados ao eixo de rotação da garra pescadora. O monitoramento do deslocamento angular das garras independentemente torna possível a identificação de falhas de encaixe. Durante a operação de encaixe, o eixo da garra percorre ângulos já conhecidos: o ângulo sofre leve abertura e volta a $90^o$ no encaixe (FIGURA). Interface de comunicação, potência requerida e outras especificações podem ser observadas no Datasheet abaixo: (FIGURA)
+Os encoders serï¿½o acoplados ao eixo de rotaï¿½ï¿½o da garra pescadora. O monitoramento do deslocamento angular das garras independentemente torna possï¿½vel a identificaï¿½ï¿½o de falhas de encaixe. Durante a operaï¿½ï¿½o de encaixe, o eixo da garra percorre ï¿½ngulos jï¿½ conhecidos: o ï¿½ngulo sofre leve abertura e volta a $90^o$ no encaixe (FIGURA). Interface de comunicaï¿½ï¿½o, potï¿½ncia requerida e outras especificaï¿½ï¿½es podem ser observadas no Datasheet abaixo: (FIGURA)
 
-Os sensores indutivos de proximidade serão instalados na garra pescadora, próximo ao local de contato com o stoplog. Indicarão o acoplamento das garras com o stoplog, a partir da geração de campo magnético. Esses sensores só serão excitados em casos de proximidade com metais, sendo possível assim a identificação de obstáculos no encaixe do stoplog (FIGURA). Interface de comunicação, potência requerida e outras especificações podem ser observadas no Datasheet abaixo: (FIGURA)
+Os sensores indutivos de proximidade serï¿½o instalados na garra pescadora, prï¿½ximo ao local de contato com o stoplog. Indicarï¿½o o acoplamento das garras com o stoplog, a partir da geraï¿½ï¿½o de campo magnï¿½tico. Esses sensores sï¿½ serï¿½o excitados em casos de proximidade com metais, sendo possï¿½vel assim a identificaï¿½ï¿½o de obstï¿½culos no encaixe do stoplog (FIGURA). Interface de comunicaï¿½ï¿½o, potï¿½ncia requerida e outras especificaï¿½ï¿½es podem ser observadas no Datasheet abaixo: (FIGURA)
 
-O sensor de inclinação ficará localizado junto à eletrônica embarcada, na parte central do Lifting Beam. O monitoramento da inclinação do Lifting Beam é importante na identificação de encaixe mal sucedido ou danos no equipamento. O sensor será do tipo capacitivo, e outras especificações podem ser observadas no Datasheet abaixo: (FIGURA)
+O sensor de inclinaï¿½ï¿½o ficarï¿½ localizado junto ï¿½ eletrï¿½nica embarcada, na parte central do Lifting Beam. O monitoramento da inclinaï¿½ï¿½o do Lifting Beam ï¿½ importante na identificaï¿½ï¿½o de encaixe mal sucedido ou danos no equipamento. O sensor serï¿½ do tipo capacitivo, e outras especificaï¿½ï¿½es podem ser observadas no Datasheet abaixo: (FIGURA)
 
-O sensor de profundidade também ficará localizado junto à eletrônica embarcada,
-na parte central do Lifting Beam. O sensor trabalha com diferença de pressão e será importante na identificação da localização do Lifting Beam quando submerso.
+O sensor de profundidade tambï¿½m ficarï¿½ localizado junto ï¿½ eletrï¿½nica embarcada,
+na parte central do Lifting Beam. O sensor trabalha com diferenï¿½a de pressï¿½o e serï¿½ importante na identificaï¿½ï¿½o da localizaï¿½ï¿½o do Lifting Beam quando submerso.
 
-\subsubsection{Eletrônica embarcada}
-A eletrônica embarcada é composta por: sensor de inclinação, sensor de
-profundidade, sensor de ingresso de água, circuito supervisório, PC embarcado,
-gateways, conversores DC/DC e bateria. Terá encapsulamento à prova de vibração,
-choque, água e será acoplada à parte central do \emph{Lifting Beam}.
+\subsubsection{Eletrï¿½nica embarcada}
+A eletrï¿½nica embarcada ï¿½ composta por: sensor de inclinaï¿½ï¿½o, sensor de
+profundidade, sensor de ingresso de ï¿½gua, circuito supervisï¿½rio, PC embarcado,
+gateways, conversores DC/DC e bateria. Terï¿½ encapsulamento ï¿½ prova de vibraï¿½ï¿½o,
+choque, ï¿½gua e serï¿½ acoplada ï¿½ parte central do \emph{Lifting Beam}.
 
-O circuito supervisório será responsável por distribuir a alimentação aos
-dispositivos, monitorar essa potência fornecida e proteger os equipamentos
-contra sobrecorrente/voltagem. Será composta por relés, microcontroladores e
-outros componentes eletrônicos.
+O circuito supervisï¿½rio serï¿½ responsï¿½vel por distribuir a alimentaï¿½ï¿½o aos
+dispositivos, monitorar essa potï¿½ncia fornecida e proteger os equipamentos
+contra sobrecorrente/voltagem. Serï¿½ composta por relï¿½s, microcontroladores e
+outros componentes eletrï¿½nicos.
 
-O PC embarcado com sistema operacional Ubuntu, realizará preprocessamento dos
-dados enviados pelo sonar. Além disso gerenciará todos os dados dos outros
-sensores, enviando-os até a base através do umbilical.
+O PC embarcado com sistema operacional Ubuntu, realizarï¿½ preprocessamento dos
+dados enviados pelo sonar. Alï¿½m disso gerenciarï¿½ todos os dados dos outros
+sensores, enviando-os atï¿½ a base atravï¿½s do umbilical.
 
-Gateways realização a conversão das interfaces que compõem o sistema: CAN e
-Ethernet. Pode ser necessária a utilização de um switch Ethernet.
+Gateways realizaï¿½ï¿½o a conversï¿½o das interfaces que compï¿½em o sistema: CAN e
+Ethernet. Pode ser necessï¿½ria a utilizaï¿½ï¿½o de um switch Ethernet.
 
-Conversores DC/DC realizam o condicionamento do sinal. Os dispositivos têm
-alimentação variada e o umbilical fornece apenas um nível de tensão, dessa forma
-há a necessidade de conversores para distribuírem a potência como requerida
+Conversores DC/DC realizam o condicionamento do sinal. Os dispositivos tï¿½m
+alimentaï¿½ï¿½o variada e o umbilical fornece apenas um nï¿½vel de tensï¿½o, dessa forma
+hï¿½ a necessidade de conversores para distribuï¿½rem a potï¿½ncia como requerida
 entre os dispositivos.
 
-O diagrama~\ref{EE_1} e diagrama~\ref{EE_2} mostram as duas soluções da
-eletrônica para o projeto. A primeira solução utiliza um PC embarcado para o
-gerenciamento e pré-processamento e a segunda faz apenas uso de um switch e
-gateways, de forma que o processamento é realizado por completo na base.
+O diagrama~\ref{EE_1} e diagrama~\ref{EE_2} mostram as duas soluï¿½ï¿½es da
+eletrï¿½nica para o projeto. A primeira soluï¿½ï¿½o utiliza um PC embarcado para o
+gerenciamento e prï¿½-processamento e a segunda faz apenas uso de um switch e
+gateways, de forma que o processamento ï¿½ realizado por completo na base.
 
 \begin{figure}[H]
     \centering
@@ -97,33 +97,33 @@ gateways, de forma que o processamento é realizado por completo na base.
     \label{EE_2}
 \end{figure}
 
-\subsubsection{Eletrônica de superfície - base}
-A eletrônica de superfície na base será composta por uma fonte, PC e ponto de
+\subsubsection{Eletrï¿½nica de superfï¿½cie - base}
+A eletrï¿½nica de superfï¿½cie na base serï¿½ composta por uma fonte, PC e ponto de
 acesso WiFi.
 
-A fonte irá transmitir a potência necessária a todo o sistema embarcado através
+A fonte irï¿½ transmitir a potï¿½ncia necessï¿½ria a todo o sistema embarcado atravï¿½s
 do umbilical.
 
-O PC processará todos os dados recebidos do sistema embarco e publicará na
-internet ou disponibilizará através de Ethernet WiFi.
+O PC processarï¿½ todos os dados recebidos do sistema embarco e publicarï¿½ na
+internet ou disponibilizarï¿½ atravï¿½s de Ethernet WiFi.
 
-\subsubsection{Eletrônica de superfície - remota}
-O operador poderá monitorar todos os sensores através de um tablet com sistema
+\subsubsection{Eletrï¿½nica de superfï¿½cie - remota}
+O operador poderï¿½ monitorar todos os sensores atravï¿½s de um tablet com sistema
 de rede WiFi.
 
 \subsubsection{Carretel}
-O carretel industrial é necessário ao menos para fornecer alimentação para a bomba e comunicação para o sonar durante as operações que envolvam limpeza de sedimentos.
+O carretel industrial ï¿½ necessï¿½rio ao menos para fornecer alimentaï¿½ï¿½o para a bomba e comunicaï¿½ï¿½o para o sonar durante as operaï¿½ï¿½es que envolvam limpeza de sedimentos.
  
-Devido à necessidade de montagem mecânica e ao fato deste estar vinculado ao guindaste e não ao \textit{Lifting Beam}, deve preferencialmente ser utilizado somente um carretel, de forma a simplificar a montagem mecânica do sistema e se intervir ao mínimo no guindaste em si. Por esse mesmo motivo, deve ser utilizado um carretel de perfil compacto.
+Devido ï¿½ necessidade de montagem mecï¿½nica e ao fato deste estar vinculado ao guindaste e nï¿½o ao \textit{Lifting Beam}, deve preferencialmente ser utilizado somente um carretel, de forma a simplificar a montagem mecï¿½nica do sistema e se intervir ao mï¿½nimo no guindaste em si. Por esse mesmo motivo, deve ser utilizado um carretel de perfil compacto.
  
-A definição do carretel a ser utilizado está condicionada às características do sistema de potência. A especificação elétrica da bomba e o cabeamento necessário para alimentá-la é fundamental para definir as características do elemento. O peso das blindagens necessárias para o cabeamento da bomba e do par trançado para comunicação também devem ser considerados.
+A definiï¿½ï¿½o do carretel a ser utilizado estï¿½ condicionada ï¿½s caracterï¿½sticas do sistema de potï¿½ncia. A especificaï¿½ï¿½o elï¿½trica da bomba e o cabeamento necessï¿½rio para alimentï¿½-la ï¿½ fundamental para definir as caracterï¿½sticas do elemento. O peso das blindagens necessï¿½rias para o cabeamento da bomba e do par tranï¿½ado para comunicaï¿½ï¿½o tambï¿½m devem ser considerados.
 
-\subsection{Operação Excepcional 1 - Inspeção}
-A utilização de mergulhadores para a realização da operação de inspeção, além de perigosa, é ineficiente, já que a visibilidade do Rio Madeira é muito comprometida devido a sedimentos em suspensão no rio. A solução proposta consiste em realizar a inspeção por meio de um sonar, que irá mapear a a superfície a ser inspecionada afim de encontrar objetos estranhos e/ou a causa da falha nas operações de inserção e remoção.
+\subsection{Operaï¿½ï¿½o Excepcional 1 - Inspeï¿½ï¿½o}
+A utilizaï¿½ï¿½o de mergulhadores para a realizaï¿½ï¿½o da operaï¿½ï¿½o de inspeï¿½ï¿½o, alï¿½m de perigosa, ï¿½ ineficiente, jï¿½ que a visibilidade do Rio Madeira ï¿½ muito comprometida devido a sedimentos em suspensï¿½o no rio. A soluï¿½ï¿½o proposta consiste em realizar a inspeï¿½ï¿½o por meio de um sonar, que irï¿½ mapear a a superfï¿½cie a ser inspecionada afim de encontrar objetos estranhos e/ou a causa da falha nas operaï¿½ï¿½es de inserï¿½ï¿½o e remoï¿½ï¿½o.
 
-O sonar será acoplado ao \emph{Lifting Beam}, de maneira que a inspeção possa ser realizada através da operação do guindaste, similarmente à operação de inserção ou remoção de um \emph{stoplog}. Não haverá a necessidade de nenhuma alteração estrutural tanto no Lifting Beam, quanto no guindaste, não violando, assim, nenhum tipo de garantia do equipamento.
+O sonar serï¿½ acoplado ao \emph{Lifting Beam}, de maneira que a inspeï¿½ï¿½o possa ser realizada atravï¿½s da operaï¿½ï¿½o do guindaste, similarmente ï¿½ operaï¿½ï¿½o de inserï¿½ï¿½o ou remoï¿½ï¿½o de um \emph{stoplog}. Nï¿½o haverï¿½ a necessidade de nenhuma alteraï¿½ï¿½o estrutural tanto no Lifting Beam, quanto no guindaste, nï¿½o violando, assim, nenhum tipo de garantia do equipamento.
 
-A reconstrução da superfície analisada será exibida para o operador do guindaste, assim como no tablet em terra. A visualização possibilitará, então, a identificação de objetos estranhos e a possível causa do problema.
+A reconstruï¿½ï¿½o da superfï¿½cie analisada serï¿½ exibida para o operador do guindaste, assim como no tablet em terra. A visualizaï¿½ï¿½o possibilitarï¿½, entï¿½o, a identificaï¿½ï¿½o de objetos estranhos e a possï¿½vel causa do problema.
 
-\subsection{Operação Excepcional 2 - Remoção de sedimentos entre stoplogs}
+\subsection{Operaï¿½ï¿½o Excepcional 2 - Remoï¿½ï¿½o de sedimentos entre stoplogs}
 
