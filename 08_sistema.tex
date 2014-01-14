@@ -1,27 +1,17 @@
-%%******************************************************************************
-%%
-%% sistema.tex
-%% teste web
-%%******************************************************************************
-%%
-%% Title......: Sistema proposto
-%%
-%% Author.....: GSCAR-DFKI
-%%
-%% Started....: Nov 2013
-%%
-%% Emails.....: renan028@gmail.com
-%%
-%% Address....: Universidade Federal do Rio de Janeiro
-%%              Caixa Postal 68.504, CEP: 21.945-970
-%%              Rio de Janeiro, RJ - Brasil.
-%%
-%%******************************************************************************
+% %******************************************************************************
+% % % sistema.tex % teste web
+% %******************************************************************************
+% % % Title......: Sistema proposto % % Author.....: GSCAR-DFKI % % Started....:
+% Nov 2013 % % Emails.....: renan028@gmail.com % % Address....: Universidade
+% Federal do Rio de Janeiro %              Caixa Postal 68.504, CEP: 21.945-970
+% %              Rio de Janeiro, RJ - Brasil.
+% %
+% %******************************************************************************
 
 
-%%******************************************************************************
-%% SECTION - Sistema proposto
-%%******************************************************************************
+% %******************************************************************************
+% % SECTION - Sistema proposto
+% %******************************************************************************
 \section{Sistema proposto}
 O objetivo do projeto ROSA é entregar uma solução para monitoramento, inspeção e
 remoção de sedimentos, de forma que as falhas comentadas nas seções anteriores
@@ -29,13 +19,18 @@ sejam minimizadas e as operações sejam mais seguras. Esta seção é subdividida em
 uma descrição geral de dispositivos que compõem o projeto e nos modos de
 operações excepcionais expostos em seções anteriores.
 
-%%******************************************************************************
-%% SUBSECTION - Subsection
-%%******************************************************************************
+% %******************************************************************************
+% % SUBSECTION - Subsection
+% %******************************************************************************
 
 
 \subsection{Operação padrão (inspeção e remoção)}
-A principal preocupação do operador nas operações padrões se resume ao encaixe bem sucedido entre garra e stoplog. Este encaixe deve ser constantemente monitorado, tornando-se necessária a instrumentação do Lifting Beam. O sistema será composto por sensores, eletrônica embarcada, sinalizadores e eletrônica da base, e um carretel com umbilical, responsável pelo fornecimento de energia e interface de comunicação entre base e eletrônica embarcada (FIGURA).
+A principal preocupação do operador nas operações padrões se resume ao encaixe
+bem sucedido entre garra e stoplog. Este encaixe deve ser constantemente
+monitorado, tornando-se necessária a instrumentação do Lifting Beam. O sistema
+será composto por sensores, eletrônica embarcada, sinalizadores e eletrônica da
+base, e um carretel com umbilical, responsável pelo fornecimento de energia e
+interface de comunicação entre base e eletrônica embarcada (FIGURA).
 
 \subsubsection{Sensores}
 O sistema é composto pelos dispositivos:
@@ -46,14 +41,30 @@ O sistema é composto pelos dispositivos:
 \item Sensor de profundidade.
 \end{itemize}
 
-Os encoders serão acoplados ao eixo de rotação da garra pescadora. O monitoramento do deslocamento angular das garras independentemente torna possível a identificação de falhas de encaixe. Durante a operação de encaixe, o eixo da garra percorre ângulos já conhecidos: o ângulo sofre leve abertura e volta a $90^o$ no encaixe (FIGURA). Interface de comunicação, potência requerida e outras especificações podem ser observadas no Datasheet abaixo: (FIGURA)
+Os encoders serão acoplados ao eixo de rotação da garra pescadora. O
+monitoramento do deslocamento angular das garras independentemente torna
+possível a identificação de falhas de encaixe. Durante a operação de encaixe, o
+eixo da garra percorre ângulos já conhecidos: o ângulo sofre leve abertura e
+volta a $90^o$ no encaixe (FIGURA). Interface de comunicação, potência requerida
+e outras especificações podem ser observadas no Datasheet abaixo: (FIGURA)
 
-Os sensores indutivos de proximidade serão instalados na garra pescadora, próximo ao local de contato com o stoplog. Indicarão o acoplamento das garras com o stoplog, a partir da geração de campo magnético. Esses sensores só serão excitados em casos de proximidade com metais, sendo possível assim a identificação de obstáculos no encaixe do stoplog (FIGURA). Interface de comunicação, potência requerida e outras especificações podem ser observadas no Datasheet abaixo: (FIGURA)
+Os sensores indutivos de proximidade serão instalados na garra pescadora,
+próximo ao local de contato com o stoplog. Indicarão o acoplamento das garras
+com o stoplog, a partir da geração de campo magnético. Esses sensores só serão
+excitados em casos de proximidade com metais, sendo possível assim a
+identificação de obstáculos no encaixe do stoplog (FIGURA). Interface de
+comunicação, potência requerida e outras especificações podem ser observadas no
+Datasheet abaixo: (FIGURA)
 
-O sensor de inclinação ficará localizado junto à eletrônica embarcada, na parte central do Lifting Beam. O monitoramento da inclinação do Lifting Beam é importante na identificação de encaixe mal sucedido ou danos no equipamento. O sensor será do tipo capacitivo, e outras especificações podem ser observadas no Datasheet abaixo: (FIGURA)
+O sensor de inclinação ficará localizado junto à eletrônica embarcada, na parte
+central do Lifting Beam. O monitoramento da inclinação do Lifting Beam é
+importante na identificação de encaixe mal sucedido ou danos no equipamento. O
+sensor será do tipo capacitivo, e outras especificações podem ser observadas no
+Datasheet abaixo: (FIGURA)
 
 O sensor de profundidade também ficará localizado junto à eletrônica embarcada,
-na parte central do Lifting Beam. O sensor trabalha com diferença de pressão e será importante na identificação da localização do Lifting Beam quando submerso.
+na parte central do Lifting Beam. O sensor trabalha com diferença de pressão e
+será importante na identificação da localização do Lifting Beam quando submerso.
 
 \subsubsection{Eletrônica embarcada}
 A eletrônica embarcada é composta por: sensor de inclinação, sensor de
@@ -96,18 +107,40 @@ O operador poderá monitorar todos os sensores através de um tablet com sistema
 de rede WiFi.
 
 \subsubsection{Carretel}
-O carretel industrial é necessário ao menos para fornecer alimentação para a bomba e comunicação para o sonar durante as operações que envolvam limpeza de sedimentos.
+O carretel industrial é necessário ao menos para fornecer alimentação para a
+bomba e comunicação para o sonar durante as operações que envolvam limpeza de
+sedimentos.
  
-Devido à necessidade de montagem mecânica e ao fato deste estar vinculado ao guindaste e não ao \textit{Lifting Beam}, deve preferencialmente ser utilizado somente um carretel, de forma a simplificar a montagem mecânica do sistema e se intervir ao mínimo no guindaste em si. Por esse mesmo motivo, deve ser utilizado um carretel de perfil compacto.
+Devido à necessidade de montagem mecânica e ao fato deste estar vinculado ao
+guindaste e não ao \textit{Lifting Beam}, deve preferencialmente ser utilizado
+somente um carretel, de forma a simplificar a montagem mecânica do sistema e se
+intervir ao mínimo no guindaste em si. Por esse mesmo motivo, deve ser utilizado
+um carretel de perfil compacto.
  
-A definição do carretel a ser utilizado está condicionada às características do sistema de potência. A especificação elétrica da bomba e o cabeamento necessário para alimentá-la é fundamental para definir as características do elemento. O peso das blindagens necessárias para o cabeamento da bomba e do par trançado para comunicação também devem ser considerados.
+A definição do carretel a ser utilizado está condicionada às características do
+sistema de potência. A especificação elétrica da bomba e o cabeamento necessário
+para alimentá-la é fundamental para definir as características do elemento. O
+peso das blindagens necessárias para o cabeamento da bomba e do par trançado
+para comunicação também devem ser considerados.
 
 \subsection{Operação Excepcional 1 - Inspeção}
-A utilização de mergulhadores para a realização da operação de inspeção, além de perigosa, é ineficiente, já que a visibilidade do Rio Madeira é muito comprometida devido a sedimentos em suspensão no rio. A solução proposta consiste em realizar a inspeção por meio de um sonar, que irá mapear a a superfície a ser inspecionada afim de encontrar objetos estranhos e/ou a causa da falha nas operações de inserção e remoção.
+A utilização de mergulhadores para a realização da operação de inspeção, além de
+perigosa, é ineficiente, já que a visibilidade do Rio Madeira é muito
+comprometida devido a sedimentos em suspensão no rio. A solução proposta
+consiste em realizar a inspeção por meio de um sonar, que irá mapear a a
+superfície a ser inspecionada afim de encontrar objetos estranhos e/ou a causa
+da falha nas operações de inserção e remoção.
 
-O sonar será acoplado ao \emph{Lifting Beam}, de maneira que a inspeção possa ser realizada através da operação do guindaste, similarmente à operação de inserção ou remoção de um \emph{stoplog}. Não haverá a necessidade de nenhuma alteração estrutural tanto no Lifting Beam, quanto no guindaste, não violando, assim, nenhum tipo de garantia do equipamento.
+O sonar será acoplado ao \emph{Lifting Beam}, de maneira que a inspeção possa
+ser realizada através da operação do guindaste, similarmente à operação de
+inserção ou remoção de um \emph{stoplog}. Não haverá a necessidade de nenhuma
+alteração estrutural tanto no Lifting Beam, quanto no guindaste, não violando,
+assim, nenhum tipo de garantia do equipamento.
 
-A reconstrução da superfície analisada será exibida para o operador do guindaste, assim como no tablet em terra. A visualização possibilitará, então, a identificação de objetos estranhos e a possível causa do problema.
+A reconstrução da superfície analisada será exibida para o operador do
+guindaste, assim como no tablet em terra. A visualização possibilitará, então, a
+identificação de objetos estranhos e a possível causa do problema.
 
-\subsection{Operação Excepcional 2 - Remoção de sedimentos entre stoplogs}
+\subsection{Operação Excepcional 2 - Remoção de sedimentos }
+
 
