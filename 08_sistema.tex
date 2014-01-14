@@ -66,35 +66,19 @@ dispositivos, monitorar essa potência fornecida e proteger os equipamentos
 contra sobrecorrente/voltagem. Será composta por relés, microcontroladores e
 outros componentes eletrônicos.
 
-O PC embarcado com sistema operacional Ubuntu, realizará preprocessamento dos
-dados enviados pelo sonar. Além disso gerenciará todos os dados dos outros
-sensores, enviando-os até a base através do umbilical.
-
-Gateways realização a conversão das interfaces que compõem o sistema: CAN e
-Ethernet. Pode ser necessária a utilização de um switch Ethernet.
-
 Conversores DC/DC realizam o condicionamento do sinal. Os dispositivos têm
 alimentação variada e o umbilical fornece apenas um nível de tensão, dessa forma
 há a necessidade de conversores para distribuírem a potência como requerida
 entre os dispositivos.
 
-O diagrama~\ref{EE_1} e diagrama~\ref{EE_2} mostram as duas soluções da
-eletrônica para o projeto. A primeira solução utiliza um PC embarcado para o
-gerenciamento e pré-processamento e a segunda faz apenas uso de um switch e
-gateways, de forma que o processamento é realizado por completo na base.
+O diagrama~\ref{EE_1} mostra as interfaces de comunicação da eletrônica proposta
+para esta solução.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\columnwidth]{figs/EE/1.pdf}
-    \caption{Interface sem switch}
+    \caption{Diagrama de interfaces}
     \label{EE_1}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\columnwidth]{figs/EE/2.pdf}
-    \caption{Interface com switch}
-    \label{EE_2}
 \end{figure}
 
 \subsubsection{Eletrônica de superfície - base}
@@ -105,7 +89,7 @@ A fonte irá transmitir a potência necessária a todo o sistema embarcado através
 do umbilical.
 
 O PC processará todos os dados recebidos do sistema embarco e publicará na
-internet ou disponibilizará através de Ethernet WiFi.
+internet ou disponibilizará através do WiFi.
 
 \subsubsection{Eletrônica de superfície - remota}
 O operador poderá monitorar todos os sensores através de um tablet com sistema
