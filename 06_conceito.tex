@@ -1,25 +1,25 @@
-%%******************************************************************************
+% %******************************************************************************
 % % % conceito.tex %
-%%******************************************************************************
+% %******************************************************************************
 % % % Title......: Projeto Conceitual % % Author.....: GSCAR-DFKI % %
 % Started....: Nov 2013 % % Emails.....: renan028@gmail.com % % Address....:
 % Universidade Federal do Rio de Janeiro %              Caixa Postal 68.504,
 % CEP: 21.945-970 %              Rio de Janeiro, RJ - Brasil.
-%%
-%%******************************************************************************
+% %
+% %******************************************************************************
 
 
-%%******************************************************************************
-%% SECTION - Sistema proposto
-%%******************************************************************************
+% %******************************************************************************
+% % SECTION - Sistema proposto
+% %******************************************************************************
 \section{Projeto Conceitual}
-Esta seção aborda os problemas que serão atacados pelo projeto, de acordo com
-os modos de operação e falhas expostos na seção Descrição do Problema.
+Esta seção aborda os problemas que serão atacados pelo projeto, de acordo com os
+modos de operação e falhas expostos na seção Descrição do Problema.
 
 Conceitualmente, o robô ROSA será constituído por um conjunto de sensores e
 atuadores a prova d'água que serão instalados no \emph{Lifting Beam}. Os
-sensores e atuadores serão conectados a uma eletrônica embarcada a prova
-d'água, instalada também no \emph{Lifting Beam}, que processará e transmitirá as
+sensores e atuadores serão conectados a uma eletrônica embarcada a prova d'água,
+instalada também no \emph{Lifting Beam}, que processará e transmitirá as
 informações para a superfície através de um umbilical. Na superfície, os dados e
 controles do sistema poderão ser visualizados em uma interface gráfica no
 console de comando. Os sensores medirão dados detalhados sobre o atual status da
@@ -32,23 +32,22 @@ A informação de encaixe mal ou bem sucedido entre garra e stoplog é de grande
 importância para o operador, durante o processo de remoção e inserção. Caso a
 operação continue sendo executada durante um encaixe mal sucedido, pode haver
 danos ao  \emph{Lifting Beam} ao stoplog e ao trilho, além de impossibilitar a
-finalização da tarefa. Há, portanto, a necessidade de instrumentar a
-garra pescadora com sensores que possam fornecer a informação de encaixe bem
-sucedido, uma eletrônica embarcada para receber e processar essa informação e um
-sistema eletrônico na base que deverá fornecer ao operador o status do processo.
-Os principais requisitos de projeto são robustez dos dispositivos,
-capacidade de submersibilidade (IP69K), resistência a choque, vibração, e
-campos magnéticos externos não devem afetar as medições.
+finalização da tarefa. Há, portanto, a necessidade de instrumentar a garra
+pescadora com sensores que possam fornecer a informação de encaixe bem sucedido,
+uma eletrônica embarcada para receber e processar essa informação e um sistema
+eletrônico na base que deverá fornecer ao operador o status do processo.
+Os principais requisitos de projeto são robustez dos dispositivos, capacidade de
+submersibilidade (IP69K), resistência a choque, vibração, e campos magnéticos
+externos não devem afetar as medições.
 
 As subseções que se seguem descrevem o projeto conceitual direcionado a cada
 falha de operação.
 
-\subsection{Operação excepcional de inserção 1 - Travamento durante
-inserção} O travamento do \emph{stoplog} durante a inserção pode ser verificado
-pelo monitoramento da inclinação do \emph{Lifting Beam}, pela
-constante verificação do encaixe a partir do eixo de rotação das
-garras e o acompanhamento da movimentação do \emph{Lifting Beam} quando
-submerso.
+\subsection{Operação excepcional de inserção 1 - Travamento durante inserção} O
+travamento do \emph{stoplog} durante a inserção pode ser verificado pelo
+monitoramento da inclinação do \emph{Lifting Beam}, pela constante verificação
+do encaixe a partir do eixo de rotação das garras e o acompanhamento da
+movimentação do \emph{Lifting Beam} quando submerso.
 
 Sensores de inclinação podem fornecer ao operador a informação de que o
 \emph{stoplog} está seguindo ou não o curso do trilho corretamente.
@@ -64,37 +63,77 @@ operador situações de inclinações extremas que estejam desacoplando o conjunto
 \emph{Lifting Beam}/\emph{stoplog}.
 
 Vale ressaltar que o projeto conceitual visa o monitoramento da operações. O
-operador, a partir dos dados recebidos, pode decider em continuar a tarefa ou reiniciá-la.
+operador, a partir dos dados recebidos, pode decider em continuar a tarefa ou
+reiniciá-la.
 
 \subsection{Operação excepcional de inserção 2 - Falha do desencaixe da garra pescadora}
 \label{op:sol:ins:1}
 
-As consequências danosas de um desencaixe mal sucedido entre o \emph{Stoplog} e as \emph{Garras Pescadoras}, como desencaixe parcial e travamento de \emph{Stoplogs}, descritas nas subseções \ref{op:ins:1} e \ref{op:rem:1}, são principalmente devido à falta de feedback na operação de inserção dos \emph{Stoplogs}.
+As consequências danosas de um desencaixe mal sucedido entre o \emph{Stoplog} e
+as \emph{Garras Pescadoras}, como desencaixe parcial e travamento de
+\emph{Stoplogs}, descritas nas subseções \ref{op:ins:1} e \ref{op:rem:1}, são
+principalmente devido à falta de feedback na operação de inserção dos
+\emph{Stoplogs}.
 
-Devido à geometria do \emph{Lifiting Beam} e das \emph{Garras Pescadoras}, o desencaixe da \emph{Garra Pescadora} dos \emph{Stoplogs} tem, necessariamente, um conjunto de posições e uma ordem de acontecimento dessas posições que a \emph{Garra Pescadora} deve obedecer. A partir desse fato, é possível monitorar a operação de desencaixe por meio de sensores de rotação acoplados às \emph{Garras Pescadoras}. 
+Devido à geometria do \emph{Lifiting Beam} e das \emph{Garras Pescadoras}, o
+desencaixe da \emph{Garra Pescadora} dos \emph{Stoplogs} tem, necessariamente,
+um conjunto de posições e uma ordem de acontecimento dessas posições que a
+\emph{Garra Pescadora} deve obedecer. A partir desse fato, é possível monitorar
+a operação de desencaixe por meio de sensores de rotação acoplados às
+\emph{Garras Pescadoras}.
 
-Por meio do monitoramento de todas as etapas de movimentação das \emph{Garras Pescadoras} e o alinhamento do \emph{Lifiting Beam}, o operador tem a capacidade de perceber que a operação está sendo realizada corretamente e caso algum erro ocorra, pode decidir entre abortar a operação e reiniciá-la ou, caso seja necessário, aborta-la completamente e tomar ações corretivas mais drásticas, como o envio de mergulhadores.
+Por meio do monitoramento de todas as etapas de movimentação das \emph{Garras
+Pescadoras} e o alinhamento do \emph{Lifiting Beam}, o operador tem a capacidade
+de perceber que a operação está sendo realizada corretamente e caso algum erro
+ocorra, pode decidir entre abortar a operação e reiniciá-la ou, caso seja
+necessário, aborta-la completamente e tomar ações corretivas mais drásticas,
+como o envio de mergulhadores.
 
-A solução concebida não atua diretamente na movimentação das garras e realiza um desencaixe livre de erros.Entretanto, possibilita um monitoramento de todos os parâmetros fundamentais para uma operação correta e eficiente e, assim,   permite, em tempo real, que ajustes sejam realizados para se finalizar a operação com sucesso ou, se necessário,  a operação seja abortada para evitar possíveis danos ou envio desnecessário de mergulhadores.
+A solução concebida não atua diretamente na movimentação das garras e realiza um
+desencaixe livre de erros.Entretanto, possibilita um monitoramento de todos os
+parâmetros fundamentais para uma operação correta e eficiente e, assim,  
+permite, em tempo real, que ajustes sejam realizados para se finalizar a
+operação com sucesso ou, se necessário,  a operação seja abortada para evitar
+possíveis danos ou envio desnecessário de mergulhadores.
 
 \subsection{Operação excepcional de inserção 3 - Não vedamento devido ao acumulo de detritos na base do trilho}
-% TODO descreve o processo de de falha e causas e o que é feito para corrigir.
-% só eh verificado apos a tentativa de drenagem e mergulhador q tira os
-% detritos. caso o objeto seja muito grande havera um erro de nivel
+
+Como forma de evitar o retrabalho, propõe-se uma inspeção inicial através do uso
+de um sonar \emph{profiling} que mapeará o fundo do rio e possibilitará a
+identificação de detritos presentes. Estes, caso não tratados, podem causar
+os problemas descritos na subseção \ref{op:rem:3}.
+
+O mapeamento também proporciona uma limpeza dos detritos mais eficiente devido
+ao conhecimento da localização do que deve ser removido. Limpeza essa feita
+por meio de uma bomba submarina capaz de eficientemente remover pequenos
+detritos, entretanto para outros de grande porte (e.g. troncos de árvore
+submersos) faz-se necessário o uso de um equipamento do tipo garra e guindaste,
+já utilizado atualmente.
+
+
 
 \subsection{Operação excepcional de remoção 1 - Falha no encaixe}
 
-O monitoramento da movimentação da garra, descrito na subseção \ref{op:sol:ins:1}, possibilita de maneira totalmente análoga um monitoramento da operação de encaixe entre as \emph{Garras Pescadoras} e o \emph{Stoplog}.
+O monitoramento da movimentação da garra, descrito na subseção
+\ref{op:sol:ins:1}, possibilita de maneira totalmente análoga um monitoramento
+da operação de encaixe entre as \emph{Garras Pescadoras} e o \emph{Stoplog}.
 
-Entretanto, se após múltiplas tentativas a operação de encaixe não seja realizada com sucesso, é possível que haja alguma obstrução no olhal do \emph{Stoplog} e/ou em sua superfície. Deve-se, então realizar uma operação de inspeção que possibilite a visualização do problema sem a necessidade do envio de mergulhadores. Uma vez que a causa do problema e sua localização sejam identificadas, um sistema de limpeza, controlado remotamente, pode ser enviado. 
+Entretanto, se após múltiplas tentativas a operação de encaixe não seja
+realizada com sucesso, é possível que haja alguma obstrução no olhal do
+\emph{Stoplog} e/ou em sua superfície. Deve-se, então realizar uma operação de
+inspeção que possibilite a visualização do problema sem a necessidade do envio
+de mergulhadores. Uma vez que a causa do problema e sua localização sejam
+identificadas, um sistema de limpeza, controlado remotamente, pode ser enviado.
 
-Para situações como a obstrução do olhal ou pequenos objetos na superfície do \emph{Stoplog} é suficiente a operação de limpeza, porém, em casos extremos, pode-se usar uma garra ou guindaste extra para auxiliar a eliminação dos detritos e, em último caso, a utilização de mergulhadores. 
+Para situações como a obstrução do olhal ou pequenos objetos na superfície do
+\emph{Stoplog} é suficiente a operação de limpeza, porém, em casos extremos,
+pode-se usar uma garra ou guindaste extra para auxiliar a eliminação dos
+detritos e, em último caso, a utilização de mergulhadores.
 
 
 \subsection{Operação excepcional de remoção 2 - Travamento durante remoção}
 O procedimento é exatamente como no caso da inserção.
 
 \subsection{Operação excepcional de remoção 3 - Acúmulo de sedimentos no fundo}
-% TODO descreve o processo de de falha e causas e o que é feito para corrigir.
-% só eh verificado apos a tentativa de drenagem e mergulhador q tira os
-% detritos. caso o objeto seja muito grande havera um erro de nivel
+O método para a resolução da condição de acúmulo de sedimentos no fundo,
+descrita na subseção \ref{op:rem:3}, não faz parte do escopo deste projeto.
