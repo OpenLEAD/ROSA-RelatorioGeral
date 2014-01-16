@@ -4,7 +4,7 @@
 %%
 %%******************************************************************************
 %%
-%% Title......: Modos de Opera̤̣o
+%% Title......: Modos de Operação
 %%
 %% Author.....: GSCAR-DFKI
 %%
@@ -20,87 +20,87 @@
 
 
 %%******************************************************************************
-%% SECTION - Modos de Opera̤̣o
+%% SECTION - Modos de Operação
 %%******************************************************************************
-\section{Descri̤̣o do problema}
-Esta se̤̣o descreve o problema que ser�� atacado a partir dos modos de opera̤̣o executados durante o processo de veda̤̣o do rio. Esta se̤̣o ̩ subdividida em dois modos de opera̤̣o padṛo: inser̤̣o e remo̤̣o de \emph{Stoplogs}. Cada modo de opera̤̣o padṛo possui tr̻s modos de opera̵̤es excepcionais, realizados em caso de falhas discutidas durante esta se̤̣o.
+\section{Descrição do problema}
+Esta seção descreve o problema que será atacado a partir dos modos de operação executados durante o processo de vedação do rio. Esta seção é subdividida em dois modos de operação padrão: inserção e remoção de \emph{Stoplogs}. Cada modo de operação padrão possui três modos de operações excepcionais, realizados em caso de falhas discutidas durante esta seção.
 
 %%******************************************************************************
 %% SUBSECTION - Subsection
 %%******************************************************************************
 
 
-\subsection{Opera̤̣o padṛo de inser̤̣o}
-A opera̤̣o padṛo de inser̤̣o consiste: em inser̤̣o de \emph{Stoplogs} no Rio Madeira para o controle de seu fluxo de ��gua, a fim de realizar a manuten̤̣o de turbinas de um sistema de gera̤̣o de energia el̩trica. Esta opera̤̣o assume as seguintes \textbf{hip�?teses}:
+\subsection{Operação padrão de inserção}
+A operação padrão de inserção consiste: em inserção de \emph{Stoplogs} no Rio Madeira para o controle de seu fluxo de água, a fim de realizar a manutenção de turbinas de um sistema de geração de energia elétrica. Esta operação assume as seguintes \textbf{hipóteses}:
 \begin{enumerate}
-\item O trilho est�� livre de obst��culos e sedimentos que poderiam impedir a execṳ̣o da tarefa.
-\item O conjunto \emph{Lifting Beam}/\emph{stoplog} ṇo sofre inclina̵̤es e desnivelamento em rela̤̣o ao trilho, portanto o \emph{stoplog} desliza pelo trilho sem travamento.
-\item O desencaixe do conjunto \emph{Lifting Beam}/\emph{stoplog} ̩ realizado com sucesso.
-\item O primeiro \emph{stoplog} a ser inserido ̩ posicionado corretamente e veda a base do trilho.
+\item O trilho está livre de obstáculos e sedimentos que poderiam impedir a execução da tarefa.
+\item O conjunto \emph{Lifting Beam}/\emph{stoplog} não sofre inclinações e desnivelamento em relação ao trilho, portanto o \emph{stoplog} desliza pelo trilho sem travamento.
+\item O desencaixe do conjunto \emph{Lifting Beam}/\emph{stoplog} é realizado com sucesso.
+\item O primeiro \emph{stoplog} a ser inserido é posicionado corretamente e veda a base do trilho.
 \end{enumerate}
 
-A opera̤̣o de inser̤̣o de \emph{Stoplogs} ̩ composta pelas seguintes \textbf{etapas}:
+A operação de inserção de \emph{Stoplogs} é composta pelas seguintes \textbf{etapas}:
 \begin{enumerate}
-\item Auxiliar de opera̤̣o manualmente modifica o estado da \emph{chave de opera̤̣o} para \textbf{Encaixe}.
-\item Operador controla o guindaste, o qual desloca o conjunto \emph{Lifting Beam} e \emph{Garras Pescadoras}, at̩ a posi̤̣o do \emph{Stoplog}, que se encontra em terra, e realiza o encaixe. O encaixe bem sucedido ̩ caracterizado pelo acoplamento correto das duas garras pescadoras com o \emph{Stoplog}. (FIGURA)
-\item Auxiliar de opera̤̣o manualmente modifica o estado da chave de opera̤̣o para \textbf{Desencaixe}.
-\item Operador controla o guindaste, o qual desloca o Lifting Beam junto com o \emph{Stoplog}, at̩ os trilhos localizados na barragem, onde os \emph{Stoplogs} deveṛo ser empilhados.
+\item Auxiliar de operação manualmente modifica o estado da \emph{chave de operação} para \textbf{Encaixe}.
+\item Operador controla o guindaste, o qual desloca o conjunto \emph{Lifting Beam} e \emph{Garras Pescadoras}, até a posição do \emph{Stoplog}, que se encontra em terra, e realiza o encaixe. O encaixe bem sucedido é caracterizado pelo acoplamento correto das duas garras pescadoras com o \emph{Stoplog}. (FIGURA)
+\item Auxiliar de operação manualmente modifica o estado da chave de operação para \textbf{Desencaixe}.
+\item Operador controla o guindaste, o qual desloca o Lifting Beam junto com o \emph{Stoplog}, até os trilhos localizados na barragem, onde os \emph{Stoplogs} deverão ser empilhados.
 \item Operador desce o conjunto \emph{Lifting Beam} e \emph{Stoplog} guiado pelo trilho.
-\item O desencaixa do conjunto \emph{Lifting Beam}/\emph{Stoplog} ̩ realizado quando o conjunto ̩ impedido de continuar seu curso. Isso ocorre pelo contato do \emph{Stoplog} com o fim da guia ou pelo contato com outro \emph{Stoplog} que j�� tinha sido posicionado (empilhamento). O desencaixe ocorre, pois, no contato, h�� perda de tenṣo no cabo de sustenta̤̣o do \emph{Lifting Beam} e de forma mecanicamente passiva a garra abre (FIGURA).
-\item O procedimento ̩ repetido at̩ os cinco \emph{Stoplogs} estarem empilhados.
+\item O desencaixa do conjunto \emph{Lifting Beam}/\emph{Stoplog} é realizado quando o conjunto é impedido de continuar seu curso. Isso ocorre pelo contato do \emph{Stoplog} com o fim da guia ou pelo contato com outro \emph{Stoplog} que já tinha sido posicionado (empilhamento). O desencaixe ocorre, pois, no contato, há perda de tensão no cabo de sustentação do \emph{Lifting Beam} e de forma mecanicamente passiva a garra abre (FIGURA).
+\item O procedimento é repetido até os cinco \emph{Stoplogs} estarem empilhados.
 \end{enumerate}
 
-Durante todo o procedimento de inser̤̣o, o operador pode monitorar o n�?vel de tenṣo exercido ao \emph{Lifting Beam} pelo motor el̩trico. Um sensor de for̤a strain gauge ̩ respons��vel por essa informa̤̣o, por̩m h�� complica̵̤es em sua calibra̤̣o. Dessa forma, o operador infere o n�?vel de tenṣo aplicado de acordo com o ru�?do sonoro gerado pelo motor. 
+Durante todo o procedimento de inserção, o operador pode monitorar o nível de tensão exercido ao \emph{Lifting Beam} pelo motor elétrico. Um sensor de força strain gauge é responsável por essa informação, porém há complicações em sua calibração. Dessa forma, o operador infere o nível de tensão aplicado de acordo com o ruído sonoro gerado pelo motor. 
 
-\subsection{Opera̤̣o excepcional 1 - Travamento durante inser̤̣o}
-Durante a etapa 5 da opera̤̣o padṛo de inser̤̣o, se assumirmos como falsas as hip�?teses 1 e 2, h�� a possibilidade de travamento do conjunto \emph{Lifting Beam}/\emph{Stoplog} com o trilho. Ac̼mulos de sedimentos e grandes obst��culos podem impedir a movimenta̤̣o do \emph{Stoplog}, ou pior, permitir a movimenta̤̣o parcial, inclinando a estrutura. Em caso de grande inclina̤̣o do conjunto, poder�� ocorrer o desencaixe devido �� perda de tenṣo do cabo de sustenta̤̣o.
+\subsection{Operação excepcional 1 - Travamento durante inserção}
+Durante a etapa 5 da operação padrão de inserção, se assumirmos como falsas as hipóteses 1 e 2, há a possibilidade de travamento do conjunto \emph{Lifting Beam}/\emph{Stoplog} com o trilho. Acúmulos de sedimentos e grandes obstáculos podem impedir a movimentação do \emph{Stoplog}, ou pior, permitir a movimentação parcial, inclinando a estrutura. Em caso de grande inclinação do conjunto, poderá ocorrer o desencaixe devido à perda de tensão do cabo de sustentação.
 
-Atualmente, quando ṇo h�� desencaixe, a opera̤̣o excepcional consiste em um processo de tentativa e erro, isto ̩, o operador continuamente ergue e desce o conjunto \emph{Lifting Beam}/\emph{Stoplog} at̩ a tarefa ser realizada com sucesso. 
+Atualmente, quando não há desencaixe, a operação excepcional consiste em um processo de tentativa e erro, isto é, o operador continuamente ergue e desce o conjunto \emph{Lifting Beam}/\emph{Stoplog} até a tarefa ser realizada com sucesso. 
 
-Em caso de desencaixa parcial (apenas uma das garras), auxiliares mergulhadores ṣo enviados para acoplar o conjunto com cabos de a̤o, no local onde ocorreu o desengate. Em desencaixe total, auxiliares mergulhadores ṣo enviados para mudar a configura̤̣o da \emph{chave de opera̤̣o} e uma nova tentativa de encaixe pode ser realizada.
+Em caso de desencaixa parcial (apenas uma das garras), auxiliares mergulhadores são enviados para acoplar o conjunto com cabos de aço, no local onde ocorreu o desengate. Em desencaixe total, auxiliares mergulhadores são enviados para mudar a configuração da \emph{chave de operação} e uma nova tentativa de encaixe pode ser realizada.
 
-\subsection{Opera̤̣o excepcional 2 - Falha do desencaixe da garra pescadora}
-%TODO descreve o processo de de falha e causas e o que ̩ feito para corrigir. mudar trava manualmente (mergulhador)
+\subsection{Operação excepcional 2 - Falha do desencaixe da garra pescadora}
+%TODO descreve o processo de de falha e causas e o que é feito para corrigir. mudar trava manualmente (mergulhador)
 
-\subsection{Opera̤̣o excepcional 3 - Ṇo vedamento devido ao acumulo de detritos na base do trilho}
-%TODO descreve o processo de de falha e causas e o que ̩ feito para corrigir. s�? eh verificado apos a tentativa de drenagem e mergulhador q tira os detritos. caso o objeto seja muito grande havera um erro de nivel
+\subsection{Operação excepcional 3 - Não vedamento devido ao acumulo de detritos na base do trilho}
+%TODO descreve o processo de de falha e causas e o que é feito para corrigir. só eh verificado apos a tentativa de drenagem e mergulhador q tira os detritos. caso o objeto seja muito grande havera um erro de nivel
 
 %_________
 
 
-\subsection{Opera̤̣o padṛo - Remo̤̣o}
-A opera̤̣o padṛo de remo̤̣o consiste em, basicamente, a opera̤̣o inversa �� da inser̤̣o de \emph{Stoplogs}. Esta opera̤̣o assume as seguintes \textbf{hip�?teses}:
+\subsection{Operação padrão - Remoção}
+A operação padrão de remoção consiste em, basicamente, a operação inversa à da inserção de \emph{Stoplogs}. Esta operação assume as seguintes \textbf{hipóteses}:
 
 \begin{enumerate}
-\item Encaixo bem sucedido entre o conjunto \emph{Lifting Beam}/\emph{stoplog} realizado dentro d'��gua.
-\item Ṇo h�� ac̼mulo de sedimentos entre \emph{stoplogs} e entre \emph{stoplog} e base do trilho. Dessa forma, ṇo h�� diferen̤a extra de presṣo hidrost��tica a ser vencida pelo \emph{Lifting Beam}.
-\item O conjunto \emph{Lifting Beam}/\emph{stoplog} se movimenta livremente pelo trilho, sem obst��culos e sedimentos.
-\item O conjunto \emph{Lifting Beam}/\emph{stoplog} ̩ removido do trilho e depositado em solo sem sofrer inclina̵̤es.  
-\item O desencaixe do conjunto \emph{Lifting Beam}/\emph{stoplog} ̩ realizado com sucesso.
+\item Encaixo bem sucedido entre o conjunto \emph{Lifting Beam}/\emph{stoplog} realizado dentro d'água.
+\item Não há acúmulo de sedimentos entre \emph{stoplogs} e entre \emph{stoplog} e base do trilho. Dessa forma, não há diferença extra de pressão hidrostática a ser vencida pelo \emph{Lifting Beam}.
+\item O conjunto \emph{Lifting Beam}/\emph{stoplog} se movimenta livremente pelo trilho, sem obstáculos e sedimentos.
+\item O conjunto \emph{Lifting Beam}/\emph{stoplog} é removido do trilho e depositado em solo sem sofrer inclinações.  
+\item O desencaixe do conjunto \emph{Lifting Beam}/\emph{stoplog} é realizado com sucesso.
 \end{enumerate}
 
-A opera̤̣o de remo̤̣o de \emph{Stoplogs} ̩ composta pelas seguintes \textbf{etapas}:
+A operação de remoção de \emph{Stoplogs} é composta pelas seguintes \textbf{etapas}:
 \begin{enumerate}
-\item Auxiliar de opera̤̣o manualmente modifica o estado da \emph{chave de opera̤̣o} para \textbf{Encaixe}.
-\item Operador controla o guindaste, o qual desloca o conjunto \emph{Lifting Beam} pelo trilho at̩ a posi̤̣o do \emph{Stoplog}, submerso. O encaixe bem sucedido ̩ realizo dentro d'��gua.
-\item O conjunto \emph{Lifting Beam}/\emph{Stoplog} ̩ removido da barragem pelo trilho. 
-\item Auxiliar de opera̤̣o manualmente modifica o estado da chave de opera̤̣o para \textbf{Desencaixe}.
-\item \emph{Stoplog} ̩ depositado em solo.
-\item O procedimento ̩ repetido at̩ os cinco \emph{Stoplogs} estarem solo.
+\item Auxiliar de operação manualmente modifica o estado da \emph{chave de operação} para \textbf{Encaixe}.
+\item Operador controla o guindaste, o qual desloca o conjunto \emph{Lifting Beam} pelo trilho até a posição do \emph{Stoplog}, submerso. O encaixe bem sucedido é realizo dentro d'água.
+\item O conjunto \emph{Lifting Beam}/\emph{Stoplog} é removido da barragem pelo trilho. 
+\item Auxiliar de operação manualmente modifica o estado da chave de operação para \textbf{Desencaixe}.
+\item \emph{Stoplog} é depositado em solo.
+\item O procedimento é repetido até os cinco \emph{Stoplogs} estarem solo.
 \end{enumerate}
 
-\subsection{Opera̤̣o excepcional 1 - Falha no encaixe}
-%TODO erro1 nao engate, causas acumulo de detrito no olhal (comum), e situa̤oes diversas nao descritivas.
+\subsection{Operação excepcional 1 - Falha no encaixe}
+%TODO erro1 nao engate, causas acumulo de detrito no olhal (comum), e situaçoes diversas nao descritivas.
 
-\subsection{Opera̤̣o excepcional 2 - Travamento durante remo̤̣o}
-%TODO descreve o processo de de falha e causas e o que ̩ feito para corrigir. mudar trava manualmente (mergulhador)
+\subsection{Operação excepcional 2 - Travamento durante remoção}
+%TODO descreve o processo de de falha e causas e o que é feito para corrigir. mudar trava manualmente (mergulhador)
 
-\subsection{Opera̤̣o excepcional 3 - Ac̼mulo de sedimentos no fundo}
-%TODO descreve o processo de de falha e causas e o que ̩ feito para corrigir. s�? eh verificado apos a tentativa de drenagem e mergulhador q tira os detritos. caso o objeto seja muito grande havera um erro de nivel
+\subsection{Operação excepcional 3 - Acúmulo de sedimentos no fundo}
+%TODO descreve o processo de de falha e causas e o que é feito para corrigir. só eh verificado apos a tentativa de drenagem e mergulhador q tira os detritos. caso o objeto seja muito grande havera um erro de nivel
 
 %TODO erro2 mesmo erro de emperramento no trilho
 
-%TODO erro3 diferen̤a de pressao hidrostatica (acumulo de detritos no fundo)
+%TODO erro3 diferença de pressao hidrostatica (acumulo de detritos no fundo)
 
 
 
@@ -116,25 +116,25 @@ A opera̤̣o de remo̤̣o de \emph{Stoplogs} ̩ composta pelas seguintes \textbf
 
 
 
-A opera̤̣o de remo̤̣o de \emph{Stoplogs} ̩ basicamente o procedimento inverso ao que foi descrito acima. Por̩m, a remo̤̣o do ̼ltimo \emph{Stoplog}, que est�� em contato direto com o solo, pode se tornar complexa e problem��tica quando h�� grande ac̼mulo de sedimentos. O espa̤o entre o \emph{Stoplog} e o solo pode ser preenchido por sedimentos, anulando a presṣo hidrost��tica exercida embaixo do \emph{Stoplog}. Portanto, o Lifting Beam dever�� vencer a for̤a adicionada pela presṣo hidrost��tica exercida sobre o \emph{Stoplog} (coluna d'��gua). Nesta situa̤̣o, torna-se necess��ria a opera̤̣o excepcional 3, remo̤̣o de sedimentos do fundo.
+A operação de remoção de \emph{Stoplogs} é basicamente o procedimento inverso ao que foi descrito acima. Porém, a remoção do último \emph{Stoplog}, que está em contato direto com o solo, pode se tornar complexa e problemática quando há grande acúmulo de sedimentos. O espaço entre o \emph{Stoplog} e o solo pode ser preenchido por sedimentos, anulando a pressão hidrostática exercida embaixo do \emph{Stoplog}. Portanto, o Lifting Beam deverá vencer a força adicionada pela pressão hidrostática exercida sobre o \emph{Stoplog} (coluna d'água). Nesta situação, torna-se necessária a operação excepcional 3, remoção de sedimentos do fundo.
 
-�� importante observar que o operador ṇo recebe nenhum tipo de feedback com rela̤̣o a encaixe e desencaixe da garra pescadora. Como a maior parte da opera̤̣o ̩ realizada debaixo d'agu��, sem visibilidade, o processo de remo̤̣o de \emph{Stoplog}s se torna uma longa s̩rie de tentativas e erros, na qual o Lifting Beam ̩ suspenso e submerso in̼meras vezes.
+É importante observar que o operador não recebe nenhum tipo de feedback com relação a encaixe e desencaixe da garra pescadora. Como a maior parte da operação é realizada debaixo d'aguá, sem visibilidade, o processo de remoção de \emph{Stoplog}s se torna uma longa série de tentativas e erros, na qual o Lifting Beam é suspenso e submerso inúmeras vezes.
 
-Al̩m disso, h�� grande possibilidade de encaixe mal sucedido, caracterizado pelo encaixe apenas de uma das garras pescadoras com o \emph{Stoplog}. (FIGURA) Este caso ̩ mais cr�?tico e pode danificar a estrutura do trilho. Essa falha pode ocorrer por dois motivos:
+Além disso, há grande possibilidade de encaixe mal sucedido, caracterizado pelo encaixe apenas de uma das garras pescadoras com o \emph{Stoplog}. (FIGURA) Este caso é mais crítico e pode danificar a estrutura do trilho. Essa falha pode ocorrer por dois motivos:
 \begin{itemize}
- \item Sedimentos acumulados na regịo de encaixe do \emph{Stoplog} impedem o acoplamento garra-\emph{Stoplog}
- \item Grandes obst��culos podem impedir o deslocamento do Lifting Beam pelo trilho. H��, tamb̩m, a possibilidade de o Lifting Beam descer inclinado pelo trilho e realizar um encaixe mal sucedido.
+ \item Sedimentos acumulados na região de encaixe do \emph{Stoplog} impedem o acoplamento garra-\emph{Stoplog}
+ \item Grandes obstáculos podem impedir o deslocamento do Lifting Beam pelo trilho. Há, também, a possibilidade de o Lifting Beam descer inclinado pelo trilho e realizar um encaixe mal sucedido.
 \end{itemize}
-Nesta situa̤̣o, o estado da chave de opera̤̣o deve ser alterado para desencaixe e o \emph{Stoplog} deve ser solto, para uma nova tentativa de encaixe bem sucedido. �� importante notar que essa falha ocorre quando o \emph{Stoplog} est�� submerso, portanto, atualmente, ṇo h�� como o operador identificar a falha sem for̤ar a estrutura contra o trilho. �� necess��ria a opera̤̣o excepcional 1, inspe̤̣o.
+Nesta situação, o estado da chave de operação deve ser alterado para desencaixe e o \emph{Stoplog} deve ser solto, para uma nova tentativa de encaixe bem sucedido. É importante notar que essa falha ocorre quando o \emph{Stoplog} está submerso, portanto, atualmente, não há como o operador identificar a falha sem forçar a estrutura contra o trilho. É necessária a operação excepcional 1, inspeção.
 
-\subsubsection{Opera̤̣o Excepcional 1 - Inspe̤̣o}
-A opera̤̣o excepcional de inspe̤̣o consiste em verificar sedimentos e obst��culos trazidos pelo Rio Madeira at̩ o trilho, onde seṛo empilhados os \emph{Stoplog}s. Atualmente, a inspe̤̣o ̩ feita por mergulhadores por tato, o que pode ser considerado extremamente perigoso devido �� forte correnteza do rio, objetos estranhos trazidos pelo rio e �� possibilidade de encaixe mal sucedido, provocando deslizamentos de \emph{Stoplog}s. Atualmente no modo de opera̤̣o padṛo ṇo ̩ realizada a opera̤̣o excepcional 1 ṇo ̩ realizada de forma preventiva, somente ̩ efetuada em casos de veda̤̣o mal sucedida.
+\subsubsection{Operação Excepcional 1 - Inspeção}
+A operação excepcional de inspeção consiste em verificar sedimentos e obstáculos trazidos pelo Rio Madeira até o trilho, onde serão empilhados os \emph{Stoplog}s. Atualmente, a inspeção é feita por mergulhadores por tato, o que pode ser considerado extremamente perigoso devido à forte correnteza do rio, objetos estranhos trazidos pelo rio e à possibilidade de encaixe mal sucedido, provocando deslizamentos de \emph{Stoplog}s. Atualmente no modo de operação padrão não é realizada a operação excepcional 1 não é realizada de forma preventiva, somente é efetuada em casos de vedação mal sucedida.
 
-%TODO opera̤̣o de ajuste de stoplog mal inserido
-%operador estima o a profundidade do stoplog pela tenṣo do cabo. Diminui̤̣o de tensao antes da hora indica uma poss�?vel inser̤̣o disnivelda. Operador realiza sucessivamente retiradas e inser̵̤es at̩ que o \emph{Stoplog} tenha um encaixe correto. Pode dar merda e emperrar.
+%TODO operação de ajuste de stoplog mal inserido
+%operador estima o a profundidade do stoplog pela tensão do cabo. Diminuição de tensao antes da hora indica uma possível inserção disnivelda. Operador realiza sucessivamente retiradas e inserções até que o \emph{Stoplog} tenha um encaixe correto. Pode dar merda e emperrar.
 
-\subsubsection{Opera̤̣o Excepcional 2 - Remo̤̣o de sedimentos entre \emph{Stoplog}s}
-A opera̤̣o excepcional de remo̤̣o de sedimentos ̩ consequ̻ncia da observa̤̣o de sedimentos na etapa de inspe̤̣o. Se esses sedimentos observados na opera̤̣o anterior estiverem comprometendo a opera̤̣o de remo̤̣o ou inser̤̣o de \emph{Stoplog}s, esses obst��culos devem ser removidos. Atualmente, ̩ utilizada uma bomba submarina.
+\subsubsection{Operação Excepcional 2 - Remoção de sedimentos entre \emph{Stoplog}s}
+A operação excepcional de remoção de sedimentos é consequência da observação de sedimentos na etapa de inspeção. Se esses sedimentos observados na operação anterior estiverem comprometendo a operação de remoção ou inserção de \emph{Stoplog}s, esses obstáculos devem ser removidos. Atualmente, é utilizada uma bomba submarina.
 
-\subsubsection{Opera̤̣o Excepcional 3 - Remo̤̣o de sedimentos do fundo}
+\subsubsection{Operação Excepcional 3 - Remoção de sedimentos do fundo}
 

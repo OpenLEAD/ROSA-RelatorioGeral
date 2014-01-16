@@ -13,77 +13,77 @@
 % % SECTION - Sistema proposto
 % %******************************************************************************
 \section{Sistema proposto}
-O objetivo do projeto ROSA ̩ entregar uma solṳ̣o para monitoramento, inspe̤̣o e
-remo̤̣o de sedimentos, de forma que as falhas comentadas nas se̵̤es anteriores
-sejam minimizadas e as opera̵̤es sejam mais seguras. Esta se̤̣o ̩ subdividida em
-uma descri̤̣o geral de dispositivos que comp̵em o projeto e nos modos de
-opera̵̤es excepcionais expostos em se̵̤es anteriores.
+O objetivo do projeto ROSA é entregar uma solução para monitoramento, inspeção e
+remoção de sedimentos, de forma que as falhas comentadas nas seções anteriores
+sejam minimizadas e as operações sejam mais seguras. Esta seção é subdividida em
+uma descrição geral de dispositivos que compõem o projeto e nos modos de
+operações excepcionais expostos em seções anteriores.
 
 % %******************************************************************************
 % % SUBSECTION - Subsection
 % %******************************************************************************
 
 
-\subsection{Opera̤̣o padṛo (inspe̤̣o e remo̤̣o)}
-A principal preocupa̤̣o do operador nas opera̵̤es padr̵es se resume ao encaixe
+\subsection{Operação padrão (inspeção e remoção)}
+A principal preocupação do operador nas operações padrões se resume ao encaixe
 bem sucedido entre garra e stoplog. Este encaixe deve ser constantemente
-monitorado, tornando-se necess��ria a instrumenta̤̣o do Lifting Beam. O sistema
-ser�� composto por sensores, eletr̫nica embarcada, sinalizadores e eletr̫nica da
-base, e um carretel com umbilical, respons��vel pelo fornecimento de energia e
-interface de comunica̤̣o entre base e eletr̫nica embarcada (FIGURA).
+monitorado, tornando-se necessária a instrumentação do Lifting Beam. O sistema
+será composto por sensores, eletrônica embarcada, sinalizadores e eletrônica da
+base, e um carretel com umbilical, responsável pelo fornecimento de energia e
+interface de comunicação entre base e eletrônica embarcada (FIGURA).
 
 \subsubsection{Sensores}
-O sistema ̩ composto pelos dispositivos:
+O sistema é composto pelos dispositivos:
 \begin{itemize}
 \item Dois encoders absolutos.
 \item Dois sensores indutivos de proximidade.
-\item Sensor de inclina̤̣o.
+\item Sensor de inclinação.
 \item Sensor de profundidade.
 \end{itemize}
 
-Os encoders seṛo acoplados ao eixo de rota̤̣o da garra pescadora. O
+Os encoders serão acoplados ao eixo de rotação da garra pescadora. O
 monitoramento do deslocamento angular das garras independentemente torna
-poss�?vel a identifica̤̣o de falhas de encaixe. Durante a opera̤̣o de encaixe, o
-eixo da garra percorre ̢ngulos j�� conhecidos: o ̢ngulo sofre leve abertura e
-volta a $90^o$ no encaixe (FIGURA). Interface de comunica̤̣o, pot̻ncia requerida
-e outras especifica̵̤es podem ser observadas no Datasheet abaixo: (FIGURA)
+possível a identificação de falhas de encaixe. Durante a operação de encaixe, o
+eixo da garra percorre ângulos já conhecidos: o ângulo sofre leve abertura e
+volta a $90^o$ no encaixe (FIGURA). Interface de comunicação, potência requerida
+e outras especificações podem ser observadas no Datasheet abaixo: (FIGURA)
 
-Os sensores indutivos de proximidade seṛo instalados na garra pescadora,
-pr�?ximo ao local de contato com o stoplog. Indicaṛo o acoplamento das garras
-com o stoplog, a partir da gera̤̣o de campo magn̩tico. Esses sensores s�? seṛo
-excitados em casos de proximidade com metais, sendo poss�?vel assim a
-identifica̤̣o de obst��culos no encaixe do stoplog (FIGURA). Interface de
-comunica̤̣o, pot̻ncia requerida e outras especifica̵̤es podem ser observadas no
+Os sensores indutivos de proximidade serão instalados na garra pescadora,
+próximo ao local de contato com o stoplog. Indicarão o acoplamento das garras
+com o stoplog, a partir da geração de campo magnético. Esses sensores só serão
+excitados em casos de proximidade com metais, sendo possível assim a
+identificação de obstáculos no encaixe do stoplog (FIGURA). Interface de
+comunicação, potência requerida e outras especificações podem ser observadas no
 Datasheet abaixo: (FIGURA)
 
-O sensor de inclina̤̣o ficar�� localizado junto �� eletr̫nica embarcada, na parte
-central do Lifting Beam. O monitoramento da inclina̤̣o do Lifting Beam ̩
-importante na identifica̤̣o de encaixe mal sucedido ou danos no equipamento. O
-sensor ser�� do tipo capacitivo, e outras especifica̵̤es podem ser observadas no
+O sensor de inclinação ficará localizado junto à eletrônica embarcada, na parte
+central do Lifting Beam. O monitoramento da inclinação do Lifting Beam é
+importante na identificação de encaixe mal sucedido ou danos no equipamento. O
+sensor será do tipo capacitivo, e outras especificações podem ser observadas no
 Datasheet abaixo: (FIGURA)
 
-O sensor de profundidade tamb̩m ficar�� localizado junto �� eletr̫nica embarcada,
-na parte central do Lifting Beam. O sensor trabalha com diferen̤a de presṣo e
-ser�� importante na identifica̤̣o da localiza̤̣o do Lifting Beam quando submerso.
+O sensor de profundidade também ficará localizado junto à eletrônica embarcada,
+na parte central do Lifting Beam. O sensor trabalha com diferença de pressão e
+será importante na identificação da localização do Lifting Beam quando submerso.
 
-\subsubsection{Eletr̫nica embarcada}
-A eletr̫nica embarcada ̩ composta por: sensor de inclina̤̣o, sensor de
-profundidade, sensor de ingresso de ��gua, circuito supervis�?rio, PC embarcado,
-gateways, conversores DC/DC e bateria. Ter�� encapsulamento �� prova de vibra̤̣o,
-choque, ��gua e ser�� acoplada �� parte central do \emph{Lifting Beam}.
+\subsubsection{Eletrônica embarcada}
+A eletrônica embarcada é composta por: sensor de inclinação, sensor de
+profundidade, sensor de ingresso de água, circuito supervisório, PC embarcado,
+gateways, conversores DC/DC e bateria. Terá encapsulamento à prova de vibração,
+choque, água e será acoplada à parte central do \emph{Lifting Beam}.
 
-O circuito supervis�?rio ser�� respons��vel por distribuir a alimenta̤̣o aos
-dispositivos, monitorar essa pot̻ncia fornecida e proteger os equipamentos
-contra sobrecorrente/voltagem. Ser�� composta por rel̩s, microcontroladores e
-outros componentes eletr̫nicos.
+O circuito supervisório será responsável por distribuir a alimentação aos
+dispositivos, monitorar essa potência fornecida e proteger os equipamentos
+contra sobrecorrente/voltagem. Será composta por relés, microcontroladores e
+outros componentes eletrônicos.
 
-Conversores DC/DC realizam o condicionamento do sinal. Os dispositivos t̻m
-alimenta̤̣o variada e o umbilical fornece apenas um n�?vel de tenṣo, dessa forma
-h�� a necessidade de conversores para distribu�?rem a pot̻ncia como requerida
+Conversores DC/DC realizam o condicionamento do sinal. Os dispositivos têm
+alimentação variada e o umbilical fornece apenas um nível de tensão, dessa forma
+há a necessidade de conversores para distribuírem a potência como requerida
 entre os dispositivos.
 
-O diagrama~\ref{EE_1} mostra as interfaces de comunica̤̣o da eletr̫nica proposta
-para esta solṳ̣o.
+O diagrama~\ref{EE_1} mostra as interfaces de comunicação da eletrônica proposta
+para esta solução.
 
 \begin{figure}[H]
     \centering
@@ -92,61 +92,61 @@ para esta solṳ̣o.
     \label{EE_1}
 \end{figure}
 
-\subsubsection{Eletr̫nica de superf�?cie - base}
-A eletr̫nica de superf�?cie na base ser�� composta por uma fonte, PC e ponto de
+\subsubsection{Eletrônica de superfície - base}
+A eletrônica de superfície na base será composta por uma fonte, PC e ponto de
 acesso WiFi.
 
-A fonte ir�� transmitir a pot̻ncia necess��ria a todo o sistema embarcado
-atrav̩s do umbilical.
+A fonte irá transmitir a potência necessária a todo o sistema embarcado
+através do umbilical.
 
-O PC processar�� todos os dados recebidos do sistema embarco e publicar�� na
-internet ou disponibilizar�� atrav̩s do WiFi.
+O PC processará todos os dados recebidos do sistema embarco e publicará na
+internet ou disponibilizará através do WiFi.
 
-\subsubsection{Eletr̫nica de superf�?cie - remota}
-O operador poder�� monitorar todos os sensores atrav̩s de um tablet com sistema
+\subsubsection{Eletrônica de superfície - remota}
+O operador poderá monitorar todos os sensores através de um tablet com sistema
 de rede WiFi.
 
 \subsubsection{Carretel}
-O carretel industrial ̩ necess��rio ao menos para fornecer alimenta̤̣o para a
-bomba e comunica̤̣o para o sonar durante as opera̵̤es que envolvam limpeza de
+O carretel industrial é necessário ao menos para fornecer alimentação para a
+bomba e comunicação para o sonar durante as operações que envolvam limpeza de
 sedimentos.
  
-Devido �� necessidade de montagem mec̢nica e ao fato deste estar vinculado ao
-guindaste e ṇo ao \textit{Lifting Beam}, deve preferencialmente ser utilizado
-somente um carretel, de forma a simplificar a montagem mec̢nica do sistema e se
-intervir ao m�?nimo no guindaste em si. Por esse mesmo motivo, deve ser utilizado
+Devido à necessidade de montagem mecânica e ao fato deste estar vinculado ao
+guindaste e não ao \textit{Lifting Beam}, deve preferencialmente ser utilizado
+somente um carretel, de forma a simplificar a montagem mecânica do sistema e se
+intervir ao mínimo no guindaste em si. Por esse mesmo motivo, deve ser utilizado
 um carretel de perfil compacto.
  
-A defini̤̣o do carretel a ser utilizado est�� condicionada ��s caracter�?sticas do
-sistema de pot̻ncia. A especifica̤̣o el̩trica da bomba e o cabeamento necess��rio
-para aliment��-la ̩ fundamental para definir as caracter�?sticas do elemento. O
-peso das blindagens necess��rias para o cabeamento da bomba e do par tran̤ado
-para comunica̤̣o tamb̩m devem ser considerados.
+A definição do carretel a ser utilizado está condicionada às características do
+sistema de potência. A especificação elétrica da bomba e o cabeamento necessário
+para alimentá-la é fundamental para definir as características do elemento. O
+peso das blindagens necessárias para o cabeamento da bomba e do par trançado
+para comunicação também devem ser considerados.
 
-\subsection{Opera̤̣o Excepcional 1 - Inspe̤̣o}
+\subsection{Operação Excepcional 1 - Inspeção}
 \label{sis:sol:1}
-A utiliza̤̣o de mergulhadores para a realiza̤̣o da opera̤̣o de inspe̤̣o, al̩m de
-perigosa, ̩ ineficiente, j�� que a visibilidade do Rio Madeira ̩ muito
-comprometida devido a sedimentos em suspenṣo no rio. A solṳ̣o proposta
-consiste em realizar a inspe̤̣o por meio de um sonar, que ir�� mapear a a
-superf�?cie a ser inspecionada afim de encontrar objetos estranhos e/ou a causa
-da falha nas opera̵̤es de inser̤̣o e remo̤̣o.
+A utilização de mergulhadores para a realização da operação de inspeção, além de
+perigosa, é ineficiente, já que a visibilidade do Rio Madeira é muito
+comprometida devido a sedimentos em suspensão no rio. A solução proposta
+consiste em realizar a inspeção por meio de um sonar, que irá mapear a a
+superfície a ser inspecionada afim de encontrar objetos estranhos e/ou a causa
+da falha nas operações de inserção e remoção.
 
-O sonar ser�� acoplado ao \emph{Lifting Beam}, de maneira que a inspe̤̣o possa
-ser realizada atrav̩s da opera̤̣o do guindaste, similarmente �� opera̤̣o de
-inser̤̣o ou remo̤̣o de um \emph{stoplog}. Ṇo haver�� a necessidade de nenhuma
-altera̤̣o estrutural tanto no Lifting Beam, quanto no guindaste, ṇo violando,
+O sonar será acoplado ao \emph{Lifting Beam}, de maneira que a inspeção possa
+ser realizada através da operação do guindaste, similarmente à operação de
+inserção ou remoção de um \emph{stoplog}. Não haverá a necessidade de nenhuma
+alteração estrutural tanto no Lifting Beam, quanto no guindaste, não violando,
 assim, nenhum tipo de garantia do equipamento.
 
-A reconstrṳ̣o da superf�?cie analisada ser�� exibida para o operador do
-guindaste, assim como no \emph{tablet} em terra. A visualiza̤̣o possibilitar��,
-enṭo, a identifica̤̣o de objetos estranhos e a poss�?vel causa do problema.
+A reconstrução da superfície analisada será exibida para o operador do
+guindaste, assim como no \emph{tablet} em terra. A visualização possibilitará,
+então, a identificação de objetos estranhos e a possível causa do problema.
 
-\subsection{Opera̤̣o Excepcional 2 - Remo̤̣o de sedimentos sobre o olhal}
+\subsection{Operação Excepcional 2 - Remoção de sedimentos sobre o olhal}
 
-A remo̤̣o de sedimentos do \emph{olhal} que poderiam vir a dificultar ou impedir
-um engate de sucesso da \emph{garra pescadora} (subse̤̣o \ref{op:rem:2}) ser��
-feito atr��ves de uma bomba submarina. Esta sendo acoplada ao \emph{Lifting
-Beam} com uma posi̤̣o e ̢ngulo determinados ̩ capaz de eficientemente remover os
+A remoção de sedimentos do \emph{olhal} que poderiam vir a dificultar ou impedir
+um engate de sucesso da \emph{garra pescadora} (subseção \ref{op:rem:2}) será
+feito atráves de uma bomba submarina. Esta sendo acoplada ao \emph{Lifting
+Beam} com uma posição e ângulo determinados é capaz de eficientemente remover os
 pequenos detritos que impediriam a passagem da \emph{garra pescadora} pelo
 \emph{olhal} e podendo ser comandado remotamente.

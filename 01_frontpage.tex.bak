@@ -54,7 +54,7 @@
 
   %% Logo section. -----------------------------------------------------------
 
-  {\LARGE Colabora̤̣o entre}
+  {\LARGE Colaboração entre}
   \vspace{0.25cm}
 
   \addpicture{0.60}{LR}{
@@ -66,7 +66,7 @@
 
    %% Title section. ----------------------------------------------------------
 
-  {\LARGE Relat�?rio Geral}
+  {\LARGE Relatório Geral}
   \vspace{0.25cm}
 
 
@@ -90,7 +90,7 @@
 \begin{center}
   %% Version section. --------------------------------------------------------
 
-  {\LARGE Documento Verṣo 1}
+  {\LARGE Documento Versão 1}
   \vspace{0.25cm}
 
   %% Project section. --------------------------------------------------------
@@ -128,17 +128,17 @@
   {\large \textbf{Gabriel Alcantara} \\ \email{alcantara@poli.ufrj.br}}
   \vspace{0.25cm}
   
-  {\large \textbf{Andr̩ Figueir�?} \\ \email{andrefig@poli.ufrj.br}}
+  {\large \textbf{André Figueiró} \\ \email{andrefig@poli.ufrj.br}}
   \vspace{0.25cm}
 
 
   \addtabular{1.0}{c|L|l|l}{
-    \rowhdr \cellcap{Verṣo}    &
-            \cellcap{Anota̤̣o}  &
+    \rowhdr \cellcap{Versão}    &
+            \cellcap{Anotação}  &
             \cellcap{Data}      &
             \cellcap{Autor(es)} \rowend
     %
-    \rowodd 1 & primeira verṣo do documento & dez 2013 \rowend
+    \rowodd 1 & primeira versão do documento & dez 2013 \rowend
     \roweve   &  &  &  \rowend
     \rowodd   &  &  &  \rowend
     \roweve   &  &  &
