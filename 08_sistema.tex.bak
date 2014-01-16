@@ -23,48 +23,48 @@
 %% SECTION - Sistema proposto
 %%******************************************************************************
 \section{Sistema proposto}
-O objetivo do projeto ROSA È entregar uma soluÁ„o para monitoramento, inspeÁ„o e remoÁ„o de sedimentos, de forma que as falhas comentadas na seÁ„o anterior sejam minimizadas e as operaÁıes sejam mais seguras. Esta seÁ„o È subdividida nos quatro modos de operaÁ„o descritos na seÁ„o anterior, pois as soluÁıes podem ser independentes.
+O objetivo do projeto ROSA √© entregar uma solu√ß√£o para monitoramento, inspe√ß√£o e remo√ß√£o de sedimentos, de forma que as falhas comentadas na se√ß√£o anterior sejam minimizadas e as opera√ß√µes sejam mais seguras. Esta se√ß√£o √© subdividida nos quatro modos de opera√ß√£o descritos na se√ß√£o anterior, pois as solu√ß√µes podem ser independentes.
 
 %%******************************************************************************
 %% SUBSECTION - Subsection
 %%******************************************************************************
 
 
-\subsection{OperaÁ„o padr„o - Monitoramento}
-A principal preocupaÁ„o do operador na operaÁ„o normal de remoÁ„o e inserÁ„o de stoplogs se resume ao encaixe bem sucedido entre garra e stoplog. Este encaixe deve ser constantemente monitorado, tornando-se necess·ria a instrumentaÁ„o do Lifting Beam. O sistema ser· composto por sensores, eletrÙnica embarcada, sinalizadores e eletrÙnica da base, e um carretel com umbilical, respons·vel pelo fornecimento de energia e interface de comunicaÁ„o entre base e eletrÙnica embarcada (FIGURA).
+\subsection{Opera√ß√£o padr√£o - Monitoramento}
+A principal preocupa√ß√£o do operador na opera√ß√£o normal de remo√ß√£o e inser√ß√£o de stoplogs se resume ao encaixe bem sucedido entre garra e stoplog. Este encaixe deve ser constantemente monitorado, tornando-se necess√°ria a instrumenta√ß√£o do Lifting Beam. O sistema ser√° composto por sensores, eletr√¥nica embarcada, sinalizadores e eletr√¥nica da base, e um carretel com umbilical, respons√°vel pelo fornecimento de energia e interface de comunica√ß√£o entre base e eletr√¥nica embarcada (FIGURA).
 
 \subsubsection{Sensores}
-O sistema È composto pelos dispositivos:
+O sistema √© composto pelos dispositivos:
 \begin{itemize}
 \item Dois encoders absolutos.
 \item Dois sensores indutivos de proximidade.
-\item Sensor de inclinaÁ„o.
-\item Sensor de nÌvel.
+\item Sensor de inclina√ß√£o.
+\item Sensor de n√≠vel.
 \end{itemize}
 
-Os encoders ser„o acoplados ao eixo de rotaÁ„o da garra pescadora. O monitoramento do deslocamento angular das garras independentemente torna possÌvel a identificaÁ„o de falhas de encaixe. Durante a operaÁ„o de encaixe, o eixo da garra percorre ‚ngulos j· conhecidos: o ‚ngulo sofre leve abertura e volta a $90^o$ no encaixe (FIGURA). Interface de comunicaÁ„o, potÍncia requerida e outras especificaÁıes podem ser observadas no Datasheet abaixo: (FIGURA)
+Os encoders ser√£o acoplados ao eixo de rota√ß√£o da garra pescadora. O monitoramento do deslocamento angular das garras independentemente torna poss√≠vel a identifica√ß√£o de falhas de encaixe. Durante a opera√ß√£o de encaixe, o eixo da garra percorre √¢ngulos j√° conhecidos: o √¢ngulo sofre leve abertura e volta a $90^o$ no encaixe (FIGURA). Interface de comunica√ß√£o, pot√™ncia requerida e outras especifica√ß√µes podem ser observadas no Datasheet abaixo: (FIGURA)
 
-Os sensores indutivos de proximidade ser„o instalados na garra pescadora, prÛximo ao local de contato com o stoplog. Indicar„o o acoplamento das garras com o stoplog, a partir da geraÁ„o de campo magnÈtico. Esses sensores sÛ ser„o excitados em casos de proximidade com metais, sendo possÌvel assim a identificaÁ„o de obst·culos no encaixe do stoplog (FIGURA). Interface de comunicaÁ„o, potÍncia requerida e outras especificaÁıes podem ser observadas no Datasheet abaixo: (FIGURA)
+Os sensores indutivos de proximidade ser√£o instalados na garra pescadora, pr√≥ximo ao local de contato com o stoplog. Indicar√£o o acoplamento das garras com o stoplog, a partir da gera√ß√£o de campo magn√©tico. Esses sensores s√≥ ser√£o excitados em casos de proximidade com metais, sendo poss√≠vel assim a identifica√ß√£o de obst√°culos no encaixe do stoplog (FIGURA). Interface de comunica√ß√£o, pot√™ncia requerida e outras especifica√ß√µes podem ser observadas no Datasheet abaixo: (FIGURA)
 
-O sensor de inclinaÁ„o ficar· localizado junto ‡ eletrÙnica embarcada, na parte central do Lifting Beam. O monitoramento da inclinaÁ„o do Lifting Beam È importante na identificaÁ„o de encaixe mal sucedido ou danos no equipamento. O sensor ser· do tipo capacitivo, e outras especificaÁıes podem ser observadas no Datasheet abaixo: (FIGURA)
+O sensor de inclina√ß√£o ficar√° localizado junto √† eletr√¥nica embarcada, na parte central do Lifting Beam. O monitoramento da inclina√ß√£o do Lifting Beam √© importante na identifica√ß√£o de encaixe mal sucedido ou danos no equipamento. O sensor ser√° do tipo capacitivo, e outras especifica√ß√µes podem ser observadas no Datasheet abaixo: (FIGURA)
 
-O sensor de nÌvel tambÈm ficar· localizado junto ‡ eletrÙnica embarcada, na parte central do Lifting Beam. O sensor trabalha com diferenÁa de press„o e ser· importante na identificaÁ„o da localizaÁ„o do Lifting Beam quando submerso.
+O sensor de n√≠vel tamb√©m ficar√° localizado junto √† eletr√¥nica embarcada, na parte central do Lifting Beam. O sensor trabalha com diferen√ßa de press√£o e ser√° importante na identifica√ß√£o da localiza√ß√£o do Lifting Beam quando submerso.
 
-\subsubsection{EletrÙnica embarcada}
-A eletrÙnica embarcada È composta por: sensor de inclinaÁ„o, sensor de nÌvel, sensor de ingresso de ·gua, circuito supervisÛrio, PC embarcado, gateways, conversores DC/DC e bateria. Ter· encapsulamento ‡ prova de vibraÁ„o, choque, ·gua e ser· acoplada ‡ parte central do Lifting Beam.
+\subsubsection{Eletr√¥nica embarcada}
+A eletr√¥nica embarcada √© composta por: sensor de inclina√ß√£o, sensor de n√≠vel, sensor de ingresso de √°gua, circuito supervis√≥rio, PC embarcado, gateways, conversores DC/DC e bateria. Ter√° encapsulamento √† prova de vibra√ß√£o, choque, √°gua e ser√° acoplada √† parte central do Lifting Beam.
 
 
 \subsubsection{Carretel}
 
 
-\subsection{OperaÁ„o Excepcional 1 - InspeÁ„o}
-A utilizaÁ„o de mergulhadores para a realizaÁ„o da operaÁ„o de inspeÁ„o, alÈm de perigosa, È ineficiente, j· que a visibilidade do Rio Madeira È muito comprometida devido a sedimentos em suspens„o no rio. A soluÁ„o proposta consiste em realizar a inspeÁ„o por meio de um sonar, que ir· mapear a a superfÌcie a ser inspecionada afim de encontrar objetos estranhos e/ou a causa da falha nas operaÁıes de inserÁ„o e remoÁ„o.
+\subsection{Opera√ß√£o Excepcional 1 - Inspe√ß√£o}
+A utiliza√ß√£o de mergulhadores para a realiza√ß√£o da opera√ß√£o de inspe√ß√£o, al√©m de perigosa, √© ineficiente, j√° que a visibilidade do Rio Madeira √© muito comprometida devido a sedimentos em suspens√£o no rio. A solu√ß√£o proposta consiste em realizar a inspe√ß√£o por meio de um sonar, que ir√° mapear a a superf√≠cie a ser inspecionada afim de encontrar objetos estranhos e/ou a causa da falha nas opera√ß√µes de inser√ß√£o e remo√ß√£o.
 
-O sonar ser· acoplado ao \emph{Lifting Beam}, de maneira que a inspeÁ„o possa ser realizada atravÈs da operaÁ„o do guindaste, similarmente ‡ operaÁ„o de inserÁ„o ou remoÁ„o de um \emph{stoplog}. N„o haver· a necessidade de nenhuma alteraÁ„o estrutural tanto no Lifting Beam, quanto no guindaste, n„o violando, assim, nenhum tipo de garantia do equipamento.
+O sonar ser√° acoplado ao \emph{Lifting Beam}, de maneira que a inspe√ß√£o possa ser realizada atrav√©s da opera√ß√£o do guindaste, similarmente √† opera√ß√£o de inser√ß√£o ou remo√ß√£o de um \emph{stoplog}. N√£o haver√° a necessidade de nenhuma altera√ß√£o estrutural tanto no Lifting Beam, quanto no guindaste, n√£o violando, assim, nenhum tipo de garantia do equipamento.
 
-A reconstruÁ„o da superfÌcie analisada ser· exibida para o operador do guindaste, assim como no tablet em terra. A visualizaÁ„o possibilitar·, ent„o, a identificaÁ„o de objetos estranhos e a possÌvel causa do problema.
+A reconstru√ß√£o da superf√≠cie analisada ser√° exibida para o operador do guindaste, assim como no tablet em terra. A visualiza√ß√£o possibilitar√°, ent√£o, a identifica√ß√£o de objetos estranhos e a poss√≠vel causa do problema.
 
-\subsection{OperaÁ„o Excepcional 2 - RemoÁ„o de sedimentos entre stoplogs}
+\subsection{Opera√ß√£o Excepcional 2 - Remo√ß√£o de sedimentos entre stoplogs}
 
-\subsection{OperaÁ„o Excepcional 3 - RemoÁ„o de sedimentos do fundo}
+\subsection{Opera√ß√£o Excepcional 3 - Remo√ß√£o de sedimentos do fundo}
 
