@@ -202,13 +202,22 @@ calibração. Dessa forma, o operador infere o nível de tensão aplicado de aco
 com o ruído sonoro gerado pelo motor.
 
 \subsection{Operação excepcional de inserção 1 - Travamento durante inserção}
-Durante a etapa 5 da operação padrão de inserção, se assumirmos como falsas as
-hipóteses 1 e 2, há a possibilidade de travamento do conjunto \emph{Lifting
-Beam}/\emph{Stoplog} com o trilho. Acúmulos de sedimentos e grandes obstáculos
+
+Durante a a descida do conjunto  \emph{Lifting Beam}/\emph{Stoplog} pelo operador (etapa 5 da operação padrão de inserção), se assumirmos que o trilho não está livre de obstáculos ou detritos e o \emph{stoplog} começar a se inclinar (falsas as
+hipóteses 1 e 2), há a possibilidade de travamento do conjunto com o trilho. Acúmulos de sedimentos e grandes obstáculos
 podem impedir a movimentação do \emph{Stoplog}, ou pior, permitir a movimentação
 parcial, inclinando a estrutura. Em caso de grande inclinação do conjunto, o
 \emph{Stoplog} terá seu movimento impedido e, caso tente-se continuar o processo
 de inserção, o \emph{Stoplog} ficará emperrado.
+
+Como o encaixe e desencaixe das \emph{Garras Pescadoras} e o \emph{Stoplog} é
+realizado passivamente por meio contato e a tração entre o \emph{Lifiting Beam}
+e o \emph{Stoplog}, em caso de travamento do \emph{Stoplog}, haverá perda de tração no cabo e poderá haver
+desencaixe parcial ou total. Em caso de desencaixe parcial (apenas uma das
+garras), auxiliares mergulhadores são enviados para acoplar o conjunto com cabos
+de aço, no local onde ocorreu o desengate. Ao perder o a sustentação de um dos
+encaixes, o \emph{Stoplog} descerá inclinado e uma operação para corrigir um
+possível travamento deve ser realizada.
 
 Atualmente, quando não há desencaixe, a operação excepcional consiste em um
 processo de tentativa e erro, isto é, o operador continuamente ergue e desce o
@@ -217,39 +226,26 @@ sucesso.
 
 
 \subsection{Operação excepcional de inserção 2 - Falha do desencaixe da garra pescadora}
-\label{op:ins:1}
+\label{op:ins:2}
 
 O desencaixe entre a \emph{Garra Pescadora} e o \emph{Stoplog} pode ocorrer
-devido a um encaixe mal sucedido (violação da hipótese 4) de uma ou ambas as
-garras.
-
-Caso apenas ambas as garras se desencaixe o \emph{Stoplog} se desprenderá do
+devido a inúmeros fatores. Caso ambas as garras se desencaixe, durante o descida do conjunto \emph{Lifiting Beam}/\emph{Stoplog}, o \emph{Stoplog} se desprenderá do
 \emph{Lifiting Beam} e descerá pelo trilho sem controle, podendo acarretar em
-sérios danos tanto ao trilho, quanto ao próprio \emph{Stoplog}. Em desencaixe
-total, auxiliares mergulhadores são enviados para mudar a configuração da
-\emph{chave de operação} e uma nova tentativa de encaixe pode ser realizada.
+sérios danos tanto ao trilho, quanto ao próprio \emph{Stoplog}. Caso ao tocar o fundo ou a superfície de um \emph{Stoplog}, houver um desencaixe mal sucedido de uma das \emph{garras pescadoras}, o \emph{Lifiting Beam} irá levantar o \emph{Stoplog} por apenas um dos olhais e como não há feedback da posição da garra o operador só pode inferir a ocorrência de um desencaixe mal sucedido pela tração do cabo do guindaste. 
 
-Como o encaixe e desencaixe das \emph{Garras Pescadoras} e o \emph{Stoplog} é
-realizado passivamente por meio contato e a tração entre o \emph{Lifiting Beam}
-e o \emph{Stoplog}, em caso de travamento do \emph{Stoplog} (\textbf{Operação
-excepcional de inserção 1}), haverá perda de tração no cabo e poderá haver
-desencaixe parcial ou total. Em caso de desencaixe parcial (apenas uma das
-garras), auxiliares mergulhadores são enviados para acoplar o conjunto com cabos
-de aço, no local onde ocorreu o desengate. Ao perder o a sustentação de um dos
-encaixes, o \emph{Stoplog} descerá inclinado e a operação para corrigir um
-possível travamento deve ser realizada (\textbf{Operação excepcional de inserção
-1}).
+Atualmente, em caso de desencaixe
+parcial, auxiliares mergulhadores são enviados para mudar a configuração da
+\emph{chave de operação} e uma nova tentativa de encaixe pode ser realizada. 
 
 \subsection{Operação excepcional de inserção 3 - Não vedamento devido ao acumulo de detritos na base do trilho}
-% TODO descreve o processo de de falha e causas e o que é feito para corrigir.
- 
+
 Uma violação da \textbf{hipótese} \textbf{\ref{hip:ins:1}}, ou seja, existência
 de sedimentos ou obstáculos, nesse caso no fundo do rio, pode acarretar em um mau posicionamento do
-\emph{stoplog} e/ou má vedação (falha da \textbf{hipétese} \textbf{\ref{hip:ins:4}}).
+\emph{stoplog} e/ou má vedação (falha da \textbf{hipótese} \textbf{\ref{hip:ins:4}}).
 
 Atualmente a má vedação só é verificada após a tentativa de drenagem para
 inspeção e então é enviado um mergulhador para tirar os detritos. Caso o objeto
-seja muito grande haverá um erro de nivel, comumente recaindo na \textbf{Operação
+seja muito grande haverá um erro de nível, comumente recaindo na \textbf{Operação
 excepcional de inserção 3}. 
 
 
@@ -309,13 +305,8 @@ obstruindo o encaixe.
 
 \subsection{Operação excepcional de remoção 2 - Travamento durante remoção}
 \label{op:rem:2}
-Durante a etapa 3 da operação padrão de remoção, se assumirmos como falsa a
-hipótese 3, há a possibilidade de travamento do conjunto \emph{Lifting
-Beam}/\emph{Stoplog} com o trilho. Acúmulos de sedimentos e grandes obstáculos
-podem impedir a movimentação do \emph{Stoplog}, ou pior, permitir a movimentação
-parcial, como na operação excepcional de inserção 1. As medidas tomadas na
-operação excepcional de remoção 2 são exatamente as mesmas da operação
-excepcional de inserção 1.
+
+Caso o conjunto \emph{Lifiting Beam/Stoplog} não possa se mover livremente pelo trilho (hipótese 3 não satisfeita), o conjunto poderá começar a se inclinar e, assim, ocasionar um possível travamento do sistema. O único feedback presente nesse tipo de erro é a tração no cabo do guindaste, o que significa que uma vez que a tração se altere o \emph{Stoplog} já não está se movendo livremente, não sendo possível realizar uma operação preventiva e apenas uma ação corretiva para o travamento durante a inserção.
 
 \subsection{Operação excepcional de remoção 3 - Acúmulo de sedimentos no fundo}
 \label{op:rem:3}
@@ -329,7 +320,7 @@ formam uma barreira que forma uma contenção à pressão hidrostática da água
 figura \ref{fig:op:rem:3_2})  eliminando a força devido ao princípio de
 arquimedes.
 
-As medidas tomadas atualmente consiste apenas em força bruta. Puxa-se o
+As medidas tomadas atualmente consistem apenas em força bruta. Puxa-se o
 \emph{stoplog} com um guindaste com força suficiente para vencer a pressão da
 coluna d'água, o que comumente acarreta em danos ao próprio \emph{stoplog} e aos
 equipamentos envolvidos.
@@ -349,27 +340,5 @@ equipamentos envolvidos.
     isolamento causado pelos sedimentos.}
     \label{fig:op:rem:3_2}
 \end{figure}
-% 
-% % % \subsubsection{Operação Excepcional 1 - Inspeção}
-% % % A operação excepcional de inspeção consiste em verificar sedimentos e obstáculos
-% % % trazidos pelo Rio Madeira até o trilho, onde serão empilhados os
-% % % \emph{Stoplog}s. Atualmente, a inspeção é feita por mergulhadores por tato, o
-% % % que pode ser considerado extremamente perigoso devido à forte correnteza do rio,
-% % % objetos estranhos trazidos pelo rio e à possibilidade de encaixe mal sucedido,
-% % % provocando deslizamentos de \emph{Stoplogs}. Atualmente no modo de operação
-% % % padrão não é realizada a operação excepcional 1  de forma preventiva, somente é
-% % % efetuada em casos de vedação mal sucedida (\textbf{Operação excepcional de
-% % % remoção 3}).
-% % % 
-% % % %TODO operação de ajuste de \emph{Stoplog} mal inserido
-% % % %operador estima o a profundidade do \emph{Stoplog} pela tensão do cabo. Diminuição de tensao antes da hora indica uma possível inserção disnivelda. Operador realiza sucessivamente retiradas e inserções até que o \emph{Stoplog} tenha um encaixe correto. Pode dar merda e emperrar.
-% % % 
-% % % \subsubsection{Operação Excepcional 2 - Remoção de sedimentos entre \emph{Stoplogs}}
-% % % A operação excepcional de remoção de sedimentos é consequência da observação de
-% % % sedimentos na etapa de inspeção. Se esses sedimentos observados na operação
-% % % anterior estiverem comprometendo a operação de remoção ou inserção de
-% % % \emph{Stoplog}s, esses obstáculos devem ser removidos. Atualmente, é utilizada
-% % % uma bomba submarina.
-% % % 
-% % % \subsubsection{Operação Excepcional 3 - Remoção de sedimentos do fundo}
+
 
