@@ -28,14 +28,6 @@ com base nessas informações, otimizar a operação e evitar possíveis problem
 Os atuadores possibilitam intervir na operação resolvendo problemas encontrados
 sem a necessidade de enviar mergulhadores ao local.
 
-A informação de encaixe mal ou bem sucedido entre garra e \emph{stoplog} é de grande
-importância para o operador, durante o processo de remoção e inserção. Caso a
-operação continue sendo executada durante um encaixe mal sucedido, pode haver
-danos ao  \emph{Lifting Beam} ao \emph{stoplog} e ao trilho, além de impossibilitar a
-finalização da tarefa. Há, portanto, a necessidade de instrumentar a garra
-pescadora com sensores que possam fornecer a informação de encaixe bem sucedido,
-uma eletrônica embarcada para receber e processar essa informação e um sistema
-eletrônico na base que deverá fornecer ao operador o status do processo.
 Os principais requisitos de projeto são robustez dos dispositivos, capacidade de
 submersibilidade (IP69K), resistência a choque, vibração, e campos magnéticos
 externos não devem afetar as medições.
@@ -43,10 +35,12 @@ externos não devem afetar as medições.
 As subseções que se seguem descrevem o projeto conceitual direcionado a cada
 falha de operação.
 
+%%%%%%%%%%%%%%%%%%
+
 \subsection{Operação excepcional de inserção 1 - Travamento durante inserção} O
 travamento do \emph{stoplog} durante a inserção pode ser verificado pelo
 monitoramento da inclinação do \emph{Lifting Beam}, pela constante verificação
-do encaixe a partir do eixo de rotação das garras e o acompanhamento da
+do encaixe a partir do eixo de rotação das garras e pelo acompanhamento da
 movimentação do \emph{Lifting Beam} quando submerso.
 
 Sensores de inclinação podem fornecer ao operador a informação de que o
@@ -54,24 +48,24 @@ Sensores de inclinação podem fornecer ao operador a informação de que o
 
 Mesmo em caso de não inclinação, há a possibilidade de o \emph{stoplog} ser
 assentado de maneira incorreta. O acúmulo uniforme de sedimentos pode criar uma
-camada e impedir o posicionamento correto de \emph{stoplog}. Os sensores de
+camada e impedir o posicionamento correto do \emph{stoplog}. Os sensores de
 profundidade possibilitam que o operador monitore a finalização da tarefa.
 
 Sensores de rotação podem ser acoplados ao eixo de rotação das garras
-pescadoras, monitorando constantemente o encaixe das garras e alertando ao
-operador situações de inclinações extremas que estejam desacoplando o conjunto
-\emph{Lifting Beam}/\emph{stoplog}.
+pescadoras e sensores de contato na região do encaixe entre \emph{garras pescadoras} e o \emph{Stoplog}, monitorando constantemente  o status do engate do conjunto.
 
 Vale ressaltar que o projeto conceitual visa o monitoramento da operações. O
 operador, a partir dos dados recebidos, pode decider em continuar a tarefa ou
-reiniciá-la.
+reiniciá-la, podendo assim evitar as situações extremas que resultariam em danos a infraestrutura. 
+
+%%%%%%%%%%%%%%%%%%
 
 \subsection{Operação excepcional de inserção 2 - Falha do desencaixe da garra pescadora}
 \label{op:sol:ins:1}
 
 As consequências danosas de um desencaixe mal sucedido entre o \emph{Stoplog} e
 as \emph{Garras Pescadoras}, como desencaixe parcial e travamento de
-\emph{Stoplogs}, descritas nas subseções \ref{op:ins:1} e \ref{op:rem:1}, são
+\emph{Stoplogs}, são
 principalmente devido à falta de feedback na operação de inserção dos
 \emph{Stoplogs}.
 
@@ -80,7 +74,7 @@ desencaixe da \emph{Garra Pescadora} dos \emph{Stoplogs} tem, necessariamente,
 um conjunto de posições e uma ordem de acontecimento dessas posições que a
 \emph{Garra Pescadora} deve obedecer. A partir desse fato, é possível monitorar
 a operação de desencaixe por meio de sensores de rotação acoplados às
-\emph{Garras Pescadoras}.
+\emph{Garras Pescadoras}, assim como, por sensores de contatos na extremidade da \emph{Garras Pescadoras}. 
 
 Por meio do monitoramento de todas as etapas de movimentação das \emph{Garras
 Pescadoras} e o alinhamento do \emph{Lifiting Beam}, o operador tem a capacidade
@@ -89,51 +83,43 @@ ocorra, pode decidir entre abortar a operação e reiniciá-la ou, caso seja
 necessário, aborta-la completamente e tomar ações corretivas mais drásticas,
 como o envio de mergulhadores.
 
-A solução concebida não atua diretamente na movimentação das garras e realiza um
-desencaixe livre de erros.Entretanto, possibilita um monitoramento de todos os
+A solução concebida não atua diretamente na movimentação das garras, entretanto possibilita um monitoramento de todos os
 parâmetros fundamentais para uma operação correta e eficiente e, assim,  
 permite, em tempo real, que ajustes sejam realizados para se finalizar a
-operação com sucesso ou, se necessário,  a operação seja abortada para evitar
-possíveis danos ou envio desnecessário de mergulhadores.
+operação com sucesso.
+
+%%%%%%%%%%%%%%%%%%
 
 \subsection{Operação excepcional de inserção 3 - Não vedamento devido ao acumulo de detritos na base do trilho}
 
-Como forma de evitar o retrabalho, propõe-se uma inspeção inicial através do uso
-de um sonar \emph{profiling} que mapeará o fundo do rio e possibilitará a
-identificação de detritos presentes. Estes, caso não tratados, podem causar
-os problemas descritos na subseção \ref{op:rem:3}. A proposta de implementação
-dessa inspeção é mais profundamente descrita na subseção \ref{sis:sol:1}.
+Atualmente, não existe um método eficiente de se realizar uma inspeção prévia da base do trilho do Stoplogs antes da inserção. A má vedação em geral só é detectada quando o escoamento do circuito hidráulico falha, resultando no envio de mergulhadores para averiguação da causa do problema. 
 
-O mapeamento também proporciona uma limpeza dos detritos mais eficiente devido
-ao conhecimento da localização do que deve ser removido. Limpeza essa feita
-por meio de uma bomba submarina capaz de eficientemente remover pequenos
-detritos, entretanto para outros de grande porte (e.g. troncos de árvore
-submersos) faz-se necessário o uso de um equipamento do tipo garra e guindaste,
-já utilizado atualmente.
+Logo, propõe-se uma solução de inspeção inicial através do uso
+de um sonar que mapeará a base do trilho e possibilitará a
+detecção de detritos ou ácumulo de silt que resultariam em uma falha da vedação. 
 
+O mapeamento por sonar também proporciona a vantagem de não apenas se detectar a existência, mas também, de se conhecer a extensão e volume do detrito/silt acumulado. Logo, possibilitando uma decisão informada e consequentemente mais eficiênte da maneira de se remover o detrito/silt. 
 
+%%%%%%%%%%%%%%%%%%
 
 \subsection{Operação excepcional de remoção 1 - Falha no encaixe}
 
-O monitoramento da movimentação da garra, descrito na subseção
-\ref{op:sol:ins:1}, possibilita de maneira totalmente análoga um monitoramento
-da operação de encaixe entre as \emph{Garras Pescadoras} e o \emph{Stoplog}.
+O monitoramento da movimentação da  \emph{Garras Pescadoras} e do contato entre \emph{Garras Pescadoras} e o \emph{Stoplog}., descrito na subseção
+\ref{op:sol:ins:1}, possibilita verificar se a operação de engate foi realizada com sucesso. Evitando assim, a tentativa de remoção do \emph{Stoplog} quando o engate for apenas parcial. 
 
-Entretanto, se após múltiplas tentativas a operação de encaixe não seja
-realizada com sucesso, é possível que haja alguma obstrução no olhal do
+
+Caso haja a falha no engate é possível que haja alguma obstrução no olhal do
 \emph{Stoplog} e/ou em sua superfície. Deve-se, então realizar uma operação de
-inspeção que possibilite a visualização do problema sem a necessidade do envio
-de mergulhadores. Uma vez que a causa do problema e sua localização sejam
-identificadas, um sistema de limpeza, controlado remotamente, pode ser enviado.
+inspeção por sonar, mapeando o topo do stoplog e a região do olhal, o que possibilita a visualização do problema sem a necessidade do envio
+de mergulhadores. Se a obstrução for decorrente de acúmulo de silt sobre o olhal é possível acoplar uma bomba submarina ao \emph{lifting beam} para remoção do material acúmulado. 
 
-Para situações como a obstrução do olhal ou pequenos objetos na superfície do
-\emph{Stoplog} é suficiente a operação de limpeza, porém, em casos extremos,
-pode-se usar uma garra ou guindaste extra para auxiliar a eliminação dos
-detritos e, em último caso, a utilização de mergulhadores.
-
+%%%%%%%%%%%%%%%%%%
 
 \subsection{Operação excepcional de remoção 2 - Travamento durante remoção}
-O procedimento é exatamente como no caso da inserção.
+
+O travamento do \emph{Stoplog} durante a remoção é causado pela inclinação excessiva do Stoplog no trilho, o que resulta em um desalinhamento e subsequentemente no travamento da operação. Logo, através do monitoramento contínuo por um inclínometro instalado no \emph{Lifting Beam} é possível que o operador tome as medidas preventivas necessárias para evitar o travamento.   
+
+%%%%%%%%%%%%%%%%%%
 
 \subsection{Operação excepcional de remoção 3 - Acúmulo de sedimentos no fundo}
 O método para a resolução da condição de acúmulo de sedimentos no fundo,
