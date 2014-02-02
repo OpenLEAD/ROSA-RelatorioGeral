@@ -11,51 +11,36 @@
 
 % %******************************************************************************
 % % SECTION - Sistema proposto
-% %******************************************************************************
+% %******************************************************************************\
+
+
 \section{Projeto Conceitual}
-Esta seção aborda os problemas que serão atacados pelo projeto, de acordo com os
-modos de operação e falhas expostos na seção Descrição do Problema.
-
-Conceitualmente, o robô ROSA será constituído por um conjunto de sensores e
-atuadores a prova d'água que serão instalados no \emph{Lifting Beam}. Os
-sensores e atuadores serão conectados a uma eletrônica embarcada a prova d'água,
-instalada também no \emph{Lifting Beam}, que processará e transmitirá as
-informações para a superfície através de um umbilical. Na superfície, os dados e
-controles do sistema poderão ser visualizados em uma interface gráfica no
-console de comando. Os sensores medirão dados detalhados sobre o atual status da
-operação de inserção/remoção dos \emph{stoplogs} permitindo ao operador tomar decisões
-com base nessas informações, otimizar a operação e evitar possíveis problemas.
-Os atuadores possibilitam intervir na operação resolvendo problemas encontrados
-sem a necessidade de enviar mergulhadores ao local.
-
-Os principais requisitos de projeto são robustez dos dispositivos, capacidade de
-submersibilidade (IP69K), resistência a choque, vibração, e campos magnéticos
-externos não devem afetar as medições.
-
+Esta seção aborda a solucão conceitual construída a partir da análise dos modos de operação e falhas expostos na seção {\bf Descrição do Problema} e da revisão bibliográfica realizada na secção {\bf Revisão Bibliográfica}. Conceitualmente, o robô ROSA será constituído por um conjunto de sensores e
+atuadores a prova d'água que serão instalados no \emph{Lifting Beam}.
 As subseções que se seguem descrevem o projeto conceitual direcionado a cada
-falha de operação.
+falha de operação, definindo assim o sensoriamento e atuação necessária para o sistema. 
+
 
 %%%%%%%%%%%%%%%%%%
 
-\subsection{Operação excepcional de inserção 1 - Travamento durante inserção} O
-travamento do \emph{stoplog} durante a inserção pode ser verificado pelo
-monitoramento da inclinação do \emph{Lifting Beam}, pela constante verificação
-do encaixe a partir do eixo de rotação das garras e pelo acompanhamento da
-movimentação do \emph{Lifting Beam} quando submerso.
+\subsection{Operação excepcional de inserção 1 - Travamento durante inserção}
 
-Sensores de inclinação podem fornecer ao operador a informação de que o
-\emph{stoplog} está seguindo ou não o curso do trilho corretamente.
+As falhas consequêntes da operação exceptional de inserção 1 - travamento do \emph{stoplog}, ocorrem devido a inclinação excessiva do \emph{stoplog} no trilho e pela liberação prematura do \emph{stoplog}. Logo, os mesmos podem ser evitados através do monitoramento da inclinação do \emph{Lifting Beam} e pelo monitoramento do engate entre \emph{Garra Pescadora} e  \emph{stoplog}. 
 
-Mesmo em caso de não inclinação, há a possibilidade de o \emph{stoplog} ser
-assentado de maneira incorreta. O acúmulo uniforme de sedimentos pode criar uma
-camada e impedir o posicionamento correto do \emph{stoplog}. Os sensores de
-profundidade possibilitam que o operador monitore a finalização da tarefa.
+Dado o acoplamento mecânico entre o \emph{Lifting Beam} e o \emph{stoplog} é possível medir a inclinação  do \emph{stoplog} através da medição da inclinação do \emph{Lifting Beam} . Logo, a solução conceital para executar este monitoramento será  a instalação de um inclinômetro dentro da eletrônica embarcada acoplada ao \emph{Lifting Beam}. 
 
-Sensores de rotação podem ser acoplados ao eixo de rotação das garras
-pescadoras e sensores de contato na região do encaixe entre \emph{garras pescadoras} e o \emph{Stoplog}, monitorando constantemente  o status do engate do conjunto.
+Devido à geometria do \emph{Lifiting Beam} e das \emph{Garras Pescadoras}, o
+desencaixe da \emph{Garra Pescadora} dos \emph{Stoplogs} tem, necessariamente,
+um conjunto de posições e uma ordem de acontecimento dessas posições que a
+\emph{Garra Pescadora} deve obedecer. A partir desse fato, é possível monitorar
+o status do engate por meio de monitoramento da posição da \emph{Garras Pescadoras} com relação ao  \emph{Lifiting Beam}. 
+Cada \emph{Garras Pescadoras} é acoplada ao \emph{Lifiting Beam} através de um único eixo, logo a posição da mesma é diretamente relacionada a posição angular deste eixo. Por conseguinte, através da medição da posição angular deste eixo é possível medir a posição da \emph{Garras Pescadoras}. 
+
+O engate entre a \emph{Garras Pescadoras} e o \emph{Stoplog} pode ser medido também através de sensores de contatos nas extremidades das \emph{Garras Pescadoras}. 
+Considerando o fato que não é possível prever todos os cenários que podem ocorrer durante a operação do Stoplog, a solução conceitual irá considerar ambas as solução para medição do engate/desengate.
 
 Vale ressaltar que o projeto conceitual visa o monitoramento da operações. O
-operador, a partir dos dados recebidos, pode decider em continuar a tarefa ou
+operador, a partir dos dados recebidos, pode decidir em continuar a tarefa ou
 reiniciá-la, podendo assim evitar as situações extremas que resultariam em danos a infraestrutura. 
 
 %%%%%%%%%%%%%%%%%%
@@ -64,54 +49,40 @@ reiniciá-la, podendo assim evitar as situações extremas que resultariam em da
 \label{op:sol:ins:1}
 
 As consequências danosas de um desencaixe mal sucedido entre o \emph{Stoplog} e
-as \emph{Garras Pescadoras}, como desencaixe parcial e travamento de
-\emph{Stoplogs}, são
-principalmente devido à falta de feedback na operação de inserção dos
-\emph{Stoplogs}.
+as \emph{Garras Pescadoras}, como desencaixe parcial, ocorrem
+principalmente devido à falta de feedback na operação de inserção dos \emph{Stoplogs}.
+Logo, a solução conceitual será o monitoramento redundante (medição da posição angular e do contato) do status do engate e por conseguitne evitar possíveis danos a estrutura. 
 
-Devido à geometria do \emph{Lifiting Beam} e das \emph{Garras Pescadoras}, o
-desencaixe da \emph{Garra Pescadora} dos \emph{Stoplogs} tem, necessariamente,
-um conjunto de posições e uma ordem de acontecimento dessas posições que a
-\emph{Garra Pescadora} deve obedecer. A partir desse fato, é possível monitorar
-a operação de desencaixe por meio de sensores de rotação acoplados às
-\emph{Garras Pescadoras}, assim como, por sensores de contatos na extremidade da \emph{Garras Pescadoras}. 
-
-Por meio do monitoramento de todas as etapas de movimentação das \emph{Garras
-Pescadoras} e o alinhamento do \emph{Lifiting Beam}, o operador tem a capacidade
-de perceber que a operação está sendo realizada corretamente e caso algum erro
-ocorra, pode decidir entre abortar a operação e reiniciá-la ou, caso seja
-necessário, aborta-la completamente e tomar ações corretivas mais drásticas,
-como o envio de mergulhadores.
-
-A solução concebida não atua diretamente na movimentação das garras, entretanto possibilita um monitoramento de todos os
-parâmetros fundamentais para uma operação correta e eficiente e, assim,  
+A solução concebida não atua diretamente na movimentação das garras, entretanto possibilita um monitoramento de todos osparâmetros fundamentais para uma operação correta e eficiente e, assim,  
 permite, em tempo real, que ajustes sejam realizados para se finalizar a
-operação com sucesso.
+operação com sucesso. 
+
+A solução da atuação ativa das \emph{Garras Pescadoras} através de motores foi discutida com os operadores de stoplogs e desconsiderada como uma solução viável, pois tal solução iria alterar significativamente a estrutura mecânica do sistema e, por conseguinte, reduziria o grau de robustês do mesmo. Logo, a aplicação ou não de tal atuador ficará em aberto para futuras discussões e não será parte da solução conceitual inicial do projeto ROSA. 
 
 %%%%%%%%%%%%%%%%%%
+
+
 
 \subsection{Operação excepcional de inserção 3 - Não vedamento devido ao acumulo de detritos na base do trilho}
 
 Atualmente, não existe um método eficiente de se realizar uma inspeção prévia da base do trilho do Stoplogs antes da inserção. A má vedação em geral só é detectada quando o escoamento do circuito hidráulico falha, resultando no envio de mergulhadores para averiguação da causa do problema. 
 
-Logo, propõe-se uma solução de inspeção inicial através do uso
-de um sonar que mapeará a base do trilho e possibilitará a
-detecção de detritos ou ácumulo de silt que resultariam em uma falha da vedação. 
+Logo, propõe-se uma solução de inspeção inicial através da realização do mapeamento 3D da base do trilho.
+O mapeamento 3D proporciona a vantagem de não apenas se detectar a existência, mas também, de se conhecer a extensão e volume do detrito/silt acumulado. Logo, possibilitando uma decisão informada do método mais eficiênte para remoção do detrito/silt. 
 
-O mapeamento por sonar também proporciona a vantagem de não apenas se detectar a existência, mas também, de se conhecer a extensão e volume do detrito/silt acumulado. Logo, possibilitando uma decisão informada e consequentemente mais eficiênte da maneira de se remover o detrito/silt. 
+A solução conceitual para remoção de pequenos detritos e acúmulos de silt será através de um sistema de bombeamento submarino direcionado a região obstruída. A metodologia/sistema para a remoção de detritos/silts acumulados na base do trilho de grande volume vai além da robotização da \emph{Garra Pescadora} e não faz parte do escopo deste projeto.
+
 
 %%%%%%%%%%%%%%%%%%
 
 \subsection{Operação excepcional de remoção 1 - Falha no encaixe}
 
-O monitoramento da movimentação da  \emph{Garras Pescadoras} e do contato entre \emph{Garras Pescadoras} e o \emph{Stoplog}., descrito na subseção
-\ref{op:sol:ins:1}, possibilita verificar se a operação de engate foi realizada com sucesso. Evitando assim, a tentativa de remoção do \emph{Stoplog} quando o engate for apenas parcial. 
+A solução conceitual de monitoramento redundante (medição da posição angular e do contato) do status do engate, possibilita verificar se a operação de engate foi realizada com sucesso. Evitando assim, a tentativa de remoção do \emph{Stoplog} quando o engate for apenas parcial, o que pode vir a danificar a estrutura. 
 
+Entretanto, apenas o monitoramento do status do engate não permite ao operador determinar a causa da falha. Logo, a solução conceitual irá incluir um sistema para mapeando 3D do topo do stoplog e da região do olhal, o que possibilita a visualização do problema sem a necessidade do envio
+de mergulhadores. 
 
-Caso haja a falha no engate é possível que haja alguma obstrução no olhal do
-\emph{Stoplog} e/ou em sua superfície. Deve-se, então realizar uma operação de
-inspeção por sonar, mapeando o topo do stoplog e a região do olhal, o que possibilita a visualização do problema sem a necessidade do envio
-de mergulhadores. Se a obstrução for decorrente de acúmulo de silt sobre o olhal é possível acoplar uma bomba submarina ao \emph{lifting beam} para remoção do material acúmulado. 
+A causa mais comum, de acordo com o pessoal de operação da ESBR, para este tipo de falha é o acúmulo de detritos/silt na região do olhal. Logo, o projeto irá apresentar uma solução conceitual de limpeza ativa através de uma bomba submarina. O mapeamento de todas as causas possíveis para a falha do engate e suas soluções vai além do escopo deste projeto. 
 
 %%%%%%%%%%%%%%%%%%
 
@@ -124,3 +95,48 @@ O travamento do \emph{Stoplog} durante a remoção é causado pela inclinação 
 \subsection{Operação excepcional de remoção 3 - Acúmulo de sedimentos no fundo}
 O método para a resolução da condição de acúmulo de sedimentos no fundo,
 descrita na subseção \ref{op:rem:3}, não faz parte do escopo deste projeto.
+
+
+%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Conclusão do Conceito Básico}
+
+Dado as falhas e conceitos desenvolvidos nas subseções acima, o sensoriamento e atuação necessária para o robô ROSA será: 
+
+\begin{itemize}
+
+	\item medição de contato entre a \emph{Garra Pescadora} e o \emph{Stoplog}; 
+	\item medição do posicionamento angular da \emph{Garra Pescadora}; 
+	\item medição da inclinação do \emph{Lifting Beam}; 
+	\item mapeamento 3D do fundo do trilho e do topo do Stoplog; e
+	\item limpeza por jato de água pressorizado. 
+
+\end{itemize}
+
+Os sensores medirão dados detalhados sobre o atual status da
+operação de inserção/remoção dos \emph{stoplogs} permitindo ao operador tomar decisões
+com base nessas informações, otimizar a operação e evitar possíveis problemas.
+Entretanto, para o mesmo, os dados medidos em baixo d'agua precisam estar disponíveis para vizualização do operador que se encontra no pórtigo rolante e control o sistema de inserção e remoção do Stoplog. 
+
+Logo, os sensores serão conectados a uma eletrônica embarcada a prova d'água,
+instalada também no \emph{Lifting Beam}, que pré-processará e transmitirá as
+informações para a superfície através de um umbilical. 
+O umbilical também será utilizado para transmitir energia para a eletrônica embarcada subaquática e deverá funcionar passivamente junto ao pórtigo rolante através de um sistem de gerência de umbilical. 
+Na supérficie, uma eletrônica de terra constítuida por um computador embarcado e um sistema de potência receberá e pós-processará os dados, transmitindo os mesmos via rede sem fio. 
+Um table conectado na rede sem fio será instalado na cabine do operador, possibilitando a vizualisação dos dados em uma interface gráfica.
+
+O conceito da estrutura física necessária para o robô ROSA e sua utilziação será: 
+
+\begin{itemize}
+
+	\item eletrônica embarcada subaquática; 
+	\item umbilical;
+	\item sistema de gerência de umbilical;
+	\item eletrônica de terra; e
+	\item table para interface do usuário. 
+
+\end{itemize}
+
+O sistema de limpeza por jato de água pressorizado possibilita intervir na operação, resolvendo problemas encontrados, sem a necessidade de enviar mergulhadores ao local. Entretanto, a posição na qual o sistema  precisa será montado dependerá da localização específica da obstrução. Logo, o mesmo será utilizado caso a caso independete da eletrônica embarcada. 
+
+
