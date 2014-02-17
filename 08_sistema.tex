@@ -63,10 +63,28 @@ na parte central do Lifting Beam. O sensor trabalha com diferença de pressão e
 será importante na identificação da localização do Lifting Beam quando submerso.
 
 \subsubsection{Eletrônica embarcada}
-A eletrônica embarcada é composta por: sensor de inclinação, sensor de
-profundidade, sensor de ingresso de água, circuito supervisório, PC embarcado,
-gateways, conversores DC/DC e bateria. Terá encapsulamento à prova de vibração,
-choque, água e será acoplada à parte central do \emph{Lifting Beam}.
+A eletrônica embarcada é composta por: 
+
+\begin{itemize}
+	\item PC embarcado industrial com ethernet, RS485 e interface CAN
+	\item  conversores DC/DC
+	\item  placa microcontroladora com sensor de inclinação, sensor de profundidade, sensor de ingresso 	 	e portas para 2 sensores analógicos. 
+	\item circuito supervisório
+\end{itemize}
+
+A eletrônica embarcada terá encapsulamento à  água,
+choque e resistente mínima de 5 bar de pressão. O encapsulamento deve possuir 8 connectores subconn a prova d'agua para conectar os equipamentos externos: 
+
+\begin{itemize}
+ 	\item um Super Seaking Profiler DFP from Tritech
+ 	\item um Gemini 720i from Tritech
+	\item um Micron Sonar DST 750m from Tritech
+	\item um OE10-10 from Kongsberg
+	\item dois NBB20-L2-E2-V1 from Pepperl-Fuchs
+	\item dois RM9000 from IFM 
+\end{itemize}
+
+
 
 O circuito supervisório será responsável por distribuir a alimentação aos
 dispositivos, monitorar essa potência fornecida e proteger os equipamentos
@@ -78,6 +96,8 @@ alimentação variada e o umbilical fornece apenas um nível de tensão, dessa f
 há a necessidade de conversores para distribuírem a potência como requerida
 entre os dispositivos.
 
+A eletrônica embarcada será conectada a uma eletrônica de terra por um umbilical e operará submersa. 
+
 O diagrama~\ref{EE_1} mostra as interfaces de comunicação da eletrônica proposta
 para esta solução.
 
@@ -88,9 +108,20 @@ para esta solução.
     \label{EE_1}
 \end{figure}
 
+\subsubsection{Umbilical}
+
+Cabo especial  de alta resistência mecânica para operação submersa customizado para transmissão de energia e transmissão de dados. O umbilical fornece conexão de dados entre o sistema eletrônico embarcado e a eletrônica de terra. Além disso, o sistema eletrônico embarcado é alimentado pelo umbilical. A taxa de transmissão mínima necessária para o Umbilical é de 1xRS485 
+
 \subsubsection{Eletrônica de superfície - base}
-A eletrônica de superfície na base será composta por uma fonte, PC e ponto de
-acesso WiFi.
+
+A eletrônica de superfície na base será composta por
+
+\begin{itemize}
+	\item PC Industrial com interface Wi-Fi
+	\item 230V de entrada de alimentação 
+	\item interfaces USB e LAN para periféricos 
+	\item Caixa Pelicase para a eletrônica
+\end{itemize}
 
 A fonte irá transmitir a potência necessária a todo o sistema embarcado
 através do umbilical.
@@ -100,7 +131,7 @@ internet ou disponibilizará através do WiFi.
 
 \subsubsection{Eletrônica de superfície - remota}
 O operador poderá monitorar todos os sensores através de um tablet com sistema
-de rede WiFi.
+de rede WiFi. 
 
 \subsubsection{Carretel}
 O carretel industrial é necessário ao menos para fornecer alimentação para a
