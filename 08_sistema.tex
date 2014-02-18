@@ -12,7 +12,7 @@
 % %******************************************************************************
 % % SECTION - Sistema proposto
 % %******************************************************************************
-\section{Sistema proposto}
+\chapter{Sistema proposto}
 O objetivo do projeto ROSA é entregar uma solução para monitoramento, inspeção e
 remoção de sedimentos, de forma que as falhas comentadas nas seções anteriores
 sejam minimizadas e as operações sejam mais seguras. Esta seção é subdividida em
@@ -24,7 +24,7 @@ operações excepcionais expostos em seções anteriores.
 % %******************************************************************************
 
 
-\subsection{Operação padrão (inspeção e remoção)}
+\section{Operação padrão (inspeção e remoção)}
 A principal preocupação do operador nas operações padrões se resume ao encaixe
 bem sucedido entre garra e stoplog. Este encaixe deve ser constantemente
 monitorado, tornando-se necessária a instrumentação do Lifting Beam. O sistema
@@ -32,7 +32,7 @@ será composto por sensores, eletrônica embarcada, sinalizadores e eletrônica 
 base, e um carretel com umbilical, responsável pelo fornecimento de energia e
 interface de comunicação entre base e eletrônica embarcada (FIGURA).
 
-\subsubsection{Sensores}
+\subsection{Sensores}
 O sistema é composto pelos dispositivos:
 \begin{itemize}
 \item Dois encoders absolutos.
@@ -62,7 +62,7 @@ O sensor de profundidade também ficará localizado junto à eletrônica embarca
 na parte central do Lifting Beam. O sensor trabalha com diferença de pressão e
 será importante na identificação da localização do Lifting Beam quando submerso.
 
-\subsubsection{Eletrônica embarcada}
+\subsection{Eletrônica embarcada}
 A eletrônica embarcada é composta por: 
 
 \begin{itemize}
@@ -108,11 +108,11 @@ para esta solução.
     \label{EE_1}
 \end{figure}
 
-\subsubsection{Umbilical}
+\subsection{Umbilical}
 
 Cabo especial  de alta resistência mecânica para operação submersa customizado para transmissão de energia e transmissão de dados. O umbilical fornece conexão de dados entre o sistema eletrônico embarcado e a eletrônica de terra. Além disso, o sistema eletrônico embarcado é alimentado pelo umbilical. A taxa de transmissão mínima necessária para o Umbilical é de 1xRS485 
 
-\subsubsection{Eletrônica de superfície - base}
+\subsection{Eletrônica de superfície - base}
 
 A eletrônica de superfície na base será composta por
 
@@ -129,11 +129,11 @@ através do umbilical.
 O PC processará todos os dados recebidos do sistema embarco e publicará na
 internet ou disponibilizará através do WiFi.
 
-\subsubsection{Eletrônica de superfície - remota}
+\subsection{Eletrônica de superfície - remota}
 O operador poderá monitorar todos os sensores através de um tablet com sistema
 de rede WiFi. 
 
-\subsubsection{Carretel}
+\subsection{Carretel}
 O carretel industrial é necessário ao menos para fornecer alimentação para a
 bomba e comunicação para o sonar durante as operações que envolvam limpeza de
 sedimentos.
@@ -150,7 +150,7 @@ para alimentá-la é fundamental para definir as características do elemento. O
 peso das blindagens necessárias para o cabeamento da bomba e do par trançado
 para comunicação também devem ser considerados.
 
-\subsection{Operação Excepcional 1 - Inspeção}
+\section{Operação Excepcional 1 - Inspeção}
 \label{sis:sol:1}
 A utilização de mergulhadores para a realização da operação de inspeção, além de
 perigosa, é ineficiente, já que a visibilidade do Rio Madeira é muito
@@ -169,7 +169,7 @@ A reconstrução da superfície analisada será exibida para o operador do
 guindaste, assim como no \emph{tablet} em terra. A visualização possibilitará,
 então, a identificação de objetos estranhos e a possível causa do problema.
 
-\subsection{Operação Excepcional 2 - Remoção de sedimentos sobre o olhal}
+\section{Operação Excepcional 2 - Remoção de sedimentos sobre o olhal}
 
 A remoção de sedimentos do \emph{olhal} que poderiam vir a dificultar ou impedir
 um engate de sucesso da \emph{garra pescadora} (subseção \ref{op:rem:2}) será
