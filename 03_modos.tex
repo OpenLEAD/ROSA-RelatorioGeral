@@ -13,24 +13,25 @@
 % %******************************************************************************
 % % SECTION - Modos de Operação
 % %******************************************************************************
-\section{Descrição do problema}
+\chapter{Descrição do problema}
 Esta seção descreve o problema que será atacado a partir dos modos de operação
 executados durante o processo de vedação do rio.
 
-\subsection{Viagem de Reconhecimento}
-A viagem a Usina Jirau aconteceu entre os dias 10 e 13 de Novembro de 2013. A
-equipe foi formada por Patrick Paranhos, Ramon Romankeviciuz, Alessandro Jacoud
-e Julia Campana. A viagem teve um caráter inicial, o objetivo foi realizar a
+\section{Viagem de Reconhecimento}
+A viagem à Usina Jirau aconteceu entre os dias 10 e 13 de Novembro de 2013. A
+equipe era formada por Patrick Paranhos, Ramon Romankeviciuz, Alessandro
+Jacoud e Julia Campana. A viagem teve um caráter inicial, o objetivo foi realizar a
 reunião de abertura, passando por  uma análise inicial do problema, assim como a
-análise de uma operação de Stoplog. Complementarmente, a visita proporcionou ao
+análise de uma operação de \emph{Stoplog}. Complementarmente, a visita proporcionou ao
 grupo a oportunidade de conhecer pessoalmente os responsáveis pelo projeto na
 ESBR.
-Na reunião de abertura, esclarecemos questões de ordem técnica e também questões
-ligadas aos procedimentos da ESBR em Projetos de Pesquisa e Desenvolvimento -
+Na reunião de abertura, foram esclarecidas questões de ordem técnica e também
+questões ligadas aos procedimentos da ESBR em Projetos de Pesquisa e Desenvolvimento -
 (P$\&$D).  Por parte da ESBR estavam presentes Breno Mollinati, Ramon Campos e
-Gizele Ferreira. Após a reunião de abertura fomos conduzidos a um pequeno "tour"
-pela usina afim de conhecer melhor as instalações e as atividades lá realizadas.
-Figs.
+Gizele Ferreira. Após a reunião de abertura, a equipe foi conduzida a um
+pequeno passeio de reconhecimento pela usina a fim de conhecer melhor as
+instalações e as atividades lá realizadas, como pode ser observado nas
+figs.
 (\ref{fig:jirau1},\ref{fig:jirau2},\ref{fig:jirau3},\ref{fig:jirau6}).
 
  \begin{figure}[ht!]
@@ -41,7 +42,8 @@ Figs.
 
  \begin{figure}[ht!]
     \centering \includegraphics[width=0.6\columnwidth]{figs/jirau/jirau_02}
-    \caption{Modelo de turbina da Usina Jirau, observado durante o tour da Usina.}
+    \caption{Modelo de turbina da Usina Jirau, observado durante o passeio da
+    Usina.}
     \label{fig:jirau2}
 \end{figure}
 
@@ -62,13 +64,15 @@ Figs.
 
 \clearpage
 
-Posteriormente a reunião de abertura e ao tour pela usina, 
+Posteriormente à reunião de abertura e ao passeio pela usina, 
 o grupo realizou a reunião de análise inicial do problema, onde os problemas
-existentes nas operações de inserção e remoção de Stoplogs foram discutidos. 
+existentes nas operações de inserção e remoção de\emph{Stoplogs} foram
+discutidos.
 Por fim, foi feita a visita de campo para o acompanhamento da operação de
-Stoplog, visando a melhor compreensão por parte dos pesquisadores da metodologia e equipamento envolvido nas operações de Stoplogs. . Figs.
+Stoplog, visando uma melhor compreensão por parte dos pesquisadores da
+metodologia e equipamento envolvido nas operações de\emph{Stoplogs}. As Figuras
 (\ref{fig:jirau9},\ref{fig:jirau11},\ref{fig:jirau13},\ref{fig:jirau14},\ref{fig:jirau15},\ref{fig:jirau16},\ref{fig:jirau17},\ref{fig:jirau18},\ref{fig:jirau19},\ref{fig:jirau20},\ref{fig:jirau21},\ref{fig:jirau22}).
-
+ilustram o acompanhamento à operação de inserção e remoção de um \emph{Stoplog}.
 
 \begin{figure}[h!]
     \centering \includegraphics[width=0.6\columnwidth]{figs/jirau/jirau_09}
@@ -96,13 +100,13 @@ Stoplog, visando a melhor compreensão por parte dos pesquisadores da metodologi
 
 \begin{figure}[h!]
     \centering \includegraphics[width=0.6\columnwidth]{figs/jirau/jirau_15}
-    \caption{Trilho para as peças de Stoplog.}
+    \caption{Trilho para as peças de \emph{Stoplog}.}
     \label{fig:jirau15}
 \end{figure}
 
 \begin{figure}[h!]
     \centering \includegraphics[scale=0.6]{figs/jirau/jirau_16}
-    \caption{Trilho para as peças de Stoplog.}
+    \caption{Trilho para as peças de \emph{Stoplog}.}
     \label{fig:jirau16}
 \end{figure}
 
@@ -120,7 +124,7 @@ Stoplog, visando a melhor compreensão por parte dos pesquisadores da metodologi
 
 \begin{figure}[h!]
     \centering \includegraphics[width=0.5\columnwidth]{figs/jirau/jirau_19}
-    \caption{Ponto de vista do stoplog a partir da cabine do operador do pórtigo rolante.}
+    \caption{Ponto de vista do \emph{Stoplog} a partir da cabine do operador do pórtigo rolante.}
     \label{fig:jirau19}
 \end{figure}
 
@@ -146,8 +150,9 @@ Stoplog, visando a melhor compreensão por parte dos pesquisadores da metodologi
 
 \clearpage
 
-Esta seção é subdividida em dois modos de operação padrão: inserção e remoção de
-\emph{Stoplogs}. Cada modo de operação padrão possui três modos de operações
+\chapter{Operações Padrão}
+Este capítulo é subdividida em dois modos de operação padrão: inserção e remoção
+de \emph{Stoplogs}. Cada modo de operação padrão possui três modos de operações
 excepcionais, realizados em caso de falhas discutidas durante esta seção.
 
 % %******************************************************************************
@@ -155,16 +160,19 @@ excepcionais, realizados em caso de falhas discutidas durante esta seção.
 % %******************************************************************************
 
 
-\subsection{Operação padrão de inserção}
-A operação padrão de inserção consiste: em inserção de \emph{Stoplogs} no Rio
+\section{Operação padrão de inserção}
+A operação padrão de inserção consiste: inserção de \emph{Stoplogs} no Rio
 Madeira para o controle de seu fluxo de água, a fim de realizar a manutenção de
 turbinas de um sistema de geração de energia elétrica. Esta operação assume as
 seguintes \textbf{hipóteses}:
 \begin{enumerate}
 \item O trilho está livre de obstáculos e sedimentos que poderiam impedir a execução da tarefa.
 \label{hip:ins:1}
-\item O conjunto \emph{ Lifting Beam}/\emph{stoplog } não sofre inclinações e desnivelamento em relação ao trilho, portanto o \emph{stoplog} desliza pelo trilho sem travamento.
-\item O desencaixe do conjunto \emph{Lifting Beam}/\emph{stoplog} é realizado com sucesso.
+\item O conjunto \emph{ Lifting Beam}/\emph{stoplog } não sofre inclinações e
+desnivelamento em relação ao trilho, portanto o \emph{stoplog} desliza pelo
+trilho sem travamento. \label{hip:ins:2}
+\item O desencaixe do conjunto \emph{Lifting Beam}/\emph{stoplog} é realizado
+com sucesso. \label{hip:ins:3}
 \item O primeiro \emph{stoplog} a ser inserido é posicionado corretamente e veda a base do trilho.
 \label{hip:ins:4}
 \end{enumerate}
@@ -173,7 +181,9 @@ A operação de inserção de \emph{Stoplogs} é composta pelas seguintes
 \textbf{etapas}:
 \begin{enumerate}
 \item Auxiliar de operação manualmente modifica o estado da \emph{chave de operação} para \textbf{Encaixe}.
-\item Operador controla o guindaste, o qual desloca o conjunto \emph{Lifting Beam} e \emph{Garras Pescadoras}, até a posição do \emph{Stoplog}, que se encontra em terra, e realiza o encaixe. O encaixe bem sucedido é caracterizado pelo acoplamento correto das duas garras pescadoras com o \emph{Stoplog}. (FIGURA)
+\item Operador controla o guindaste, o qual desloca o conjunto \emph{Lifting Beam} e \emph{Garras Pescadoras}, 
+até a posição do \emph{Stoplog}, que se encontra em terra, e realiza o encaixe. O encaixe bem sucedido é caracterizado 
+pelo acoplamento correto das duas garras pescadoras com o \emph{Stoplog}.
 \item Auxiliar de operação manualmente modifica o estado da chave de operação para \textbf{Desencaixe}.
 \item Operador controla o guindaste, o qual desloca o \emph{Lifting Beam} junto com o \emph{Stoplog}, até os trilhos localizados na barragem, onde os \emph{Stoplogs} deverão ser empilhados.
 \item Operador desce o conjunto \emph{Lifting Beam} e \emph{Stoplog} guiado pelo trilho.
@@ -182,12 +192,12 @@ A operação de inserção de \emph{Stoplogs} é composta pelas seguintes
 \end{enumerate}
 
 Durante todo o procedimento de inserção, o operador pode monitorar o nível de
-tensão exercido ao \emph{Lifting Beam} pelo motor elétrico. Um sensor de força
-strain gauge é responsável por essa informação, porém há complicações em sua
+tensão no cabo exercido ao \emph{Lifting Beam} pelo motor elétrico. Um sensor de
+força strain gauge é responsável por essa informação, porém há complicações em sua
 calibração. Dessa forma, o operador infere o nível de tensão aplicado de acordo
 com o ruído sonoro gerado pelo motor.
 
-\subsection{Operação excepcional de inserção 1 - Travamento durante inserção}
+\section{Operação excepcional de inserção 1 - Travamento durante inserção}
 
 Durante a descida do conjunto  \emph{Lifting Beam}/\emph{Stoplog} pelo operador (etapa 5 da operação padrão de inserção), se assumirmos que o trilho não está livre de obstáculos, detritos ou que possui alguma deformação da estrutura do trilho, existe a possibilidade do \emph{stoplog} começar a se inclinar (falsas as
 hipóteses 1 e 2), o que pode gerar o travamento da operação.
@@ -197,26 +207,37 @@ conjunto \emph{Lifting Beam}/\emph{Stoplog} em um
 processo de tentativa e erro, até a tarefa ser realizada com
 sucesso.
 
-Caso o grau de inclinação do Stoplog seja acentuado, o mesmo pode travar completamente no trilho. O risco de tal acontecimento é que o desencaixe entre a \emph{Garras Pescadoras} e o \emph{Stoplog}, durante o processo de inserção, é  mecânicamente passivo. Logo, existe a possibilidade de haver uma perda de tração no cabo dado o travamento, o que acarretará em desengate parcial ou total prematuro do Stoplog. 
+Caso o grau de inclinação do \emph{Stoplog} seja acentuado, o mesmo pode travar completamente no trilho. O risco 
+de tal acontecimento é que o desencaixe entre a \emph{Garras Pescadoras} e o \emph{Stoplog}, durante o processo de inserção, 
+é  mecânicamente passivo. Logo, existe a possibilidade de haver uma perda de
+tração no cabo dado o travamento, o que acarretará em desengate parcial ou total
+prematuro do \emph{Stoplog}.
 
 Em caso de desencaixe parcial (apenas uma das
-garras) será necessário o envio de um equipe de mergulhadores para corrigir o problema. Uma operação lenta e de alto risco de vida, durante a qual o sistema hidráulico está inoperante. 
+garras) será necessário o envio de um equipe de mergulhadores para corrigir o
+problema. Essa operação é lenta e de alto risco de vida, durante a qual o
+sistema hidráulico está inoperante.
 
-Em caso de desengate total prematuro, o Stoplog cai até o solo sem controle, podendo resultar em danos a estrutura. Neste caso é necessário um processesso de inspeção por mergulhadores para determinar a extensão do dano causado e para recuperação do Stoplog. 
+Em caso de desengate total prematuro, o \emph{Stoplog} cai até o solo sem
+controle, podendo resultar em danos a estrutura. Neste caso, é necessário um
+processesso de inspeção por mergulhadores para determinar a extensão do dano causado e para recuperação do \emph{Stoplog}.
 
 
 
 
-\subsection{Operação excepcional de inserção 2 - Falha do desencaixe da garra pescadora}
+\section{Operação excepcional de inserção 2 - Falha do desencaixe da garra pescadora}
 \label{op:ins:2}
 
-Existe a possibilidade de ao final da operação de inserção não haver o correto desengate do Stoplog. Esta falha pode ser parcial, apenas uma das \emph{garras pescadoras} se mantém acoplada, ou total, ambas as \emph{garras pescadoras} se mantém acoplada. O operador só pode inferir a ocorrência de um desengate mal sucedido pela tração do cabo do guindaste ao tentar levantar o \emph{Lifiting Beam}.
+Existe a possibilidade de ao final da operação de inserção não haver o correto desengate do \emph{Stoplog}. 
+Esta falha pode ser parcial, apenas uma das \emph{garras pescadoras} se mantém acoplada, ou total, ambas as 
+\emph{garras pescadoras} se mantém acopladas. O operador só pode inferir a
+ocorrência de um desengate mal sucedido pela tração do cabo do guindaste ao tentar levantar o \emph{Lifiting Beam}.
 
 Ao notar a falha no desengate, o operador continuamente ergue e desce o
 conjunto \emph{Lifting Beam}/\emph{Stoplog} em um 
 processo de tentativa e erro, até a tarefa ser realizada com sucesso. Entretanto, se o desengate for parcial existe o risco do \emph{Stoplog} inclinar no trilho, resultando em seu subsequente travamento. Atualmente, o único modo de solucionar e determinar a natureza do problem é através do envio de mergulhadores. 
 
-\subsection{Operação excepcional de inserção 3 - Não vedamento devido ao acumulo de detritos na base do trilho}
+\section{Operação excepcional de inserção 3 - Não vedamento devido ao acumulo de detritos na base do trilho}
 
 
 Uma violação da \textbf{hipótese} \textbf{\ref{hip:ins:1}}, ou seja, existência
@@ -229,7 +250,7 @@ Atualmente, o único método possível para averiguação da causa da obstruçã
 %_________
 
 
-\subsection{Operação padrão - Remoção}
+\section{Operação padrão - Remoção}
 A operação padrão de remoção consiste em, basicamente, a operação inversa à da inserção de \emph{Stoplogs}. Esta operação assume as seguintes \textbf{hipóteses}:
 
 \begin{enumerate}
@@ -245,14 +266,17 @@ realizado dentro d'água.
 A operação de remoção de \emph{Stoplogs} é composta pelas seguintes \textbf{etapas}:
 \begin{enumerate}
 \item Auxiliar de operação manualmente modifica o estado da \emph{chave de operação} para \textbf{Encaixe}.
-\item Operador controla o guindaste, o qual desloca o conjunto \emph{Lifting Beam} pelo trilho até a posição do \emph{Stoplog}, submerso. O encaixe bem sucedido é realizo dentro d'água.
+\item Operador controla o guindaste, o qual desloca o conjunto \emph{Lifting
+Beam} pelo trilho até a posição do \emph{Stoplog}, submerso. O encaixe bem
+sucedido é realizado dentro d'água.
 \item O conjunto \emph{Lifting Beam}/\emph{Stoplog} é removido da barragem pelo trilho. 
 \item Auxiliar de operação manualmente modifica o estado da chave de operação para \textbf{Desencaixe}.
 \item \emph{Stoplog} é depositado em solo.
-\item O procedimento é repetido até todos os Stoplogs serem removidos \emph{Stoplogs}.
+\item O procedimento é repetido até todos os \emph{Stoplogs} serem removidos
+\emph{Stoplogs}.
 \end{enumerate}
 
-\subsection{Operação excepcional de remoção 1 - Falha no encaixe}
+\section{Operação excepcional de remoção 1 - Falha no encaixe}
 \label{op:rem:1}
 O encaixe no olhal do \emph{Stoplog} é realizado de forma passiva e sem feedback
 quando a operação é realizada submersa. É importante observar que o operador não
@@ -282,14 +306,17 @@ levantado por apenas um olhal, podendo resultar em travemento da operação.
 
 
 
-\subsection{Operação excepcional de remoção 2 - Travamento durante remoção}
+\section{Operação excepcional de remoção 2 - Travamento durante remoção}
 \label{op:rem:2}
 
-Caso o conjunto \emph{Lifiting Beam/Stoplog} não possa se mover livremente pelo trilho (hipótese 3 não satisfeita), o conjunto poderá começar a se inclinar e, assim, ocasionar um possível travamento do sistema. O único feedback presente nesse tipo de erro é a tração no cabo do guindaste. O operador continuamente ergue e desce o conjunto \emph{Lifting Beam}/\emph{Stoplog} em um 
-processo de tentativa e erro, até a tarefa ser realizada com sucesso.
+Caso o conjunto \emph{Lifiting Beam/Stoplog} não possa se mover livremente pelo
+trilho (\textbf{hipótese} \ref{hip:ins:3} não satisfeita), o conjunto poderá
+começar a se inclinar e, assim, ocasionar um possível travamento do sistema. O único feedback
+presente nesse tipo de erro é a tração no cabo do guindaste. O operador continuamente ergue e 
+desce o conjunto \emph{Lifting Beam}/\emph{Stoplog} em um processo de tentativa e erro, até a tarefa ser realizada com sucesso.
 Caso o problema não seja solucionado, é necessário o envio de mergulhadores para averiguação e correção. 
 
-\subsection{Operação excepcional de remoção 3 - Acúmulo de sedimentos no fundo}
+\section{Operação excepcional de remoção 3 - Acúmulo de sedimentos no fundo}
 \label{op:rem:3}
 Uma vez que a inserção é realizada com sucesso, mantendo então a \textbf{hipótese}
 \textbf{\ref{hip:ins:4}}, pode-se ocorrer um posterior acúmulo de sedimentos na

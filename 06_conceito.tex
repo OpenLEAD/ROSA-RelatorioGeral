@@ -15,7 +15,9 @@
 
 
 \chapter{Projeto Conceitual}
-Esta seção aborda a solucão conceitual construída a partir da análise dos modos de operação e falhas expostos na seção {\bf Descrição do Problema} e da revisão bibliográfica realizada na secção {\bf Revisão Bibliográfica}. Conceitualmente, o robô ROSA será constituído por um conjunto de sensores e
+Esta seção aborda a solucão conceitual construída a partir da análise dos modos de operação e 
+falhas expostos na seção {\bf Descrição do Problema} e da revisão bibliográfica realizada na 
+seção {\bf Revisão Bibliográfica}. Conceitualmente, o robô ROSA será constituído por um conjunto de sensores e
 atuadores a prova d'água que serão instalados no \emph{Lifting Beam}.
 As subseções que se seguem descrevem o projeto conceitual direcionado a cada
 falha de operação, definindo assim o sensoriamento e atuação necessária para o sistema. 
@@ -41,7 +43,7 @@ Cada \emph{Garra Pescadora} é acoplada ao \emph{Lifiting Beam} através de um �
 O engate entre a \emph{Garras Pescadoras} e o \emph{Stoplog} pode ser medido
 também através de sensores de contatos nas extremidades das \emph{Garras Pescadoras}.
 Considerando o fato que não é possível prever todos os cenários que podem
-ocorrer durante a operação do Stoplog, a solução conceitual irá considerar ambas
+ocorrer durante a operação do \emph{Stoplog}, a solução conceitual irá considerar ambas
 as soluções para medição do engate/desengate.
 
 Vale ressaltar que o projeto conceitual visa o monitoramento da operações. O
@@ -56,14 +58,15 @@ reiniciá-la, podendo assim evitar as situações extremas que resultariam em da
 As consequências danosas de um desencaixe mal sucedido entre o \emph{Stoplog} e
 as \emph{Garras Pescadoras}, como desencaixe parcial, ocorrem
 principalmente devido à falta de feedback na operação de inserção dos \emph{Stoplogs}.
-Logo, a solução conceitual será o monitoramento redundante (medição da posição angular e do contato) do status do engate e por conseguitne evitar possíveis danos a estrutura. 
+Logo, a solução conceitual será o monitoramento redundante (medição da posição
+angular e do contato) do status do engate e por conseguinte evitar possíveis danos à estrutura.
 
 A solução concebida não atua diretamente na movimentação das garras, entretanto
 possibilita um monitoramento de todos os parâmetros fundamentais para uma operação correta e eficiente e, assim, permite, em tempo real, que ajustes sejam realizados para se finalizar a
 operação com sucesso. 
 
 A solução da atuação ativa das \emph{Garras Pescadoras} através de motores foi
-discutida com os operadores de stoplogs e desconsiderada como uma solução
+discutida com os operadores de \emph{Stoplogs} e desconsiderada como uma solução
 viável, pois tal solução iria alterar significativamente a estrutura mecânica do sistema e, por conseguinte, reduziria o grau de robustez do mesmo. Logo, a aplicação ou não de tal atuador ficará em aberto para futuras discussões e não será parte da solução conceitual inicial do projeto ROSA.
 
 %%%%%%%%%%%%%%%%%%
@@ -73,7 +76,7 @@ viável, pois tal solução iria alterar significativamente a estrutura mecânic
 \section{Operação excepcional de inserção 3 - Não vedamento devido ao acumulo de detritos na base do trilho}
 
 Atualmente, não existe um método eficiente de se realizar uma inspeção prévia da
-base do trilho do Stoplogs antes da inserção. A má vedação, em geral, só é
+base do trilho do \emph{Stoplogs} antes da inserção. A má vedação, em geral, só é
 detectada quando o escoamento do circuito hidráulico falha, resultando no envio de mergulhadores para averiguação da causa do problema.
 
 Logo, propõe-se uma solução de inspeção inicial através da realização do mapeamento 3D da base do trilho.
@@ -92,7 +95,7 @@ através de um sistema de bombeamento submarino direcionado a região obstruída
 A solução conceitual de monitoramento redundante (medição da posição angular e
 do contato) do status do engate, possibilita verificar se a operação de engate foi realizada com sucesso. Evitando, assim, a tentativa de remoção do \emph{Stoplog} quando o engate for apenas parcial, o que pode vir a danificar a estrutura.
 
-Entretanto, apenas o monitoramento do status do engate não permite ao operador determinar a causa da falha. Logo, a solução conceitual irá incluir um sistema para mapeando 3D do topo do stoplog e da região do olhal, o que possibilita a visualização do problema sem a necessidade do envio
+Entretanto, apenas o monitoramento do status do engate não permite ao operador determinar a causa da falha. Logo, a solução conceitual irá incluir um sistema para mapeando 3D do topo do \emph{Stoplog} e da região do olhal, o que possibilita a visualização do problema sem a necessidade do envio
 de mergulhadores. 
 
 A causa mais comum, de acordo com o pessoal de operação da ESBR, para este tipo
@@ -124,7 +127,7 @@ sensoriamento e atuação necessária para o robô ROSA será:
 	\item medição do posicionamento angular da \emph{Garra Pescadora}; 
 	\item medição da inclinação do \emph{Lifting Beam};
 	\item medição da profundidade do \emph{Lifting Beam}; 
-	\item mapeamento 3D do fundo do trilho e do topo do Stoplog; e
+	\item mapeamento 3D do fundo do trilho e do topo do \emph{Stoplog}; e
 	\item limpeza por jato de água pressorizado. 
 
 \end{itemize}
@@ -133,7 +136,7 @@ Os sensores medirão dados detalhados sobre o atual status da
 operação de inserção/remoção dos \emph{stoplogs} permitindo ao operador tomar decisões
 com base nessas informações, otimizar a operação e evitar possíveis problemas.
 Entretanto, para o mesmo, os dados medidos em baixo d'agua precisam estar
-disponíveis para vizualização do operador que se encontra no pórtigo rolante e controla o sistema de inserção e remoção do Stoplog.
+disponíveis para vizualização do operador que se encontra no pórtigo rolante e controla o sistema de inserção e remoção do \emph{Stoplog}.
 
 Logo, os sensores serão conectados a uma eletrônica embarcada a prova d'água,
 instalada também no \emph{Lifting Beam}, que pré-processará e transmitirá as
